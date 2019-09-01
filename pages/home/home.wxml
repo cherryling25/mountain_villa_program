@@ -1,0 +1,35 @@
+<!--pages/home/home.wxml-->
+<!--轮播-->
+<view class="weui-padding-wrap">
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}" wx:key="index" class="img_content">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" class="img" />
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+<!--图标-->
+<view class="weui-flex">
+  <view class="weui-flex__item">
+    <view class="placeholder">
+      <image src="../../images/order_food.png" class="flex_img"></image>
+      <span>订房</span> 
+    </view>
+  </view>
+
+  <view class="weui-flex__item">
+    <view class="placeholder">
+     <image src="../../images/order_room.png" class="flex_img"></image>
+    <span>优惠劵</span> 
+    </view>
+  </view>
+  
+  <view class="weui-flex__item">
+    <view class="placeholder">
+     <image src="../../images/order_food.png" class="flex_img"></image>
+    <span>收藏</span> 
+    </view>
+  </view>
+</view>

@@ -1,0 +1,65 @@
+/* pages/home/home.wxss */
+
+.wx-swiper-dots {
+  position: relative;
+  left: unset !important;
+  right: 0;
+}
+
+.wx-swiper-dots.wx-swiper-dots-horizontal {
+  margin-bottom: -5rpx;
+}
+
+.weui-padding-wrap {
+  width: 750rpx;
+  padding: 0;
+}
+
+.image-content {
+  width: 100%;
+}
+
+.img {
+  width: 750rpx;
+}
+
+/*图标*/
+.placeholder{
+    margin: 5px;
+    padding: 0 5px;
+    text-align: center;
+    /*border-radius: 50%;
+    background-color: #f7dede;*/
+    height: 4em;
+    line-height: 2.3em;
+    color: #262427d8;
+    border: 0px solid green;
+    font-size: 12px;
+}
+
+span{
+   display: -webkit-flex;
+   width: 120rpx;
+   margin-left: 65rpx;
+   margin-top: -30rpx;
+  border: 0px solid green;
+  
+}
+.weui-flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+   margin: 5px 0;
+}
+
+.weui-flex__item {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+.flex_img{
+  width: 60rpx;
+  height: 60rpx;
+  border: 0px solid red;
+}
