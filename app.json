@@ -1,9 +1,10 @@
 {
   "pages": [
+    "pages/order/order",
     "pages/home/home",
     "pages/index/index",
     "pages/myPage/my",
-    "pages/order/order",
+    
     "pages/register/register",
     "pages/myPage/change"
     
