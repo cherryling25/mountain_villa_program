@@ -14,22 +14,24 @@
 <view class="weui-flex">
   <view class="weui-flex__item">
     <view class="placeholder">
+    <navigator url="./orderFood/orderFood">
       <image src="../../images/order_food.png" class="flex_img"></image>
-      <span>订房</span> 
+      <span>订餐</span> 
+      </navigator>
     </view>
   </view>
 
   <view class="weui-flex__item">
     <view class="placeholder">
      <image src="../../images/order_room.png" class="flex_img"></image>
-    <span>优惠劵</span> 
+    <span>订房</span> 
     </view>
   </view>
   
   <view class="weui-flex__item">
     <view class="placeholder">
-     <image src="../../images/order_food.png" class="flex_img"></image>
-    <span>收藏</span> 
+     <image src="../../images/home_coupon.png" class="flex_img"></image>
+    <span>优惠劵</span> 
     </view>
   </view>
 </view>

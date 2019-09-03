@@ -1,4 +1,4 @@
-// pages/myPage/change.js
+// pages/home/orderFood/orderFood.js
 Page({
 
   /**
