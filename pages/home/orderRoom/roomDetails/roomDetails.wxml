@@ -1,0 +1,30 @@
+<!--pages/home/orderRoom/roomDetails/roomDetails.wxml-->
+<!--轮播-->
+<view class="weui-padding-wrap">
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}" wx:key="index" class="img_content">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" class="img" />
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+<!--输入框-->
+<view class="weui-flex">
+  <view class="weui-flex__item">
+    <view class="placeholder">
+    <view>
+    <input placeholder="入住日期" auto-focus/>
+    
+    </view>
+    </view>
+  </view>
+
+  <view class="weui-flex__item">
+    <view class="placeholder">
+    <input placeholder="退房时间"/>
+    </view>
+  </view>
+
+</view>

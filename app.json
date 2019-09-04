@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/home/orderRoom/roomDetails/roomDetails",
     "pages/home/orderRoom/orderRoom",
     "pages/home/home",
     "pages/myPage/my",
@@ -48,7 +49,6 @@
     "color": "#c09ce2",
     "selectedColor": "#000000"
   },
-  
   "plugins": {
     "calendar": {
       "version": "1.1.0",

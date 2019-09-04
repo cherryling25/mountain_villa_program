@@ -16,13 +16,13 @@ span {
   margin-left: 30rpx;
   margin-top: -30rpx;
   border: 0px solid green;
-
 }
 
-.pice{
-  padding-left: -10rpx;
-  border: 1px solid green;
-  color: rgb(107, 105, 105);
+.price{
+  display: -webkit-flex;
+  padding-left: 26rpx;
+  color: #230d88e3;
+  font-size: 11px;
 }
 
 .weui-flex {

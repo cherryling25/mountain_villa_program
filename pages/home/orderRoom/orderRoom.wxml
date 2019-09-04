@@ -2,10 +2,10 @@
 <view class="weui-flex">
   <view class="weui-flex__item">
     <view class="placeholder">
-    <navigator url="./orderFood/orderFood">
+    <navigator url="./roomDetails/roomDetails">
       <image src="../../../images/fengjing.jpg" class="flex_img"></image>
       <span>标间 ･ 1卧1床1卫</span>
-      <view class="pice">¥268 每晚</view>
+      <view class="price">¥268 每晚</view>
       </navigator>
     </view>
   </view>
@@ -14,7 +14,8 @@
     <view class="placeholder">
     <navigator url="./orderRoom/orderRoom">
      <image src="../../../images/fengjing.jpg" class="flex_img"></image>
-    <span>标间</span> 
+    <span>标间 ･ 1卧1床1卫</span>
+    <view class="price">¥268 每晚</view>
     </navigator>
     </view>
   </view>
@@ -27,7 +28,8 @@
     <view class="placeholder">
     <navigator url="./orderRoom/orderRoom">
      <image src="../../../images/fengjing.jpg" class="flex_img"></image>
-    <span>订 房</span> 
+    <span>标间 ･ 1卧1床1卫</span>
+    <view class="price">¥268 每晚</view>
     </navigator>
     </view>
   </view>
@@ -36,7 +38,8 @@
     <view class="placeholder">
     <navigator url="./orderRoom/orderRoom">
      <image src="../../../images/fengjing.jpg" class="flex_img"></image>
-    <span>订 房</span> 
+    <span>标间 ･ 1卧1床1卫</span>
+    <view class="price">¥268 每晚</view> 
     </navigator>
     </view>
   </view>
