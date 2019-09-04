@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/home/orderRoom/orderRoom",
     "pages/home/home",
     "pages/myPage/my",
     "pages/myPage/coupon",
@@ -8,6 +9,7 @@
     "pages/index/index",
     "pages/register/register",
     "pages/home/orderFood/orderFood"
+    
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -45,5 +47,12 @@
     ],
     "color": "#c09ce2",
     "selectedColor": "#000000"
+  },
+  
+  "plugins": {
+    "calendar": {
+      "version": "1.1.0",
+      "provider": "wx92c68dae5a8bb046"
+    }
   }
 }
