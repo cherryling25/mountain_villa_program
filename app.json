@@ -1,16 +1,16 @@
 {
   "pages": [
+    "pages/home/home",
     "pages/home/orderRoom/roomDetails/roomDetails",
     "pages/home/orderRoom/orderRoom",
-    "pages/home/home",
     "pages/myPage/my",
     "pages/myPage/coupon",
     "pages/myPage/booking",
     "pages/order/order",
     "pages/index/index",
     "pages/register/register",
-    "pages/home/orderFood/orderFood"
-    
+    "pages/home/orderFood/orderFood",
+    "pages/home/receiveCoupon/receiveCoupon"
   ],
   "window": {
     "backgroundTextStyle": "light",

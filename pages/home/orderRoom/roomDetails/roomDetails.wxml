@@ -14,17 +14,67 @@
 <view class="weui-flex">
   <view class="weui-flex__item">
     <view class="placeholder">
-    <view>
-    <input placeholder="入住日期" auto-focus/>
-    
+      <view>
+        <image src="/images/calendar.png" class="flex-img"></image>
+        <input placeholder="入住日期" placeholder-style="width:60px;" type="date"/>
+      </view>
     </view>
-    </view>
+    <!--日历-->
+    <!--<calendar calendar-style="calendar1"  header-style="calendar-header1"  board-style="calendar-board1"
+ days-color="{{dayStyle}}" weeks-type="cn" binddayClick="dayClick"/>-->
   </view>
 
   <view class="weui-flex__item">
     <view class="placeholder">
-    <input placeholder="退房时间"/>
+      <view>
+        <image src="/images/calendar.png" class="flex-img"></image>
+        <input placeholder="退房时间" placeholder-style="width:60px;" />
+      </view>
     </view>
   </view>
 
+</view>
+
+ <!--房屋介绍-->
+<view class="introduce">
+  <view class="text">
+    简约风/ins 风观景房酒店
+  </view>
+
+  <view class="text1">
+    标间･1张床･1间卫生间･最多住两人
+  </view>
+
+   <view class="text2">
+    享受 8月1日-8月15日 期间的九折优惠，
+    完成预定，锁定限时好礼
+   </view>
+
+  <view class="text3">
+    欢迎光临 lemon house! 你会喜欢这里
+   </view>
+
+   <view class="text4">
+    <span>入住/退房</span>   入住时间 14:00后･ 退房时间 12:00
+   </view>
+
+    <view class="text5">
+    <view>预定须知</view>
+    <p>* 48小时内可免费取消预定</p>
+   </view>
+
+</view>
+
+
+<!--固定底部-->
+<view class="weui-flex">
+   <view class="weui-flex__item">
+   <view class="footer">
+   <view class="footer_left">
+    <span class="span1">¥ 259 每晚</span>
+    <span>⭐️⭐️⭐️</span>
+   </view>
+    <button type="warn" bindtap="warn">预订</button>
+   </view>
+   </view>
 </view>

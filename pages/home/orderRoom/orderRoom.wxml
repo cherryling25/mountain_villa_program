@@ -3,7 +3,7 @@
   <view class="weui-flex__item">
     <view class="placeholder">
     <navigator url="./roomDetails/roomDetails">
-      <image src="../../../images/fengjing.jpg" class="flex_img"></image>
+      <image src="../../../images/beijing1.jpg" class="flex_img"></image>
       <span>标间 ･ 1卧1床1卫</span>
       <view class="price">¥268 每晚</view>
       </navigator>
@@ -37,7 +37,7 @@
   <view class="weui-flex__item">
     <view class="placeholder">
     <navigator url="./orderRoom/orderRoom">
-     <image src="../../../images/fengjing.jpg" class="flex_img"></image>
+     <image src="../../../images/beijing1.jpg" class="flex_img"></image>
     <span>标间 ･ 1卧1床1卫</span>
     <view class="price">¥268 每晚</view> 
     </navigator>

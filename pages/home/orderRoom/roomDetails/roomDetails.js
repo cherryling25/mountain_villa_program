@@ -13,9 +13,26 @@ Page({
     indicatorDots: true,
     autoplay: true,
     interval: 3000,
-    duration: 500
+    duration: 500,
+
+    //日历
+      dayStyle: [
+        { month: 'current', day: new Date().getDate(), color: 'white', background: '#AAD4F5' },
+        { month: 'current', day: new Date().getDate(), color: 'white', background: '#AAD4F5' }
+      ],
   },
 
+  //给点击的日期设置一个背景颜色
+  dayClick: function (event) {
+    let clickDay = event.detail.day;
+    let changeDay = `dayStyle[1].day`;
+    let changeBg = `dayStyle[1].background`;
+    this.setData({
+      [changeDay]: clickDay,
+      [changeBg]: "#84e7d0"
+    })
+
+  },
   /**
    * Lifecycle function--Called when page load
    */

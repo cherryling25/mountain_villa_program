@@ -40,8 +40,8 @@
 
 span {
   display: -webkit-flex;
-  width: 120rpx;
-  margin-left: 65rpx;
+  width: 90rpx;
+  margin-left: 75rpx;
   margin-top: -30rpx;
   border: 0px solid green;
 }

@@ -1,18 +1,11 @@
-// pages/home/home.js
-
-
-
+// pages/home/receiveCoupon/receiveCoupon.js
 Page({
+
+  /**
+   * Page initial data
+   */
   data: {
-    imgUrls: [
-      '../../images/tu.png',
-      '../../images/1.png',
-      'https://images.unsplash.com/photo-1551446591-142875a901a1?w=640'
-    ],
-    indicatorDots: true,
-    autoplay: true,
-    interval: 3000,
-    duration: 500
+
   },
 
   /**
