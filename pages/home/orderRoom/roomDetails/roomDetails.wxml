@@ -11,6 +11,7 @@
 </view>
 
 <!--输入框-->
+<!--
 <view class="weui-flex">
   <view class="weui-flex__item">
     <view class="placeholder">
@@ -19,9 +20,9 @@
         <input placeholder="入住日期" placeholder-style="width:60px;" type="date"/>
       </view>
     </view>
-    <!--日历-->
-    <!--<calendar calendar-style="calendar1"  header-style="calendar-header1"  board-style="calendar-board1"
- days-color="{{dayStyle}}" weeks-type="cn" binddayClick="dayClick"/>-->
+    
+   <calendar calendar-style="calendar1"  header-style="calendar-header1"  board-style="calendar-board1"
+ days-color="{{dayStyle}}" weeks-type="cn" binddayClick="dayClick"/>
   </view>
 
   <view class="weui-flex__item">
@@ -33,7 +34,7 @@
     </view>
   </view>
 
-</view>
+</view>-->
 
  <!--房屋介绍-->
 <view class="introduce">
@@ -74,7 +75,7 @@
     <span class="span1">¥ 259 每晚</span>
     <span>⭐️⭐️⭐️</span>
    </view>
-    <button type="warn" bindtap="warn">预订</button>
+    <button type="warn" bindtap="warnButton">查看可订时期</button>
    </view>
    </view>
 </view>

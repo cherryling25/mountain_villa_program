@@ -33,6 +33,12 @@ Page({
     })
 
   },
+
+  warnButton: function(){
+    wx.navigateTo({
+      url: './orderRoomInformation/orderRoomInformation',
+    })
+  },
   /**
    * Lifecycle function--Called when page load
    */

@@ -1,0 +1,5 @@
+/* pages/home/orderRoom/roomDetails/orderRoomInformation/orderRoomInformation.wxss */
+page{
+  /*background:linear-gradient(-90deg,rgb(45, 228, 142),rgb(50, 223, 254));*/
+  background:linear-gradient(-90deg,#2980B9,#6DD5FA,#FFFFFF);
+}

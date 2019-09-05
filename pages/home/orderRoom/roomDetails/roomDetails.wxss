@@ -114,7 +114,7 @@ button{
   margin-top: 20rpx;
   margin-left: 29rpx;
   font-size: 14px;
-  height: 900rpx;
+  height: 700rpx;
 }
 
 .text{

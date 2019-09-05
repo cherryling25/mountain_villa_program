@@ -40,22 +40,3 @@
   </view>
 </view>
 
-
-<!--列表-->
-<view class="list_title">山庄介绍</view>
-        <view class="weui-cells weui-cells_after-title">
-            <view class="weui-cell weui-cell_example ">
-                <view class="weui-cell__hd">
-                    <image src="/images/head_img.png" style="margin-right: 16px;vertical-align: middle;width:20px; height: 20px;"></image>
-                </view>
-                <view class="weui-cell__bd">标题文字</view>
-                <view class="weui-cell__ft">说明文字</view>
-            </view>
-            <view class="weui-cell weui-cell_example ">
-                <view class="weui-cell__hd">
-                    <image src="{{icon}}" style="margin-right: 16px;vertical-align: middle;width:20px; height: 20px;"></image>
-                </view>
-                <view class="weui-cell__bd">标题文字</view>
-                <view class="weui-cell__ft">说明文字</view>
-            </view>
-        </view>
