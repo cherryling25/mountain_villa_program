@@ -1,0 +1,68 @@
+/* pages/home/story/story.wxss */
+
+page {
+  height: 100%;
+}
+
+.img-bg {	
+  position: fixed;
+  filter: blur(10px);
+}
+
+.content {	
+  background-color:rgba(0,0,0,0.4); 
+  color: white;
+  position: absolute;
+    left:0;
+    top:0;
+    text-align: center;
+}
+
+.title {
+  margin: 20rpx auto;
+  font-weight: bold;
+  font-size: 18px;
+  width: 255rpx;
+  border: 0px solid beige;
+}
+
+.underline {
+  border-top: 2px solid white;
+  width: 130rpx;
+  margin: 40rpx auto 0 auto;
+ 
+}
+
+.title1 {
+  margin: 45rpx auto;
+  width: 560rpx;
+  border: 0px solid beige;
+}
+
+.border {
+  border: 0px solid white;
+  margin: 45rpx;
+}
+
+.img{
+  width: 650rpx;
+}
+
+.text{
+  background-color: white;
+  width: 650rpx;
+  margin: -15rpx auto 0 auto;
+  
+}
+
+.text_title{
+  color: green;
+  padding-top: 20rpx;
+}
+
+.text .wenzi{
+  font-size: 14px;
+    line-height: 1.7;
+    color: #484848;
+    padding: 20rpx;
+}

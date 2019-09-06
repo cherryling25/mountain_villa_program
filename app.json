@@ -1,8 +1,8 @@
 {
   "pages": [
+    "pages/home/story/story",
     "pages/home/home",
     "pages/home/orderRoom/roomDetails/orderRoomInformation/orderRoomInformation",
-    
     "pages/home/orderRoom/roomDetails/roomDetails",
     "pages/home/orderRoom/orderRoom",
     "pages/myPage/my",
