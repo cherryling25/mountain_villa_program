@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/home/story/story",
     "pages/home/home",
+    "pages/home/story/story",
     "pages/home/orderRoom/roomDetails/orderRoomInformation/orderRoomInformation",
     "pages/home/orderRoom/roomDetails/roomDetails",
     "pages/home/orderRoom/orderRoom",
@@ -12,8 +12,9 @@
     "pages/index/index",
     "pages/register/register",
     "pages/home/orderFood/orderFood",
-    "pages/home/receiveCoupon/receiveCoupon"
-    
+    "pages/home/receiveCoupon/receiveCoupon",
+    "pages/home/story/story1/story1",
+    "pages/home/recommend/recommend"
   ],
   "window": {
     "backgroundTextStyle": "light",

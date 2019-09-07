@@ -54,7 +54,7 @@
 
   <view class="weui-flex__item">
     <view class="content">
-    <navigator url="./orderRoom/orderRoom">
+    <navigator url="./story/story1/story1">
      <image src="../../images/beijing1.jpg" class="flex1_img"></image>
     
     </navigator>
