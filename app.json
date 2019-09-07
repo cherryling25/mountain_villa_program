@@ -1,20 +1,20 @@
 {
   "pages": [
     "pages/home/home",
-    "pages/home/story/story",
-    "pages/home/orderRoom/roomDetails/orderRoomInformation/orderRoomInformation",
-    "pages/home/orderRoom/roomDetails/roomDetails",
-    "pages/home/orderRoom/orderRoom",
+    "pages/discover/story/story",
+    "pages/discover/orderRoom/roomDetails/orderRoomInformation/orderRoomInformation",
+    "pages/discover/orderRoom/roomDetails/roomDetails",
+    "pages/discover/orderRoom/orderRoom",
     "pages/myPage/my",
     "pages/myPage/coupon",
     "pages/myPage/booking",
-    "pages/order/order",
     "pages/index/index",
     "pages/register/register",
-    "pages/home/orderFood/orderFood",
-    "pages/home/receiveCoupon/receiveCoupon",
-    "pages/home/story/story1/story1",
-    "pages/home/recommend/recommend"
+    "pages/discover/orderFood/orderFood",
+    "pages/discover/receiveCoupon/receiveCoupon",
+    "pages/discover/story/story1/story1",
+    "pages/discover/recommend/recommend",
+    "pages/discover/discover"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -25,12 +25,7 @@
   "sitemapLocation": "sitemap.json",
   "tabBar": {
     "list": [
-      {
-        "pagePath": "pages/index/index",
-        "text": "首页",
-        "iconPath": "images/first.png",
-        "selectedIconPath": "images/first1.png"
-      },
+      
       {
         "pagePath": "pages/home/home",
         "text": "首页",
@@ -38,10 +33,10 @@
         "selectedIconPath": "images/first1.png"
       },
       {
-        "pagePath": "pages/order/order",
-        "text": "订单",
-        "iconPath": "images/order.png",
-        "selectedIconPath": "images/order1.png"
+        "pagePath": "pages/discover/discover",
+        "text": "发现",
+        "iconPath": "images/discover.png",
+        "selectedIconPath": "images/discover1.png"
       },
       {
         "pagePath": "pages/myPage/my",

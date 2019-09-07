@@ -1,95 +1,74 @@
-/* pages/home/home.wxss */
-
-.wx-swiper-dots {
-  position: relative;
-  left: unset !important;
-  right: 0;
+/* pages/discover/discover.wxss */
+page {
+  height: 100%;
 }
 
-.wx-swiper-dots.wx-swiper-dots-horizontal {
-  margin-bottom: -5rpx;
+.img-bg {	
+  position: fixed;
+  filter: blur(10px);
 }
 
-.weui-padding-wrap {
-  width: 750rpx;
-  padding: 0;
+.content {	
+  background-color:rgba(0,0,0,0.4); 
+  color: white;
+  position: absolute;
+    left:0;
+    top:0;
+    text-align: center;
 }
 
-.image-content {
-  width: 100%;
+.title {
+  margin: 20rpx auto;
+  font-weight: bold;
+  font-size: 18px;
+  width: 255rpx;
+  border: 0px solid beige;
 }
 
-.img {
-  width: 750rpx;
+.underline {
+  border-top: 2px solid white;
+  width: 130rpx;
+  margin: 40rpx auto 0 auto;
+ 
 }
 
-
-/*图标*/
-.placeholder {
-  margin: 5px;
-  padding: 0 5px;
-  text-align: center;
-  /*border-radius: 50%;
-    background-color: #f7dede;*/
-  height: 4em;
-  line-height: 2.3em;
-  color: #262427d8;
-  border: 0px solid green;
-  font-size: 12px;
+.title1 {
+  margin: 45rpx auto;
+  width: 560rpx;
+  border: 0px solid beige;
 }
 
-span {
-  display: -webkit-flex;
-  width: 90rpx;
-  margin-left: 75rpx;
-  margin-top: -30rpx;
-  border: 0px solid green;
-}
-
-.weui-flex {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: flex;
-  margin: 5px 0;
-}
-
-.weui-flex__item {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-  flex: 1;
-}
-
-.flex_img {
-  width: 60rpx;
-  height: 60rpx;
-  border: 0px solid red;
+.title2 {
+  margin: 95rpx auto 45rpx auto;
+  width: 560rpx;
+  border: 0px solid beige;
 }
 
 
-/*山庄介绍*/
-.title{
-  margin-top: 50rpx;
-  margin-left: 40rpx;
+.border {
+  border: 0px solid white;
+  margin: 45rpx;
 }
 
-.content{
-  margin: 5px;
-  border: 0px solid red;
-  font-size: 0;
+.img{
+  width: 650rpx;
 }
 
-.flex1_img{
-  width: 350rpx;
-  height: 300rpx;
-  border-radius: 5px;
-
+.text{
+  background-color: white;
+  width: 650rpx;
+  margin: -15rpx auto 0 auto;
+  
 }
 
-/*视频*/
-.tc{
-  width: 750rpx;
+.text_title{
+  color: green;
+  padding-top: 20rpx;
 }
-video{
-  width: 93%;
-  margin-left: 25rpx;
+
+.text .wenzi{
+  font-size: 14px;
+    line-height: 1.7;
+    color: #484848;
+    padding: 20rpx 20rpx 40rpx 20rpx;
 }

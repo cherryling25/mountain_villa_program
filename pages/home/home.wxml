@@ -1,94 +1,36 @@
-<!--pages/home/home.wxml-->
-<!--轮播-->
-<view class="weui-padding-wrap">
-  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-    <block wx:for="{{imgUrls}}" wx:key="index" class="img_content">
-      <swiper-item>
-        <image src="{{item}}" class="slide-image" class="img" />
-      </swiper-item>
-    </block>
-  </swiper>
-</view>
+<!--pages/discover/discover.wxml-->
+<image class="img-bg" src="/images/beijing1.jpg" style='width:100%;min-height:100%;background-size:100% 100%;'></image>
+<view class="content">
+  <view class="title">湖南竟有如此不可思议的地方</view>
+  <view class="underline"></view>
 
-<!--图标-->
-<view class="weui-flex">
-  <view class="weui-flex__item">
-    <view class="placeholder">
-    <navigator url="./orderFood/orderFood">
-      <image src="../../images/order_food.png" class="flex_img"></image>
-      <span> 订 餐</span> 
-      </navigator>
+  <!--第一个图文-->
+  <view class="title1">
+    周末到了，要过一个怎样的夜晚呢？粗旷还是精致、热闹还是安静？从南洋到英伦，从精酿到鸡尾酒，总能找到一间酒吧称你的心情。
+  </view>
+  <view class="underline"></view>
+  <view class="border">
+    <image src="/images/tu.png" class="img"></image>
+    <view class="text">
+      <view class="text_title">武侠江湖气息的鸡尾酒吧</view>
+      <view class="wenzi">在rong bar 喝酒的时候，感受到了仪式感。 走过一条长长的隧道阶梯，打开一个民国南洋风格的复古的空间。酒吧除了供应classical cocktail和whisky之外，原创鸡尾酒也很有趣，一系列以古典诗词命名的酒名，颇有笑傲江湖的氛围。
+      </view>
     </view>
   </view>
 
-  <view class="weui-flex__item">
-    <view class="placeholder">
-    <navigator url="./orderRoom/orderRoom">
-     <image src="../../images/order_room.png" class="flex_img"></image>
-    <span> 订 房</span> 
-    </navigator>
-    </view>
+  <!--第二个图文-->
+  <view class="title2">
+    周末到了，要过一个怎样的夜晚呢？粗旷还是精致、热闹还是安静？从南洋到英伦，从精酿到鸡尾酒，总能找到一间酒吧称你的心情。
   </view>
-  
-  <view class="weui-flex__item">
-    <view class="placeholder">
-    <navigator url="./receiveCoupon/receiveCoupon">
-     <image src="../../images/home_coupon.png" class="flex_img"></image>
-    <span>优惠劵</span>
-    </navigator> 
-    </view>
-  </view>
-</view>
-
-<!--山庄介绍  故事集-->
-<view class="title">故事集</view>
-<view class="weui-flex">
-  <view class="weui-flex__item">
-    <view class="content">
-    <navigator url="./story/story">
-      <image src="../../images/beijing1.jpg" class="flex1_img"></image>
-      
-      </navigator>
+  <view class="underline"></view>
+  <view class="border">
+    <image src="/images/tu.png" class="img"></image>
+    <view class="text">
+      <view class="text_title">武侠江湖气息的鸡尾酒吧</view>
+      <view class="wenzi">在rong bar 喝酒的时候，感受到了仪式感。 走过一条长长的隧道阶梯，打开一个民国南洋风格的复古的空间。酒吧除了供应classical cocktail和whisky之外，原创鸡尾酒也很有趣，一系列以古典诗词命名的酒名，颇有笑傲江湖的氛围。
+      </view>
     </view>
   </view>
 
-  <view class="weui-flex__item">
-    <view class="content">
-    <navigator url="./story/story1/story1">
-     <image src="../../images/beijing1.jpg" class="flex1_img"></image>
-    
-    </navigator>
-    </view>
-  </view>
-  
-</view>
 
-<!--山庄介绍  推荐-->
-<view class="title">推荐</view>
-<view class="weui-flex">
-  <view class="weui-flex__item">
-    <view class="content">
-    <navigator url="./orderFood/orderFood">
-      <image src="../../images/beijing1.jpg" class="flex1_img"></image>
-      
-      </navigator>
-    </view>
-  </view>
-
-  <view class="weui-flex__item">
-    <view class="content">
-    <navigator url="./orderRoom/orderRoom">
-     <image src="../../images/beijing1.jpg" class="flex1_img"></image>
-    
-    </navigator>
-    </view>
-  </view>
-  
-</view>
-
-
-<!--视频-->
-<view class="section tc">
-  <video id="myVideo" src="{{src}}" enable-danmu controls enable-play-gesture="true"></video>
-  
 </view>
