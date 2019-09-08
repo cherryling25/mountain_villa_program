@@ -1,4 +1,4 @@
-// pages/home/recommend/recommend.js
+// pages/service/introduce/introduce.js
 Page({
 
   /**

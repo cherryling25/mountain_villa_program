@@ -1,4 +1,4 @@
-<!--pages/home/orderRoom/roomDetails/roomDetails.wxml-->
+<!--pages/service/orderRoom/roomDetails/roomDetails.wxml-->
 <!--轮播-->
 <view class="weui-padding-wrap">
   <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">

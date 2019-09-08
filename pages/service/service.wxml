@@ -23,7 +23,7 @@
 
   <view class="weui-flex__item">
     <view class="placeholder">
-    <navigator url="./discover/orderRoom/orderRoom">
+    <navigator url="./orderRoom/orderRoom">
      <image src="../../images/order_room.png" class="flex_img"></image>
     <span> 订 房</span> 
     </navigator>
@@ -45,7 +45,7 @@
 <view class="weui-flex">
   <view class="weui-flex__item">
     <view class="content">
-    <navigator url="./story/story">
+    <navigator url="./introduce/introduce">
       <image src="../../images/beijing1.jpg" class="flex1_img"></image>
       </navigator>
     </view>
@@ -57,7 +57,7 @@
 <view class="weui-flex">
   <view class="weui-flex__item">
     <view class="content">
-    <navigator url="./orderFood/orderFood">
+    <navigator url="./introduce/introduce">
       <image src="../../images/beijing1.jpg" class="flex1_img"></image>
       </navigator>
     </view>
@@ -69,7 +69,7 @@
 <view class="weui-flex">
   <view class="weui-flex__item">
     <view class="content">
-    <navigator url="./orderFood/orderFood">
+    <navigator url="./introduce/introduce">
       <image src="../../images/beijing1.jpg" class="flex1_img"></image>
       </navigator>
     </view>

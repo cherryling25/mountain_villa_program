@@ -1,21 +1,21 @@
 {
   "pages": [
+    "pages/service/service",
     "pages/discover/discover",
     "pages/home/home",
     "pages/discover/story/story",
-    "pages/discover/orderRoom/roomDetails/orderRoomInformation/orderRoomInformation",
-    "pages/discover/orderRoom/roomDetails/roomDetails",
-    "pages/discover/orderRoom/orderRoom",
+    "pages/service/orderRoom/roomDetails/orderRoomInformation/orderRoomInformation",
+    "pages/service/orderRoom/roomDetails/roomDetails",
+    "pages/service/orderRoom/orderRoom",
     "pages/myPage/my",
     "pages/myPage/coupon",
     "pages/myPage/booking",
     "pages/index/index",
     "pages/register/register",
-    "pages/discover/orderFood/orderFood",
-    "pages/discover/receiveCoupon/receiveCoupon",
+    "pages/service/orderFood/orderFood",
+    "pages/service/receiveCoupon/receiveCoupon",
     "pages/discover/story/story1/story1",
-    "pages/discover/recommend/recommend",
-    "pages/service/service"
+    "pages/service/introduce/introduce"
   ],
   "window": {
     "backgroundTextStyle": "light",
