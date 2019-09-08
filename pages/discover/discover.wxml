@@ -1,94 +1,40 @@
 <!--pages/home/home.wxml-->
-<!--轮播-->
-<view class="weui-padding-wrap">
-  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-    <block wx:for="{{imgUrls}}" wx:key="index" class="img_content">
-      <swiper-item>
-        <image src="{{item}}" class="slide-image" class="img" />
-      </swiper-item>
-    </block>
-  </swiper>
-</view>
+<!--图片-->
+<image src="{{imgurl}}" class="img" />
 
-<!--图标-->
-<view class="weui-flex">
-  <view class="weui-flex__item">
-    <view class="placeholder">
-    <navigator url="./orderFood/orderFood">
-      <image src="../../images/order_food.png" class="flex_img"></image>
-      <span> 订 餐</span> 
-      </navigator>
-    </view>
-  </view>
-
-  <view class="weui-flex__item">
-    <view class="placeholder">
-    <navigator url="./orderRoom/orderRoom">
-     <image src="../../images/order_room.png" class="flex_img"></image>
-    <span> 订 房</span> 
-    </navigator>
-    </view>
-  </view>
-  
-  <view class="weui-flex__item">
-    <view class="placeholder">
-    <navigator url="./receiveCoupon/receiveCoupon">
-     <image src="../../images/home_coupon.png" class="flex_img"></image>
-    <span>优惠劵</span>
-    </navigator> 
-    </view>
-  </view>
-</view>
-
-<!--山庄介绍  故事集-->
-<view class="title">故事集</view>
+<!--故事集-->
+<view class="title">标题1</view>
 <view class="weui-flex">
   <view class="weui-flex__item">
     <view class="content">
     <navigator url="./story/story">
       <image src="../../images/beijing1.jpg" class="flex1_img"></image>
-      
       </navigator>
-    </view>
-  </view>
-
-  <view class="weui-flex__item">
-    <view class="content">
-    <navigator url="./story/story1/story1">
-     <image src="../../images/beijing1.jpg" class="flex1_img"></image>
-    
-    </navigator>
     </view>
   </view>
   
 </view>
 
-<!--山庄介绍  推荐-->
-<view class="title">推荐</view>
+<view class="title">标题2</view>
 <view class="weui-flex">
   <view class="weui-flex__item">
     <view class="content">
     <navigator url="./orderFood/orderFood">
       <image src="../../images/beijing1.jpg" class="flex1_img"></image>
-      
       </navigator>
     </view>
   </view>
 
-  <view class="weui-flex__item">
-    <view class="content">
-    <navigator url="./orderRoom/orderRoom">
-     <image src="../../images/beijing1.jpg" class="flex1_img"></image>
-    
-    </navigator>
-    </view>
-  </view>
-  
 </view>
 
+<view class="title">标题3</view>
+<view class="weui-flex">
+  <view class="weui-flex__item">
+    <view class="content">
+    <navigator url="./orderFood/orderFood">
+      <image src="../../images/beijing1.jpg" class="flex1_img"></image>
+      </navigator>
+    </view>
+  </view>
 
-<!--视频-->
-<view class="section tc">
-  <video id="myVideo" src="{{src}}" enable-danmu controls enable-play-gesture="true"></video>
-  
 </view>

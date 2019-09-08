@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/discover/discover",
     "pages/home/home",
     "pages/discover/story/story",
     "pages/discover/orderRoom/roomDetails/orderRoomInformation/orderRoomInformation",
@@ -14,7 +15,7 @@
     "pages/discover/receiveCoupon/receiveCoupon",
     "pages/discover/story/story1/story1",
     "pages/discover/recommend/recommend",
-    "pages/discover/discover"
+    "pages/service/service"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -25,7 +26,6 @@
   "sitemapLocation": "sitemap.json",
   "tabBar": {
     "list": [
-      
       {
         "pagePath": "pages/home/home",
         "text": "首页",
@@ -37,6 +37,12 @@
         "text": "发现",
         "iconPath": "images/discover.png",
         "selectedIconPath": "images/discover1.png"
+      },
+      {
+        "pagePath": "pages/service/service",
+        "text": "服务",
+        "iconPath": "images/service.png",
+        "selectedIconPath": "images/service1.png"
       },
       {
         "pagePath": "pages/myPage/my",
