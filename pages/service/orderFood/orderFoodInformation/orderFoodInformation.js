@@ -1,16 +1,29 @@
-// pages/home/orderFood/orderFood.js
+// pages/service/orderFood/orderFoodInformation/orderFoodInformation.js
 Page({
 
   /**
    * Page initial data
    */
   data: {
-    imgurl:
-      'https://images.unsplash.com/photo-1551446591-142875a901a1?w=640'
+    inputValue: '',
+    date: '2019-09-11',  //默认为当天的日期
+    time: ''  //默认为当天的时间
   },
-  booking(){
-    wx.navigateTo({
-      url: './orderFoodInformation/orderFoodInformation'
+  bindKeyInput: function (e) {
+    this.setData({
+      inputValue: e.detail.value
+    })
+  },
+  bindDateChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      date: e.detail.value
+    })
+  },
+  bindTimeChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      time: e.detail.value
     })
   },
   /**

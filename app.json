@@ -1,5 +1,7 @@
 {
   "pages": [
+    "pages/service/orderFood/orderFoodInformation/orderFoodInformation",
+    "pages/service/orderFood/orderFood",
     "pages/service/service",
     "pages/discover/discover",
     "pages/home/home",
@@ -12,10 +14,10 @@
     "pages/myPage/booking",
     "pages/index/index",
     "pages/register/register",
-    "pages/service/orderFood/orderFood",
     "pages/service/receiveCoupon/receiveCoupon",
     "pages/discover/story/story1/story1",
     "pages/service/introduce/introduce"
+    
   ],
   "window": {
     "backgroundTextStyle": "light",

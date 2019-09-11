@@ -1,2 +1,50 @@
 <!--pages/service/orderFood/orderFood.wxml-->
-<text>pages/service/orderFood/orderFood.wxml</text>
+<!--图片-->
+<image src="{{imgurl}}" class="img" />
+
+<!--预定餐位-->
+<view class="title">餐位预订</view>
+
+  <view class="title1">大厅</view>
+<view class="weui-flex">
+
+  <view class="weui-flex__item">
+    <view class="content">
+      <image src="../../../images/beijing1.jpg" class="flex1_img"></image>
+    </view>
+
+    <view class="text">
+        1 - 4 人
+    </view>
+    <view class="btn" bindtap="booking">立即预订</view>
+  </view>
+  
+  <view class="weui-flex__item">
+    <view class="content">
+      <image src="../../../images/beijing1.jpg" class="flex1_img"></image>
+    </view>
+
+
+    <view class="text">
+        1 - 4 人
+    </view>
+      <view class="btn1">已订满</view>
+  </view>
+
+</view>
+
+
+<view class="weui-flex">
+  <view class="weui-flex__item">
+    <view class="content">
+      <image src="../../../images/beijing1.jpg" class="flex1_img"></image>
+    </view>
+  </view>
+
+  <view class="weui-flex__item">
+    <view class="content">
+      <image src="../../../images/beijing1.jpg" class="flex1_img"></image>
+    </view>
+  </view>
+
+</view>

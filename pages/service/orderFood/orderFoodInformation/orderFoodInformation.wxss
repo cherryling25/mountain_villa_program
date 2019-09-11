@@ -1,0 +1,58 @@
+/* pages/service/orderFood/orderFoodInformation/orderFoodInformation.wxss */
+page{
+  background: whitesmoke;
+}
+
+.wrap{
+  margin: 40rpx 20rpx;
+}
+
+.flex_img {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.title{
+  margin-left: 80rpx;
+  margin-top: -70rpx;
+  font-size: 18px;
+}
+
+.text1{
+  padding: 18rpx 0 0 0;
+}
+
+.text{
+  padding: 10rpx 0;
+}
+
+.hr{
+  border-bottom: 4px solid rgb(228, 227, 227);
+  margin-top: 30rpx;
+}
+
+/*就餐人信息*/
+.content{
+  margin: 40rpx 0 0 0;
+}
+
+input{
+  border-bottom: 1px solid rgb(133, 128, 128);
+  padding: 27rpx 0;
+}
+
+.holder{
+  color: rgb(197, 196, 196);
+
+}
+
+button{
+  margin:60rpx 40rpx;
+}
+
+.wran{
+  font-size: 13px;
+}
+.wran span{
+  color: red;
+}
