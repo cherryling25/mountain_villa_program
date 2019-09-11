@@ -1,9 +1,10 @@
 /* pages/service/orderFood/orderFoodInformation/orderFoodInformation.wxss */
-page{
+
+page {
   background: whitesmoke;
 }
 
-.wrap{
+.wrap {
   margin: 40rpx 20rpx;
 }
 
@@ -12,47 +13,79 @@ page{
   height: 60rpx;
 }
 
-.title{
+.title {
   margin-left: 80rpx;
   margin-top: -70rpx;
   font-size: 18px;
 }
 
-.text1{
+.text1 {
   padding: 18rpx 0 0 0;
 }
 
-.text{
+.text {
   padding: 10rpx 0;
 }
 
-.hr{
+.hr {
   border-bottom: 4px solid rgb(228, 227, 227);
   margin-top: 30rpx;
 }
 
 /*就餐人信息*/
-.content{
-  margin: 40rpx 0 0 0;
+
+.content {
+  margin: 20rpx 0 0 0;
 }
 
-input{
-  border-bottom: 1px solid rgb(133, 128, 128);
-  padding: 27rpx 0;
+/*最后 input 的线，自己写的样式*/
+.xian{
+  width: 672rpx;
+  border: 0.1px solid rgba(0, 0, 0, 0.1);
+  margin-left: 37rpx;
 }
 
-.holder{
+/*箭头*/
+.weui-cell__ft_in-access {
+  padding-right: 470rpx;
+  position: relative;
+}
+
+.weui-cell__ft_in-access1 {
+  padding-right: 560rpx;
+  position: relative;
+}
+
+.weui-cell__ft_in-access1:after {
+  content: " ";
+  display: inline-block;
+  height: 8px;
+  width: 8px;
+  border-width: 2px 2px 0 0;
+  border-color: #b2b2b2;
+  border-style: solid;
+  -webkit-transform: matrix(0.71, 0.71, -.71, 0.71, 0, 0);
+  transform: matrix(0.71, 0.71, -.71, 0.71, 0, 0);
+  position: absolute;
+  top: 50%;
+  margin-top: -5px;
+  right: 0;
+}
+
+/*input 样式*/
+
+.holder {
   color: rgb(197, 196, 196);
-
 }
 
-button{
-  margin:60rpx 40rpx;
+button {
+  margin: 60rpx 40rpx;
 }
 
-.wran{
+.wran {
   font-size: 13px;
 }
-.wran span{
+
+.wran span {
   color: red;
 }

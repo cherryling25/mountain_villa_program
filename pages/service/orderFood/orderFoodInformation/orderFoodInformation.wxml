@@ -12,34 +12,42 @@
 
   <!--就餐人信息-->
   <view class="content">
-    <image src="../../../../images/food.png" class="flex_img"></image>
-    <view class="title">就餐人信息</view>
 
     <!--input-->
-    <picker mode="date" value="{{date}}" start="2019-09-11" end="2029-09-01" bindchange="bindDateChange">
-    <view class="picker">
-      <input type="number" value="{{date}}" placeholder-class="holder" bindinput="bindKeyInput" placeholder="选择时间" />
+    <view class="weui-cell ">
+      <picker mode="date" value="{{date}}" start="2019-09-11" end="2029-09-01" bindchange="bindDateChange">
+        <view class="weui-input weui-cell__ft_in-access">{{date}}</view>
+      </picker>
     </view>
-  </picker>
-  
-    <picker mode="time" value="{{time}}" start="09:01" end="21:01" 
-    bindchange="bindTimeChange">
-    <view class="picker">
-      <input type="number" value="{{time}}" placeholder-class="holder" bindinput="bindKeyInput" 
-      placeholder="选择时间" />
+
+    <view class="weui-cell ">
+      <picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+        <view class="weui-input weui-cell__ft_in-access1">{{time}}</view>
+      </picker>
     </view>
-  </picker>
-  
 
-    <input type="number" placeholder-class="holder" bindinput="bindKeyInput" placeholder="就餐人数" />
-    <input type="text" placeholder-class="holder" bindinput="bindKeyInput" placeholder="联系人" />
-    <input type="number" placeholder-class="holder" bindinput="bindKeyInput" placeholder="联系人手机号" />
+    
+    <view class="weui-cell ">
+      <input type="number" placeholder-class="holder" bindinput="bindKeyInput" placeholder="就餐人数" />
+    </view>
 
-  <!--提交-->
-  <button type="primary">预订</button>
+    <view class="weui-cell ">
+      <input type="text" placeholder-class="holder" bindinput="bindKeyInput" placeholder="联系人" />
+    </view>
 
-  <view class="wran"><span>温馨提示：</span>预订后本座位只预留1小时，若1小时未到店，将自动释放，敬请谅解！</view>
-  </view><!--content-->
-  
+    <view class="weui-cell">
+      <input type="number" placeholder-class="holder" bindinput="bindKeyInput" placeholder="联系人手机号" />
+    </view>
+    <view class="xian"></view>
 
-</view><!--wrap-->
+    <!--提交-->
+    <button type="primary">预订</button>
+
+    <view class="wran">
+      <span>温馨提示：</span>预订后本座位只预留1小时，若1小时未到店，将自动释放，敬请谅解！</view>
+  </view>
+  <!--content-->
+
+
+</view>
+<!--wrap-->

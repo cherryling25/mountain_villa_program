@@ -7,7 +7,7 @@ Page({
   data: {
     inputValue: '',
     date: '2019-09-11',  //默认为当天的日期
-    time: ''  //默认为当天的时间
+    time: '12:00'  //默认为当天的时间
   },
   bindKeyInput: function (e) {
     this.setData({
