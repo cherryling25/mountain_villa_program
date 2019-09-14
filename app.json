@@ -1,10 +1,11 @@
 {
   "pages": [
+    "pages/home/home",
     "pages/service/orderFood/orderFoodInformation/orderFoodInformation",
     "pages/service/orderFood/orderFood",
     "pages/service/service",
     "pages/discover/discover",
-    "pages/home/home",
+    
     "pages/discover/story/story",
     "pages/service/orderRoom/roomDetails/orderRoomInformation/orderRoomInformation",
     "pages/service/orderRoom/roomDetails/roomDetails",
