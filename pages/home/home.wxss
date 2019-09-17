@@ -9,6 +9,15 @@ page {
 }
 
 .content {	
+  background-color:#e8eff0; 
+  
+  position: absolute;
+    left:0;
+    top:0;
+    text-align: center;
+}
+/*
+.content {	
   background-color:rgba(0,0,0,0.4); 
   color: white;
   position: absolute;
@@ -16,7 +25,7 @@ page {
     top:0;
     text-align: center;
 }
-
+*/
 .title {
   margin: 20rpx auto;
   font-weight: bold;

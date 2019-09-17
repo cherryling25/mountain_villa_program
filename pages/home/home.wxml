@@ -1,5 +1,5 @@
 <!--pages/discover/discover.wxml-->
-<image class="img-bg" src="/images/beijing1.jpg" style='width:100%;min-height:100%;background-size:100% 100%;'></image>
+<!--<image class="img-bg" src="/images/beijing1.jpg" style='width:100%;min-height:100%;background-size:100% 100%;'></image>-->
 <view class="content">
   <view class="title">湖南竟有如此不可思议的地方</view>
   <view class="underline"></view>

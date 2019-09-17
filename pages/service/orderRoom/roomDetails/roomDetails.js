@@ -35,7 +35,7 @@ Page({
   },
 
   warnButton: function(){
-    wx.navigateTo({
+    wx.redirectTo({
       url: './orderRoomInformation/orderRoomInformation',
     })
   },

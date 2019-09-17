@@ -1,15 +1,16 @@
 {
   "pages": [
     "pages/home/home",
+    "pages/service/orderRoom/orderRoom",
+    "pages/service/orderRoom/roomDetails/orderRoomInformation/orderRoomInformation",
+    
     "pages/service/orderFood/orderFoodInformation/orderFoodInformation",
     "pages/service/orderFood/orderFood",
     "pages/service/service",
     "pages/discover/discover",
-    
     "pages/discover/story/story",
-    "pages/service/orderRoom/roomDetails/orderRoomInformation/orderRoomInformation",
     "pages/service/orderRoom/roomDetails/roomDetails",
-    "pages/service/orderRoom/orderRoom",
+    
     "pages/myPage/my",
     "pages/myPage/coupon",
     "pages/myPage/booking",

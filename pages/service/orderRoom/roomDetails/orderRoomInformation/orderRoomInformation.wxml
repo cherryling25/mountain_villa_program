@@ -1,2 +1,32 @@
 <!--pages/service/orderRoom/roomDetails/orderRoomInformation/orderRoomInformation.wxml-->
+<view class="content">
+  <!--输入框-->
 
+<view class="weui-flex">
+  <view class="weui-flex__item">
+    <view class="placeholder">
+      <view>
+        <image src="/images/calendar.png" class="flex-img"></image>
+        <input placeholder="入住日期" placeholder-style="width:60px;" type="date"/>
+      </view>
+    </view>
+  </view>
+
+  <view class="weui-flex__item">
+    <view class="placeholder">
+      <view>
+        <image src="/images/calendar.png" class="flex-img"></image>
+        <input placeholder="退房时间" placeholder-style="width:60px;" />
+      </view>
+    </view>
+  </view>
+
+</view>
+
+  <!--日历-->
+  <calendar  calendar-style="calendar"  header-style="calendar-header"  board-style="calendar-board"
+ days-color="{{dayStyle}}" weeks-type="cn" binddayClick="dayClick"
+ />
+
+ <button type="primary" bindtap="save">保存</button>
+</view>

@@ -1,5 +1,54 @@
 /* pages/home/orderRoom/roomDetails/orderRoomInformation/orderRoomInformation.wxss */
-page{
-  /*background:linear-gradient(-90deg,rgb(45, 228, 142),rgb(50, 223, 254));*/
-  background:linear-gradient(-90deg,#2980B9,#6DD5FA,#FFFFFF);
+
+/*输入框*/
+.placeholder {
+  margin: 5px;
+  padding: 5px 5px;
+  text-align: center;
+  /*border-radius: 5px;
+  background-color: #f7dede;*/
+  line-height: 2.3em;
+  color: #262427d8;
+  border: 1px solid green;
+  font-size: 12px;
+}
+
+.weui-flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  margin: 5px 0;
+}
+
+.weui-flex__item {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  border: 0px solid gray;
+
+}
+
+.flex-img{
+  width: 40rpx;
+  height: 40rpx;
+  float: right;
+}
+
+
+/* 日历 */
+.calendar {
+   
+    padding-top: 60rpx; 
+}
+.calendar-header{
+  font-size: large;
+  color: #59518d;
+}
+.calendar-board{
+  color: #c7cbe2;
+   font-weight: bold;
+}
+
+button {
+  margin: 60rpx 40rpx;
 }
