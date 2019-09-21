@@ -6,8 +6,8 @@ Page({
    */
   data: {
     dayStyle: [
-      { month: 'current', day: new Date().getDate(), color: 'white', background: '#AAD4F5' },
-      { month: 'current', day: new Date().getDate(), color: 'white', background: '#AAD4F5' }
+      { month: 'current', day: 20, color: 'white', background: 'red'},
+      { month: 'current', day: 21, color: 'white', background: '#AAD4F5' }
     ]
   },
   //给点击的日期设置一个背景颜色

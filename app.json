@@ -1,8 +1,9 @@
 {
   "pages": [
+    "pages/service/orderRoom/roomDetails/orderRoomInformation/orderRoomInformation",
     "pages/home/home",
     "pages/service/orderRoom/orderRoom",
-    "pages/service/orderRoom/roomDetails/orderRoomInformation/orderRoomInformation",
+    
     
     "pages/service/orderFood/orderFoodInformation/orderFoodInformation",
     "pages/service/orderFood/orderFood",
