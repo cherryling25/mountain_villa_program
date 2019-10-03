@@ -7,7 +7,7 @@ Page({
 
   data: {
     imgUrls: [
-      '../../images/tu.png',
+      '../../images/Wechat2.jpg',
       '../../images/1.png',
       'https://images.unsplash.com/photo-1551446591-142875a901a1?w=640'
     ],

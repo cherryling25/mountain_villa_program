@@ -8,7 +8,7 @@ Page({
 
   data: {
     imgurl: 
-      'https://images.unsplash.com/photo-1551446591-142875a901a1?w=640'
+      '/images/Wechat2.jpg'
     ,
     
     //视频路径
