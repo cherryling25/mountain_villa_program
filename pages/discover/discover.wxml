@@ -7,7 +7,7 @@
 <view class="weui-flex">
   <view class="weui-flex__item">
     <view class="content">
-    <navigator url="./story/story">
+    <navigator url="../../packageA/pages/story/story">
       <image src="../../images/beijing1.jpg" class="flex1_img"></image>
       </navigator>
     </view>

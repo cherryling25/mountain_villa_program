@@ -1,27 +1,11 @@
 {
   "pages": [
+    "pages/myPage/my",
     "pages/home/home",
-    "pages/service/orderRoom/roomDetails/orderRoomInformation/orderRoomInformation",
-    
-    "pages/service/orderRoom/orderRoom",
-    
-    
-    "pages/service/orderFood/orderFoodInformation/orderFoodInformation",
-    "pages/service/orderFood/orderFood",
     "pages/service/service",
     "pages/discover/discover",
-    "pages/discover/story/story",
-    "pages/service/orderRoom/roomDetails/roomDetails",
-    
-    "pages/myPage/my",
-    "pages/myPage/coupon",
-    "pages/myPage/booking",
     "pages/index/index",
-    "pages/register/register",
-    "pages/service/receiveCoupon/receiveCoupon",
-    "pages/discover/story/story1/story1",
-    "pages/service/introduce/introduce"
-    
+    "pages/register/register"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -60,6 +44,30 @@
     "color": "#c09ce2",
     "selectedColor": "#000000"
   },
+  "subpackages": [
+    {
+      "root": "packageA",
+      "pages": [
+        "pages/story/story",
+        "pages/story/story1/story1"
+      ]
+    },
+    {
+      "root": "packageB",
+      "name": "pack2",
+      "pages": [
+        "pages/receiveCoupon/receiveCoupon",
+        "pages/orderFood/orderFood",
+        "pages/orderFood/orderFoodInformation/orderFoodInformation",
+        "pages/orderRoom/orderRoom",
+        "pages/orderRoom/roomDetails/orderRoomInformation/orderRoomInformation",
+        "pages/orderRoom/roomDetails/roomDetails",
+        "pages/introduce/introduce",
+        "pages/coupon",
+        "pages/booking"
+      ]
+    }
+  ],
   "plugins": {
     "calendar": {
       "version": "1.1.0",

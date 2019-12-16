@@ -3,7 +3,7 @@
 <view class="weui-cells weui-cells_after-title">
   <view class="ci">
     <image src="../../images/backed.jpg" class="img" mode="cover"></image>
-    <text class="user-motto">lemon</text>
+    <text class="user-motto">{{userInfo.nickName}}</text>
   </view>
 
   <view class="weui-cell head">
@@ -12,7 +12,7 @@
     </view>
   </view>
 
-  <navigator url="./booking" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+  <navigator url="../../packageB/pages/booking" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
     <view class="weui-cell__hd">
       <image src="../../images/booking.png" style="margin-right: 16px;vertical-align: middle;width:20px; height: 20px;"></image>
     </view>
@@ -20,7 +20,7 @@
     <view class="weui-cell__ft weui-cell__ft_in-access"></view>
   </navigator>
 
-  <navigator url="./coupon" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+  <navigator url="../../packageB/pages/coupon" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
     <view class="weui-cell__hd">
       <image src="../../images/coupon.png" style="margin-right: 16px;vertical-align: middle;width:20px; height: 20px;"></image>
     </view>
