@@ -41,7 +41,7 @@
     <view class="xian"></view>
 
     <!--提交-->
-    <button type="primary">预订</button>
+    <button type="primary" bindtap="booking">预订</button>
 
     <view class="wran">
       <span>温馨提示：</span>预订后本座位只预留1小时，若1小时未到店，将自动释放，敬请谅解！</view>

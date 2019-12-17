@@ -1,15 +1,100 @@
-<!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+<!--pages/discover/discover.wxml-->
+<!--<image class="img-bg" src="/images/beijing1.jpg" style='width:100%;min-height:100%;background-size:100% 100%;'></image>-->
+<view class="content">
+  <view class="title">湖南竟有如此不可思议的地方</view>
+  <view class="underline"></view>
+
+  <!--第一个图文-->
+  <view class="title1">
+    嗨！你造吗？
+    拥有“湖南第一古银杏”称号的，我市东安县南桥镇马皇村的一棵古银杏树荣获“全国十大最美古银杏”称号。
+    
+    <!--对对对，是我是我，在东安县南桥镇马皇村高山中，有一株树去年被中国林业学会评为“全国十大最美古银杏”，是“湖南第一古树王”。
+      经国家林业部门考证，这株古银杏是春秋战国时期当地的古越人所种植，至今树龄已超过2500年。它的胸径有3.84米，东西冠幅20米、南北冠幅22米，树高60米。古银杏只留下外皮，蔸部内空，宽敞得能摆下一个大圆桌。古银杏每年春天郁郁葱葱，秋天挂果时满树金黄，村民每年捡果数百公斤
+      “湖南第一古树王”——位于东安县南桥镇的古银杏树，为春秋时古越人所种，至今已有2500多岁
+      据考究，地处四明山山脉的东安县南桥镇马皇村银杏系 春秋战国时期古越人所栽种，那时候我还小，记不大清楚了，距今约2500年，被称为“湖南第一古银杏”。原树高60余米， 明末清初时遭雷击树杆被拦腰击断，撕裂至根际，树梢架落在距树蔸55米远的山包上，如架天桥。古银杏能挂果千斤，每到果实成熟的时候，全村老少择吉日如欢庆节日般聚集采撷分享白果。附近村民历来视古银杏为“神树”，向古树祭祀祈福，以求吉祥昌瑞。 从湖南省四明山国家森林公园管理处徒步出发大约一个小时路程，可以让你看到湖南省最大的古银杏树，也是全国最美的十大古银杏树之一。
+
+养在深闺人未识
+
+　　银杏是目前地球上最古老的高等植物之一，是我国特有的珍贵树种，具有极高的经济、生态、观赏和科研价值，有“植物大熊猫”、“金色活化石”之称。据考究，东安县南桥镇马皇村银杏系春秋战国时期古越人所栽种，距今约2500年，被称为“湖南第一古银杏”。原树高60余米，明末清初时遭雷击树杆被拦腰击断，撕裂至根际，树梢架落在距树蔸55米远的山包上，如架天桥。
+   
+   世上古树千千万，唯有小杏得我心
+   拥有“湖南第一古银杏“称号的一颗古银杏树在2016年荣获“全国十大最美古银杏”称号
+    我市东安县南桥镇马皇村拥有“湖南第一古银杏荣获“全国十大最美古银杏”称号
+    -->
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+  <view class="underline"></view>
+  <view class="border">
+    <image src="/images/Wechat23.jpg" class="img"></image>
+    <view class="text">
+      <view class="text_title">春日睡醒的我</view>
+      <view class="wenzi">
+
+    古柯不计数人围，叶茂枝孙绿荫肥。世外沧桑阅如幻，开山大定记依稀。
+      <!--在rong bar 喝酒的时候，感受到了仪式感。 走过一条长长的隧道阶梯，打开一个民国南洋风格的复古的空间。酒吧除了供应classical cocktail和whisky之外，原创鸡尾酒也很有趣，一系列以古典诗词命名的酒名，颇有笑傲江湖的氛围。
+     
+出自：清 乾隆 《银杏王》
+
+译文：古树的树干粗壮要好多人一起才能围得住，枝叶茂盛洒下一片绿荫。外面的世界如何沧桑变化，这株银杏还依稀记得当年的模样。 
+咦，我咋还文艺起来了
+
+  我在人间贩卖黄昏，只为收集世间温柔去见你
+-->
+      </view>
+    </view>
   </view>
-  
-  
+
+  <!--第二个图文-->
+  <view class="title2">
+    周末到了，要过一个怎样的夜晚呢？粗旷还是精致、热闹还是安静？从南洋到英伦，从精酿到鸡尾酒，总能找到一间酒吧称你的心情。
+  </view>
+  <view class="underline"></view>
+  <view class="border">
+    <image src="/images/tu.png" class="img"></image>
+    <view class="text">
+      <view class="text_title">夏日也怕热的我</view>
+      <view class="wenzi">
+      
+     
+      </view>
+    </view>
+  </view>
+
+  <!--第三个图文-->
+  <view class="title2">
+    周末到了，要过一个怎样的夜晚呢？粗旷还是精致、热闹还是安静？从南洋到英伦，从精酿到鸡尾酒，总能找到一间酒吧称你的心情。
+  </view>
+  <view class="underline"></view>
+  <view class="border">
+    <image src="/images/tu.png" class="img"></image>
+    <view class="text">
+      <view class="text_title">秋日送礼物的我</view>
+      <view class="wenzi"> 
+      清晨的光芒在我的叶片中跳跃，是温暖的
+      到深秋的时候，秋风就像一个魔术师，在叶上一点，顿时就变成了金黄色。
+      一阵风吹过，我的叶片就会腾空而起，像是五颜六色的蝴蝶四处飘飞，
+      我来伴奏，你来舞
+      又慢慢落在地上，远远望去，像是铺在地上的一块金黄色的大地毯，显得格外漂亮，每年秋天，都能看到这一美景，如果你有机会来，一定不要错过这美景哦！
+      
+
+      </view>
+    </view>
+  </view>
+
+
+  <!--第四个图文-->
+  <view class="title2">
+    周末到了，要过一个怎样的夜晚呢？粗旷还是精致、热闹还是安静？从南洋到英伦，从精酿到鸡尾酒，总能找到一间酒吧称你的心情。
+  </view>
+  <view class="underline"></view>
+  <view class="border">
+    <image src="/images/tu.png" class="img"></image>
+    <view class="text">
+      <view class="text_title">冬季贪睡的我</view>
+      <view class="wenzi">在rong bar 喝酒的时候，感受到了仪式感。 走过一条长长的隧道阶梯，打开一个民国南洋风格的复古的空间。酒吧除了供应classical cocktail和whisky之外，原创鸡尾酒也很有趣，一系列以古典诗词命名的酒名，颇有笑傲江湖的氛围。
+      </view>
+    </view>
+  </view>
+
+
 </view>

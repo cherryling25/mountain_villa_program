@@ -1,11 +1,13 @@
 {
   "pages": [
-    "pages/myPage/my",
-    "pages/home/home",
-    "pages/service/service",
-    "pages/discover/discover",
     "pages/index/index",
+    "pages/authorize/authorize",
+    "pages/service/service",
+    "pages/myPage/my",
+    "pages/discover/discover",
+    
     "pages/register/register"
+    
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -17,7 +19,7 @@
   "tabBar": {
     "list": [
       {
-        "pagePath": "pages/home/home",
+        "pagePath": "pages/index/index",
         "text": "首页",
         "iconPath": "images/first.png",
         "selectedIconPath": "images/first1.png"
