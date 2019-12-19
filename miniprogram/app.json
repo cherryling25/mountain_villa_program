@@ -1,13 +1,12 @@
 {
   "pages": [
+    "pages/service/service",
     "pages/index/index",
     "pages/authorize/authorize",
-    "pages/service/service",
+    
     "pages/myPage/my",
     "pages/discover/discover",
-    
     "pages/register/register"
-    
   ],
   "window": {
     "backgroundTextStyle": "light",
