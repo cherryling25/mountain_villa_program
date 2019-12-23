@@ -1,10 +1,9 @@
 {
   "pages": [
+    "pages/myPage/my",
     "pages/service/service",
     "pages/index/index",
     "pages/authorize/authorize",
-    
-    "pages/myPage/my",
     "pages/discover/discover",
     "pages/register/register"
   ],
