@@ -75,16 +75,17 @@ page {
 }
 
 .btn{
-    display: inline-block;
+    display: inline-flex;
     background-color: transparent;
     border: solid 1px #767676;
-    border-radius: 50px;
-    padding: 2rpx 25rpx;
+    border-radius: 40px;
+    padding: 25rpx;
     cursor: pointer;
 }
 
 .zan{
   color: #767676;
   font-family: var(--font-font_family, Circular, "PingFang-SC", "Hiragino Sans GB", "微软雅黑", "Microsoft YaHei", "Heiti SC");
+  padding-top: 15rpx;
   padding-bottom: 50rpx;
 }

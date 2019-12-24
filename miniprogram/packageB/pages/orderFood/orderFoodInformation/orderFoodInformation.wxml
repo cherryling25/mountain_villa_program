@@ -11,9 +11,10 @@
   <view class="hr"></view>
 
   <!--就餐人信息-->
-  <view class="content">
 
+  <view class="content">
     <!--input-->
+    <form bindsubmit="formSubmit">
     <view class="weui-cell ">
       <picker mode="date" value="{{day}}" start="2019-09-11" end="2029-09-01" bindchange="bindDayChange">
         <view class="weui-input weui-cell__ft_in-access">{{day}}</view>
@@ -34,7 +35,7 @@
 
     <view class="weui-cell ">
       <input type="text" placeholder-class="holder" bindinput="userNameInput"
-      value="{{contact}}" name="userName" placeholder="联系人" />
+      value="{{name}}" name="userName" placeholder="联系人" />
     </view>
 
     <view class="weui-cell">
@@ -42,7 +43,7 @@
       value="{{telephone}}" placeholder="联系人手机号" />
     </view>
     <view class="xian"></view>
-
+</form>
 
     <!-- <view class="weui-cell ">
       <picker mode="date" value="{{date}}" start="2019-09-11" end="2029-09-01" bindchange="bindDateChange">

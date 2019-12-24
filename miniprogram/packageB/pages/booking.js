@@ -7,6 +7,12 @@ Page({
     winHeight: 0,
     // tab切换  
     currentTab: 0,
+    msgData:[
+      { price:10},
+      { number: 10},
+      { time: '2019-10-01'},
+      { total: 100}
+    ]
   },
   onLoad: function () {
     var that = this;

@@ -14,54 +14,41 @@
 
 </view>
 
-<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" 
+  style="height:{{winHeight - 31}}px" bindchange="bindChange">
 
   <swiper-item>
-    <!--全部订单-->
-    
-        <view class="weui-cells">
-            <view class="weui-cell">
-                <view class="weui-cell__ft">价格:</view>
-            </view>
-            
-            <view class="weui-cell">
-                <view class="weui-cell__ft">入住人数:</view>
-            </view>
-
-            <view class="weui-cell">
-                <view class="weui-cell__ft">入住时间:</view>
-            </view>
-
-            <view class="weui-cell">
-                <view class="weui-cell__ft">价格总计:</view>
-            </view>
-
-            <view class="weui-cell__ft last">已完成</view>
+      <!--全部订单-->
+      <view class="order-cells1" wx:if="{{msgData.length==0}}">
+      <image src="/images/no_order.png"></image>
+        <view class="text">
+          您还没有相关订单哦！
         </view>
+      </view>
 
-        <view class="weui-cells">
-            <view class="weui-cell">
-                <view class="weui-cell__ft">价格:</view>
-            </view>
-            
-            <view class="weui-cell">
-                <view class="weui-cell__ft">入住人数:</view>
-            </view>
+      <view class="weui-cells" wx:for='{{msgData}}' wx:key='{{index}}'>
+          <view class="weui-cell">
+              <view class="weui-cell__ft">价格: {{price}}</view>
+          </view>
+          
+          <view class="weui-cell">
+              <view class="weui-cell__ft">入住人数: {{number}}</view>
+          </view>
 
-            <view class="weui-cell">
-                <view class="weui-cell__ft">入住时间:</view>
-            </view>
+          <view class="weui-cell">
+              <view class="weui-cell__ft">入住时间: {{time}}</view>
+          </view>
 
-            <view class="weui-cell">
-                <view class="weui-cell__ft">价格总计:</view>
-            </view>
+          <view class="weui-cell">
+              <view class="weui-cell__ft">价格总计: {{total}}</view>
+          </view>
 
-            <view class="weui-cell__ft last">已完成</view>
-        </view>
+          <view class="weui-cell__ft last">已完成</view>
+      </view>
   </swiper-item>
 
-  <swiper-item>
 
+  <swiper-item>
   <!--待付款订单-->
     <view class="order-cells1">
     <image src="/images/no_order.png"></image>

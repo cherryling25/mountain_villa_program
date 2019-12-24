@@ -16,9 +16,9 @@
       <view class="wenzi">在rong bar 喝酒的时候，感受到了仪式感。 走过一条长长的隧道阶梯，打开一个民国南洋风格的复古的空间。酒吧除了供应classical cocktail和whisky之外，原创鸡尾酒也很有趣，一系列以古典诗词命名的酒名，颇有笑傲江湖的氛围。
       </view>
       <button class="btn">
-      <image src="/images/getPraise.png" style="width:60rpx;height:60rpx;padding-top:14rpx; border: solid 0px red;"></image>
+      <image src="/images/getPraise.png" style="width:60rpx;height:60rpx;border: solid 0px red;"></image>
       </button>
-      <view class="zan">56人已赞</view>
+      <view class="zan" bindtap="add">{{count}}人已赞</view>
     </view>
   </view>
 
@@ -34,7 +34,7 @@
       <view class="wenzi">在rong bar 喝酒的时候，感受到了仪式感。 走过一条长长的隧道阶梯，打开一个民国南洋风格的复古的空间。酒吧除了供应classical cocktail和whisky之外，原创鸡尾酒也很有趣，一系列以古典诗词命名的酒名，颇有笑傲江湖的氛围。
       </view>
       <button class="btn">
-      <image src="/images/getPraise.png" style="width:60rpx;height:60rpx;padding-top:14rpx; border: solid 0px red;"></image>
+      <image src="/images/getPraise.png" style="width:60rpx;height:60rpx; border: solid 0px red;"></image>
       </button>
       <view class="zan">56人已赞</view>
     </view>

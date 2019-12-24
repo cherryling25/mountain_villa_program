@@ -5,9 +5,12 @@ Page({
    * Page initial data
    */
   data: {
-
+    count:'0'
   },
 
+  add:function(e){
+    count:count+1;
+  },
   /**
    * Lifecycle function--Called when page load
    */
