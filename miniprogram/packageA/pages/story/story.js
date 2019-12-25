@@ -1,15 +1,19 @@
 // pages/home/story/story.js
+var app = getApp()
 Page({
 
   /**
    * Page initial data
    */
   data: {
-    count:'0'
+    count:0
   },
 
-  add:function(e){
-    count:count+1;
+  add:function(){
+    console.log(1);
+    this.setData({
+      count: "你好，世界"
+    })
   },
   /**
    * Lifecycle function--Called when page load
