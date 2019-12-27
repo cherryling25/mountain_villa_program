@@ -10,9 +10,8 @@ Page({
   },
 
   add:function(){
-    console.log(1);
     this.setData({
-      count: "你好，世界"
+      count: this.data.count +1
     })
   },
   /**

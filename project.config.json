@@ -47,6 +47,14 @@
 					"id": -1,
 					"name": "packageA/pages/story/story",
 					"pathName": "packageA/pages/story/story",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "pages/register/register",
+					"pathName": "pages/register/register",
+					"query": "",
 					"scene": null
 				}
 			]

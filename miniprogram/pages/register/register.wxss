@@ -1,1 +1,12 @@
 /* pages/register/register.wxss */
+
+.item {
+  padding: 20rpx;
+  border: 1rpx solid red;
+}
+ 
+.wish_list_box_collection image {
+  width: 40rpx;
+  height: 40rpx;
+  overflow: hidden;
+}
