@@ -16,9 +16,28 @@
       <view class="wenzi">在rong bar 喝酒的时候，感受到了仪式感。 走过一条长长的隧道阶梯，打开一个民国南洋风格的复古的空间。酒吧除了供应classical cocktail和whisky之外，原创鸡尾酒也很有趣，一系列以古典诗词命名的酒名，颇有笑傲江湖的氛围。
       </view>
       <button class="btn" bindtap="add">
-      <image src="/images/getPraise.png" style="width:60rpx;height:60rpx;border: solid 0px red;"></image>
+        <image wx:if="{{collected==0}}" src="/images/getPraise.png" style="width:60rpx;height:60rpx;border: solid 0px red;"></image>
+        <image wx:else src="/images/praised.png" style="width:60rpx;height:60rpx;border: solid 0px red;"></image>
       </button>
       <view class="zan">{{count}}人已赞</view>
+
+      <!-- 
+     <block wx:for="{{wishList}}" wx:key="{{index}}">
+      <view class="item" data-index='{{item.id}}'>
+        <view class='wish_list_box_collection' wx:if="{{item.collected==1}}">
+          <image catchtap='onCollectionTap' src="/images/praised.png" data-index='{{index}}'></image>
+          <text>{{item.dzzs}}</text>
+        </view>
+        <view class='wish_list_box_collection' wx:else>
+        
+          <image src='/images/getPraise.png' catchtap='onCollectionTap' data-index='{{index}}'></image>
+          <text>{{item.dzzs}}</text>
+        </view>
+      </view>
+      <view class="zan">{{count}}人已赞</view> 
+    </block>  -->
+
+
     </view>
   </view>
 
@@ -34,10 +53,10 @@
       <view class="wenzi">在rong bar 喝酒的时候，感受到了仪式感。 走过一条长长的隧道阶梯，打开一个民国南洋风格的复古的空间。酒吧除了供应classical cocktail和whisky之外，原创鸡尾酒也很有趣，一系列以古典诗词命名的酒名，颇有笑傲江湖的氛围。
       </view>
       <button class="btn">
-      <image src="/images/getPraise.png" style="width:60rpx;height:60rpx; border: solid 0px red;"></image>
+        <image src="/images/getPraise.png" style="width:60rpx;height:60rpx; border: solid 0px red;"></image>
       </button>
       <view class="zan">56人已赞</view>
     </view>
   </view>
-      
+
 </view>

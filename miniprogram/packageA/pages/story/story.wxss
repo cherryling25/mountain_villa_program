@@ -1,5 +1,12 @@
 /* pages/home/story/story.wxss */
 
+
+.wish_list_box_collection image {
+  width: 60rpx;
+  height: 60rpx;
+  overflow: hidden;
+}
+
 page {
   height: 100%;
 }
@@ -73,6 +80,20 @@ page {
     color: #484848;
     padding: 20rpx;
 }
+
+/* .item{
+    background-color: transparent;
+    border: solid 1px #767676;
+    border-radius: 40px;
+    padding: 20rpx 6rpx 15rpx 25rpx;
+    cursor: pointer;
+    margin: auto;
+    width: 80rpx;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    -webkit-user-select: none;
+    -moz-user-focus: none;
+    -moz-user-select: none;
+} */
 
 .btn{
     display: inline-flex;

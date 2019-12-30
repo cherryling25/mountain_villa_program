@@ -35,16 +35,16 @@
 </view>
 
 
-<block wx:for="{{item_list}}" wx:key="{{index}}">
+<block wx:for="{{wishList}}" wx:key="{{index}}">
   <view class="item" data-index='{{item.id}}'>
     <view class='wish_list_box_collection' wx:if="{{item.collected==1}}">
       <!-- 点赞过 -->
-      <image catchtap='favorclick' src="../../images/collection.png" data-index='{{index}}'></image>
+      <image catchtap='onCollectionTap' src="../../images/collection.png" data-index='{{index}}'></image>
       <text>{{item.dzzs}}</text>
     </view>
     <view class='wish_list_box_collection' wx:else>
       <!-- 未点赞 -->
-      <image src='../../images/coupon.png' catchtap='favorclick' data-index='{{index}}'></image>
+      <image src='../../images/coupon.png' catchtap='onCollectionTap' data-index='{{index}}'></image>
       <text>{{item.dzzs}}</text>
     </view>
   </view>
