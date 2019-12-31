@@ -20,24 +20,6 @@
         <image wx:else src="/images/praised.png" style="width:60rpx;height:60rpx;border: solid 0px red;"></image>
       </button>
       <view class="zan">{{count}}人已赞</view>
-
-      <!-- 
-     <block wx:for="{{wishList}}" wx:key="{{index}}">
-      <view class="item" data-index='{{item.id}}'>
-        <view class='wish_list_box_collection' wx:if="{{item.collected==1}}">
-          <image catchtap='onCollectionTap' src="/images/praised.png" data-index='{{index}}'></image>
-          <text>{{item.dzzs}}</text>
-        </view>
-        <view class='wish_list_box_collection' wx:else>
-        
-          <image src='/images/getPraise.png' catchtap='onCollectionTap' data-index='{{index}}'></image>
-          <text>{{item.dzzs}}</text>
-        </view>
-      </view>
-      <view class="zan">{{count}}人已赞</view> 
-    </block>  -->
-
-
     </view>
   </view>
 
