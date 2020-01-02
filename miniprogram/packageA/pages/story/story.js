@@ -43,7 +43,7 @@ Page({
           icon: 'none',
           title: '点赞失败'
         })
-        console.error('[数据库] [新增记录] 失败：', err)
+        //console.error('[数据库] [新增记录] 失败：', err)
       }
     })
     

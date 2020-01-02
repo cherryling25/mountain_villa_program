@@ -56,6 +56,12 @@
 					"pathName": "pages/register/register",
 					"query": "",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "packageB/pages/booking",
+					"pathName": "packageB/pages/booking",
+					"scene": null
 				}
 			]
 		}
