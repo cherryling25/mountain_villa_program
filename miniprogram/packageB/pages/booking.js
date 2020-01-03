@@ -9,9 +9,9 @@ Page({
     currentTab: 0,
     msgData: [
       { name: '价格', number: 10 }, 
-      { name: '入住人数', number: 2 +'人' }, 
+      { name: '入住人数', number: 2 +'  人' }, 
       { name: '入住时间', number: '2019-10-01' },
-      { name: '价格总计', number: 100+ '元' },
+      { name: '价格总计', number: 100+ '  元' },
     ],
     state:'已完成'
   },
