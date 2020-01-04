@@ -39,23 +39,23 @@ page {
 }
 
 /*最后 input 的线，自己写的样式*/
-.xian{
+
+.xian {
   width: 672rpx;
   border: 0.1px solid rgba(0, 0, 0, 0.1);
   margin-left: 37rpx;
 }
 
 /*箭头*/
+
 .weui-cell__ft_in-access {
-  padding-right: 470rpx;
+  padding-right: 420rpx;
   position: relative;
 }
-
 .weui-cell__ft_in-access1 {
-  padding-right: 560rpx;
+  padding-right: 520rpx;
   position: relative;
 }
-
 .weui-cell__ft_in-access1:after {
   content: " ";
   display: inline-block;
@@ -67,6 +67,7 @@ page {
   -webkit-transform: matrix(0.71, 0.71, -.71, 0.71, 0, 0);
   transform: matrix(0.71, 0.71, -.71, 0.71, 0, 0);
   position: absolute;
+  top: -2px;
   top: 50%;
   margin-top: -5px;
   right: 0;

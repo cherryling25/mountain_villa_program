@@ -61,6 +61,13 @@
 					"id": -1,
 					"name": "packageB/pages/booking",
 					"pathName": "packageB/pages/booking",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "packageB/pages/orderFood/orderFoodInformation/orderFoodInformation",
+					"pathName": "packageB/pages/orderFood/orderFoodInformation/orderFoodInformation",
 					"scene": null
 				}
 			]

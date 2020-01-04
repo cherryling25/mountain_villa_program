@@ -1,85 +1,88 @@
 // pages/service/orderFood/orderFoodInformation/orderFoodInformation.js
 import WxValidate from '../WxValidate.js'
+var util = require('../../util.js')
 var app = getApp();
 
 Page({
   data: {
     form: {
-      day: '2019-09-11',
-      time: '12:00',
-      number: '',
+      day: '',
+      time: '',
+      person:'',
       name: '',
-      telephone: ''
+      phone: ''
     }
   },
-  
-  // onLoad中有多个函数的写法，onLoad函数内写函数名，函数在onLoad外定义
-  onLoad() {
-    this.initValidate()//验证规则函数
+  onLoad: function (options) {
+    //验证方法
+    this.initValidate();
+    var day = util.formatTime(new Date());
+    var time = util.formatDate(new Date());
+    this.setData({			
+      day: day,
+      time:time
+    });
   },
-
-//onLoad中只有一个函数的写法
-onLoad: function () {
-    rules: { }
-    messages: { }
-  },
-  //报错 
-  showModal(error) {
-    wx.showModal({
-      content: error.msg,
-      showCancel: false,
-    })
-  },
-  //验证函数
-  initValidate() {
+  /***验证表单字段 */
+  initValidate: function () {
     const rules = {
+      person: {
+        required: true,
+        digits: true
+      },
       name: {
         required: true,
-        minlength: 2
+        maxlength: 5
       },
-      telephone: {
+      phone: {
         required: true,
         tel: true
       }
     }
     const messages = {
-      name: {
-        required: '请填写姓名',
-        minlength: '请输入正确的名称'
+      person: {
+        required: '请填写就餐人数'
       },
-      telephone: {
-        required: '请填写手机号',
-        tel: '请填写正确的手机号'
+
+      name: {
+        required: '请填写联系人'
+      },
+      
+      phone: {
+        required: '请填写联系电话',
+        tel: '请填写正确的联系电话'
       }
     }
-    this.WxValidate = new WxValidate(rules, messages)
+    this.WxValidate = new WxValidate(rules, messages);
   },
-  //调用验证函数
+  /***调用验证函数***/
   formSubmit: function (e) {
-    console.log('form发生了submit事件，携带的数据为：', e.detail.value)
-    const params = e.detail.value
+    //console.log('form发生了submit事件，携带的数据为：', e.detail.value);
+    const params = e.detail.value;
+    params.person = this.data.person;
+    params.name = this.data.name;
+    params.phone = this.data.phone;
+    //console.log(params);
     //校验表单
     if (!this.WxValidate.checkForm(params)) {
-      const error = this.WxValidate.errorList[0]
-      this.showModal(error)
-      return false
+      const error = this.WxValidate.errorList[0];
+      this.showToast(error);
+      return false;
     }
-    this.showModal({
-      msg: '提交成功'
+    this.booking();
+  },
+
+  /***报错 **/
+  showToast(error) {
+    wx.showToast({
+      icon: 'none',
+      title: error.msg
     })
   },
-  //onLoad: function (options) {
-
-    // if (app.globalData.openid) {
-    //   this.setData({
-    //     openid: app.globalData.openid
-    //   })
-    // }
-  //},
-
-  userNumberInput: function (e) {
+    
+  userPersonInput: function (e) {
     this.setData({
-      number: e.detail.value
+      person: e.detail.value
     })
   },
   userNameInput: function (e) {
@@ -87,11 +90,10 @@ onLoad: function () {
       name: e.detail.value
     })
   },
-  userTellInput: function (e) {
-   
-    // this.setData({
-    //   telephone: e.detail.value
-    // })
+  userPhoneInput: function (e) {
+    this.setData({
+      phone: e.detail.value
+    })
   },
   bindDayChange: function (e) {
     this.setData({
@@ -111,23 +113,31 @@ onLoad: function () {
       data: {
         data:this.data.day,
         time:this.data.time,
-        number: this.data.number,
-        contact: this.data.contact,
-        telephone: this.data.telephone
+        number: this.data.person,
+        contact: this.data.name,
+        telephone: this.data.phone
       },
       success: res => {
         // 在返回结果中会包含新创建的记录的 _id
+        var day = util.formatTime(new Date());
+        var time = util.formatDate(new Date());
         this.setData({
-          counterId: res._id,
-          count: 1,
-          day: '2019-09-11',
-          time: '12:00',
-          number: '',
-          contact: '',
-          telephone: ''
+          day: day,
+          time: time,
+          person: '',
+          name: '',
+          phone: ''
         })
         wx.showToast({
           title: '预订成功',
+          duration: 2000, //消息显示两秒
+          success: function () {
+            setTimeout(function () {  // 返回上一页
+              wx.navigateBack({
+                delta: 1
+              })
+            }, 2000);
+          }
         })
         console.log('[数据库] [新增记录] 成功，记录 _id: ', res._id)
       },
