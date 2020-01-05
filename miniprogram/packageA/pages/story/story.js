@@ -1,7 +1,7 @@
 // pages/home/story/story.js
 var app = getApp()
 
-var util = require('../util.js');
+var util = require('./util.js');
 Page({
 
   /**
@@ -60,7 +60,19 @@ Page({
       });
       console.log(res.total)
     })
-    
+    if(this.data.collected == 1) {
+      wx.showToast({
+        icon: 'none',
+        title: '已点赞'
+      })
+      return;
+    }
+    db.collection('awsomerecorder').where(res => {
+      this.setData({
+        count: res.total,
+        userInfo: app.globalData.userInfo.nickName
+      });
+    })
   },
 
   /**
