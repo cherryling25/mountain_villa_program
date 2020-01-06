@@ -14,6 +14,7 @@
 	"libVersion": "2.8.1",
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
+	"compileType": "miniprogram",
 	"condition": {
 		"search": {
 			"current": -1,
@@ -68,6 +69,13 @@
 					"id": -1,
 					"name": "packageB/pages/orderFood/orderFoodInformation/orderFoodInformation",
 					"pathName": "packageB/pages/orderFood/orderFoodInformation/orderFoodInformation",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "packageB/pages/introduce/introduce",
+					"pathName": "packageB/pages/introduce/introduce",
 					"query": "",
 					"scene": null
 				}
