@@ -62,6 +62,7 @@ Page({
     params.person = this.data.person;
     params.name = this.data.name;
     params.phone = this.data.phone;
+    
     //console.log(params);
     //校验表单
     if (!this.WxValidate.checkForm(params)) {
@@ -108,14 +109,16 @@ Page({
   
   booking: function () {
     wx.cloud.init();
-    const db = wx.cloud.database()
+    const db = wx.cloud.database();
+    console.log(app.globalData.userInfo);
     db.collection('booking').add({
       data: {
         data:this.data.day,
         time:this.data.time,
-        number: this.data.person,
-        contact: this.data.name,
-        telephone: this.data.phone
+        person: this.data.person,
+        name: this.data.name,
+        phone: this.data.phone,
+        userId : app.globalData.userInfo._id
       },
       success: res => {
         // 在返回结果中会包含新创建的记录的 _id

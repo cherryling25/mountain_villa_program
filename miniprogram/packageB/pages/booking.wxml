@@ -27,13 +27,28 @@
         </view>
       </view>
 
-      <view class="weui-cells">
-          <view class="weui-cell" wx:for='{{msgData}}' wx:key='{{index}}' data-data="{{item}}">
+      <view class="weui-cells" wx:for='{{msgData}}' wx:key='{{index}}' data-data="{{item}}">
+          <view class="weui-cell"  >
               <view class="weui-cell__ft">
-              {{item.name}} : 
-              <text style="padding-right:50rpx;"></text>{{item.number}}</view>
+              日期:<text style="padding-right:50rpx;"></text>{{item.data}}
+              </view>
           </view>
-          <view class="weui-cell__ft last">{{state}}</view>
+
+          <view class="weui-cell"  >
+              <view class="weui-cell__ft">
+              时间:<text style="padding-right:50rpx;"></text>{{item.time}}
+              </view>
+          </view>
+
+          <view class="weui-cell"  >
+              <view class="weui-cell__ft">
+              人数 : 
+              <text style="padding-right:50rpx;"></text>{{item.person}}
+              </view>
+          </view>
+
+              <view class="weui-cell__ft last">{{state}}
+              </view>
       </view>
   </swiper-item>
 

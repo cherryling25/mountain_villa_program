@@ -1,5 +1,5 @@
 // pages/myPage/booking.js
-var app = getApp()
+var app = getApp();
 Page({
   data: {
     //页面配置 
@@ -8,13 +8,12 @@ Page({
     // tab切换  
     currentTab: 0,
     msgData: [
-      { name: '价格', number: 10 }, 
-      { name: '入住人数', number: 2 +'  人' }, 
-      { name: '入住时间', number: '2019-10-01' },
-      { name: '价格总计', number: 100+ '  元' },
+      // { name: '入住时间', number: '2019-10-01' },
+      // { name: '价格总计', number: 100+ '  元' },
     ],
     state:'已完成'
   },
+
   onLoad: function () {
     var that = this;
     // 获取系统信息
@@ -26,6 +25,19 @@ Page({
         });
       }
     });
+    wx.cloud.init();
+    const openId = "ohB5t5f2LIWtlK0E1Sr-_cUr0DVo";
+    const db = wx.cloud.database();
+    db.collection('booking').where({
+      // _openid: openId,
+      // contact : '玲'
+    })
+      .get({
+        success: function (res) {
+          console.log(res);
+          that.setData({ msgData : res.data});
+        }
+      })
   },
   // 滑动切换tab 
   bindChange: function (e) {
