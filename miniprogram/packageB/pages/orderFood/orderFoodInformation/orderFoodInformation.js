@@ -110,7 +110,6 @@ Page({
   booking: function () {
     wx.cloud.init();
     const db = wx.cloud.database();
-    console.log(app.globalData.userInfo);
     db.collection('booking').add({
       data: {
         data:this.data.day,
@@ -118,7 +117,7 @@ Page({
         person: this.data.person,
         name: this.data.name,
         phone: this.data.phone,
-        userId : app.globalData.userInfo._id
+        userInfo: app.globalData.userInfo.nickName
       },
       success: res => {
         // 在返回结果中会包含新创建的记录的 _id
@@ -129,7 +128,8 @@ Page({
           time: time,
           person: '',
           name: '',
-          phone: ''
+          phone: '',
+          userInfo: app.globalData.userInfo.nickName
         })
         wx.showToast({
           title: '预订成功',
@@ -154,6 +154,7 @@ Page({
     })
   },
 
+  
 
   /**
    * Lifecycle function--Called when page is initially rendered

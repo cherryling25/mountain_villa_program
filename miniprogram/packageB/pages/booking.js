@@ -26,11 +26,11 @@ Page({
       }
     });
     wx.cloud.init();
-    const openId = "ohB5t5f2LIWtlK0E1Sr-_cUr0DVo";
+    //const openId = "ohB5t5f2LIWtlK0E1Sr-_cUr0DVo";
     const db = wx.cloud.database();
     db.collection('booking').where({
       // _openid: openId,
-      // contact : '玲'
+      userInfo: app.globalData.userInfo.nickName
     })
       .get({
         success: function (res) {
