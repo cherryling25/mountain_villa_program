@@ -7,11 +7,7 @@ Page({
     winHeight: 0,
     // tab切换  
     currentTab: 0,
-    msgData: [
-      // { name: '入住时间', number: '2019-10-01' },
-      // { name: '价格总计', number: 100+ '  元' },
-    ],
-    state:'已完成'
+    msgData: [],
   },
 
   onLoad: function () {
@@ -25,24 +21,23 @@ Page({
         });
       }
     });
-    wx.cloud.init();
-    //const openId = "ohB5t5f2LIWtlK0E1Sr-_cUr0DVo";
-    const db = wx.cloud.database();
-    db.collection('booking').where({
-      // _openid: openId,
-      userInfo: app.globalData.userInfo.nickName
-    })
-      .get({
-        success: function (res) {
-          console.log(res);
-          that.setData({ msgData : res.data});
-        }
-      })
+    that.display(null);
   },
   // 滑动切换tab 
   bindChange: function (e) {
     var that = this;
     that.setData({ currentTab: e.detail.current });
+    switch (e.detail.current) {
+      case 0 : 
+        that.display(null);
+      break;
+      case 1:
+        that.display('New');
+        break;
+      case 2:
+        that.display('Completed');
+        break;
+    }
   },
   //点击tab切换 
   swichNav: function (e) {
@@ -55,6 +50,24 @@ Page({
       })
     }
   },
+
+  display: function(state) {
+    var that = this;
+    wx.cloud.init();
+    const db = wx.cloud.database();
+    const requestData = {
+      userInfo: app.globalData.userInfo.nickName,
+    };
+    if(state) {
+      requestData.state = state;
+    }
+    db.collection('booking').where(requestData)
+      .get({
+        success: function (res) {
+          that.setData({ msgData: res.data });
+        }
+      })
+  }
 
 
 

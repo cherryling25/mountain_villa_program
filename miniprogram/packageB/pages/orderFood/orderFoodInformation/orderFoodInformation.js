@@ -117,7 +117,8 @@ Page({
         person: this.data.person,
         name: this.data.name,
         phone: this.data.phone,
-        userInfo: app.globalData.userInfo.nickName
+        userInfo: app.globalData.userInfo.nickName,
+        state:'New'
       },
       success: res => {
         // 在返回结果中会包含新创建的记录的 _id
