@@ -81,8 +81,9 @@
 }
 
 .last {
-  padding-top: 6px;
+  padding: 6px 0;
   color: red;
+  position: relative;
 }
 
 .order-cells1 {
@@ -97,4 +98,19 @@
 
 .order-cells1 .text {
   color: rgba(0, 0, 0, 0.5);
+}
+
+.cancel{
+  position: absolute;
+  top: 3rpx;
+  right: 20rpx;
+  border: 1px solid rgb(197, 196, 196);
+  border-radius: 10rpx;
+  padding: 13rpx;
+  color: rgb(102, 100, 100);
+}
+.btn-hover{
+  top: 6rpx;	
+  /* box-shadow:0px 0px 8px #999 inset;  */
+   box-shadow:0px 0px 10px #bbbec4 inset; 
 }
