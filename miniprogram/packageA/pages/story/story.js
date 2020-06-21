@@ -13,6 +13,9 @@ Page({
   },
   
   add:function(e){
+    if(e.date == 1) {
+      console.log(123);
+    }
     if(this.data.collected == 1) {
       wx.showToast({
         icon: 'none',

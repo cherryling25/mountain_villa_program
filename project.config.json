@@ -78,6 +78,12 @@
 					"pathName": "packageB/pages/introduce/introduce",
 					"query": "",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "packageB/pages/orderFood/orderFood",
+					"pathName": "packageB/pages/orderFood/orderFood",
+					"scene": null
 				}
 			]
 		}

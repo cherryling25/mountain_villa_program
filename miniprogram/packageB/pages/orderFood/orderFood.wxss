@@ -1,4 +1,9 @@
 /* pages/home/orderFood/orderFood.wxss */
+.wrap{
+  display: flex;
+  justify-content: space-between;
+}
+
 /*图片*/
 .img {
   width: 750rpx;

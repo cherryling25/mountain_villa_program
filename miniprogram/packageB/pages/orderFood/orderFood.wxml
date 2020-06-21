@@ -1,9 +1,54 @@
 <!--pages/service/orderFood/orderFood.wxml-->
+<view class="wrap">
+  <view class="sidebar">
+    <van-sidebar active-key="{{ activeKey }}"  bind:change="onChange">
+      <van-sidebar-item title="{{item.title}}" wx:for="{{list}}" data-title="{{item.title}}"  wx:key='{{item.title}}'/>
+    </van-sidebar>
+  </view>
+
+  <view>
+    <van-card wx:for="{{selectCard}}" wx:key='index'
+      num="{{item.num}}"
+      price="{{item.price}}"
+      desc="{{item.desc}}"
+      title="{{item.commodityTitle}}"
+      thumb="{{ item.imgurl }}"
+    >
+      <view slot="footer">
+        <van-button size="mini">
+          <van-icon name="add" color="red" size="50rpx" wx:if="{{item.currentIcon}}"data-index="{{index}}" bind:click="hide"/>
+          <van-stepper wx:if="{{!item.currentIcon}}" value="{{ 1 }}" bind:change="change" />
+        </van-button>
+      </view>
+    </van-card>
+  </view>
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!--图片-->
-<image src="{{imgurl}}" class="img" />
+<!-- <image src="{{imgurl}}" class="img" /> -->
 
 <!--预定餐位-->
-<view class="title">餐位预订</view>
+<!-- <view class="title">餐位预订</view>
 
   <view class="title1">大厅</view>
 <view class="weui-flex">
@@ -47,4 +92,4 @@
     </view>
   </view>
 
-</view>
+</view> -->

@@ -74,5 +74,12 @@
       "version": "1.1.0",
       "provider": "wx92c68dae5a8bb046"
     }
+  },
+  "usingComponents": {
+    "van-sidebar": "@vant/weapp/sidebar/index",
+    "van-sidebar-item": "@vant/weapp/sidebar-item/index",
+    "van-card": "@vant/weapp/card/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-stepper": "@vant/weapp/stepper/index"
   }
 }
