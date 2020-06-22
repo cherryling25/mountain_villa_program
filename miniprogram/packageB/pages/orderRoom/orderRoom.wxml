@@ -1,47 +1,14 @@
 <!--pages/service/orderRoom/orderRoom.wxml-->
 <view class="weui-flex">
-  <view class="weui-flex__item">
+  <view class="weui-flex__item" wx:for="{{rooms}}" wx:key="index">
     <view class="placeholder">
-    <navigator url="./roomDetails/roomDetails">
-      <image src="../../../images/beijing1.jpg" class="flex_img"></image>
-      <span>标间 ･ 1卧1床1卫</span>
-      <view class="price">¥268 每晚</view>
+    <navigator url="{{item.url}}">
+      <image src="{{item.src}}" class="flex_img"></image>
+      <span>{{item.desc}}</span>
+      <view class="price">¥{{item.price}} 每晚</view>
       </navigator>
     </view>
   </view>
-
-  <view class="weui-flex__item">
-    <view class="placeholder">
-    <navigator url="./orderRoom/orderRoom">
-     <image src="../../../images/fengjing.jpg" class="flex_img"></image>
-    <span>标间 ･ 1卧1床1卫</span>
-    <view class="price">¥268 每晚</view>
-    </navigator>
-    </view>
-  </view>
-
 </view>  
 
 
-<view class="weui-flex">
-  <view class="weui-flex__item">
-    <view class="placeholder">
-    <navigator url="./orderRoom/orderRoom">
-     <image src="../../../images/fengjing.jpg" class="flex_img"></image>
-    <span>标间 ･ 1卧1床1卫</span>
-    <view class="price">¥268 每晚</view>
-    </navigator>
-    </view>
-  </view>
-
-  <view class="weui-flex__item">
-    <view class="placeholder">
-    <navigator url="./orderRoom/orderRoom">
-     <image src="../../../images/beijing1.jpg" class="flex_img"></image>
-    <span>标间 ･ 1卧1床1卫</span>
-    <view class="price">¥268 每晚</view> 
-    </navigator>
-    </view>
-  </view>
-
-</view>

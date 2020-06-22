@@ -5,7 +5,26 @@ Page({
    * Page initial data
    */
   data: {
-
+    rooms:[
+      {
+        url: './roomDetails/roomDetails',
+        src: '../../../images/backed.jpg',
+        desc: '标间 ･ 1卧1床1卫',
+        price: '268'
+      },
+      {
+        url: './roomDetails/roomDetails',
+        src: '../../../images/backed.jpg',
+        desc: '标间 ･ 1卧1床1卫',
+        price: '268'
+      },
+      {
+        url: './roomDetails/roomDetails',
+        src: '../../../images/backed.jpg',
+        desc: '标间 ･ 1卧1床1卫',
+        price: '268'
+      }
+    ]
   },
 
   /**

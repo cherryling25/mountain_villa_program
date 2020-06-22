@@ -3,10 +3,10 @@
   <image src="../../../../images/order.png" class="flex_img"></image>
   <view class="title">预订信息</view>
 
-  <view>
+  <!-- <view>
     <view class="text1">座位类型：4人桌</view>
     <view class="text">容纳人数：1-4人</view>
-  </view>
+  </view> -->
 
   <view class="hr"></view>
 

@@ -7,7 +7,8 @@
   </view>
 
   <view>
-    <van-card wx:for="{{selectCard}}" wx:key='index'
+    <van-card 
+      wx:for="{{selectCard}}" wx:key='index'
       num="{{item.num}}"
       price="{{item.price}}"
       desc="{{item.desc}}"
@@ -15,14 +16,38 @@
       thumb="{{ item.imgurl }}"
     >
       <view slot="footer">
-        <van-button size="mini">
-          <van-icon name="add" color="red" size="50rpx" wx:if="{{item.currentIcon}}"data-index="{{index}}" bind:click="hide"/>
-          <van-stepper wx:if="{{!item.currentIcon}}" value="{{ 1 }}" bind:change="change" />
-        </van-button>
+          <van-icon name="add" color="red" size="50rpx" wx:if="{{item.currentIcon}}" data-index="{{index}}" bind:click="hide"/>
+          <van-stepper wx:if="{{!item.currentIcon}}" min="0" value="{{ 1 }}" data-index="{{index}}" bind:change="changeNumber" />
       </view>
     </van-card>
   </view>
 </view>
+
+<van-submit-bar
+  price="{{ total*100 }}"
+  button-text="选好了"
+  bind:submit="onClickShow"
+>
+  <van-icon name="shopping-cart-o" size="50rpx"/>
+</van-submit-bar> 
+
+<van-overlay show="{{ show }}" bind:click="onClickHide">
+  <view class="wrapper">
+  <view class="block">
+    <view class="blockTitle">WELCOME</view>
+    <view class="blockContent">欢迎来到君悦休闲农庄</view>
+    <view class="blockTip">尽享多种优惠权益</view>
+    <view class="blockBtn">
+      <van-button type="default" size="small">取消</van-button>
+      <van-button type="primary" size="small" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">微信授权</van-button>
+    </view>
+  </view>
+  </view>
+</van-overlay>
+
+
+
+
 
 
 

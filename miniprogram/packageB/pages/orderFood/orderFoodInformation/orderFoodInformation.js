@@ -134,7 +134,7 @@ Page({
         })
         wx.showToast({
           title: '预订成功',
-          duration: 2000, //消息显示两秒
+          duration: 2000, 
           success: function () {
             setTimeout(function () {  // 返回上一页
               wx.navigateBack({

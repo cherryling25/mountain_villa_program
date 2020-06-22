@@ -25,7 +25,7 @@
   </view>
   <view class="underline"></view>
   <view class="border">
-    <image src="/images/Wechat23.jpg" class="img"></image>
+    <image src="/images/backed.jpg" class="img"></image>
     <view class="text">
       <view class="text_title">春日睡醒的我</view>
       <view class="wenzi">
@@ -50,7 +50,7 @@
   </view>
   <view class="underline"></view>
   <view class="border">
-    <image src="/images/tu.png" class="img"></image>
+    <image src="/images/backed.jpg" class="img"></image>
     <view class="text">
       <view class="text_title">夏日也怕热的我</view>
       <view class="wenzi">
@@ -66,7 +66,7 @@
   </view>
   <view class="underline"></view>
   <view class="border">
-    <image src="/images/tu.png" class="img"></image>
+    <image src="/images/backed.jpg" class="img"></image>
     <view class="text">
       <view class="text_title">秋日送礼物的我</view>
       <view class="wenzi"> 
@@ -88,7 +88,7 @@
   </view>
   <view class="underline"></view>
   <view class="border">
-    <image src="/images/tu.png" class="img"></image>
+    <image src="/images/backed.jpg" class="img"></image>
     <view class="text">
       <view class="text_title">冬季贪睡的我</view>
       <view class="wenzi">在rong bar 喝酒的时候，感受到了仪式感。 走过一条长长的隧道阶梯，打开一个民国南洋风格的复古的空间。酒吧除了供应classical cocktail和whisky之外，原创鸡尾酒也很有趣，一系列以古典诗词命名的酒名，颇有笑傲江湖的氛围。

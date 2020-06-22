@@ -15,11 +15,11 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-    if (!app.globalData.userInfo) {
-      wx.redirectTo({
-        url: '/pages/authorize/authorize'
-      })
-    }
+    // if (!app.globalData.userInfo) {
+    //   wx.redirectTo({
+    //     url: '/pages/authorize/authorize'
+    //   })
+    // }
   },
   
   /**

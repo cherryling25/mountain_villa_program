@@ -6,10 +6,10 @@ Page({
    */
   data: {
     listData: [
-      { content: '躲藏在山间的美食', icon: '🍒🍒🍒', src:'/images/Wechat1.jpg' },
-      { content: '躲藏在山间的美食', icon: '🍒🍒🍒', src: '/images/Wechat1.jpg' },
-      { content: '躲藏在山间的美食', icon: '🍒🍒🍒', src: '/images/Wechat1.jpg' },
-      { content: '躲藏在山间的美食', icon: '🍒🍒🍒', src: '/images/Wechat1.jpg' },
+      { content: '躲藏在山间的美食', icon: '🍒🍒🍒', src:'/images/backed.jpg' },
+      { content: '躲藏在山间的美食', icon: '🍒🍒🍒', src: '/images/backed.jpg' },
+      { content: '躲藏在山间的美食', icon: '🍒🍒🍒', src: '/images/backed.jpg' },
+      { content: '躲藏在山间的美食', icon: '🍒🍒🍒', src: '/images/backed.jpg' },
     ]
   },
 

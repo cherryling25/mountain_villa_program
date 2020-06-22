@@ -3,38 +3,16 @@
 <image src="{{imgurl}}" class="img" />
 
 <!--故事集-->
-<view class="title">标题1</view>
-<view class="weui-flex">
-  <view class="weui-flex__item">
-    <view class="content">
-    <navigator url="../../packageA/pages/story/story">
-      <image src="../../images/beijing1.jpg" class="flex1_img"></image>
-      </navigator>
+<view wx:for="{{stories}}" wx:key="index">
+  <view class="title">{{item.title}}</view>
+  <view class="weui-flex">
+    <view class="weui-flex__item">
+      <view class="content">
+      <navigator url="{{item.url}}">
+        <image src="{{item.src}}" class="flex1_img"></image>
+        </navigator>
+      </view>
     </view>
   </view>
-  
 </view>
 
-<view class="title">标题2</view>
-<view class="weui-flex">
-  <view class="weui-flex__item">
-    <view class="content">
-    <navigator url="./orderFood/orderFood">
-      <image src="../../images/beijing1.jpg" class="flex1_img"></image>
-      </navigator>
-    </view>
-  </view>
-
-</view>
-
-<view class="title">标题3</view>
-<view class="weui-flex">
-  <view class="weui-flex__item">
-    <view class="content">
-    <navigator url="./orderFood/orderFood">
-      <image src="../../images/beijing1.jpg" class="flex1_img"></image>
-      </navigator>
-    </view>
-  </view>
-
-</view>

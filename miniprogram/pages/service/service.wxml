@@ -41,45 +41,16 @@
 </view>
 
 <!--故事集-->
-<view class="title">特色美食</view>
-<view class="weui-flex">
-  <view class="weui-flex__item">
-    <view class="content">
-    <navigator url="../../packageB/pages/introduce/introduce">
-      <image src="../../images/beijing1.jpg" class="flex1_img"></image>
-      </navigator>
+<view wx:for="{{stories}}" wx:key="index">
+  <view class="title">{{item.title}}</view>
+  <view class="weui-flex">
+    <view class="weui-flex__item">
+      <view class="content">
+      <navigator url="{{item.url}}">
+        <image src="{{item.src}}" class="flex1_img"></image>
+        </navigator>
+      </view>
     </view>
   </view>
-  
 </view>
 
-<view class="title">美景</view>
-<view class="weui-flex">
-  <view class="weui-flex__item">
-    <view class="content">
-    <navigator url="./introduce/introduce">
-      <image src="../../images/beijing1.jpg" class="flex1_img"></image>
-      </navigator>
-    </view>
-  </view>
-
-</view>
-
-<view class="title">标题3</view>
-<view class="weui-flex">
-  <view class="weui-flex__item">
-    <view class="content">
-    <navigator url="./introduce/introduce">
-      <image src="../../images/beijing1.jpg" class="flex1_img"></image>
-      </navigator>
-    </view>
-  </view>
-
-</view>
-
-
-<!--视频-->
-<view class="section tc">
-  <video id="myVideo" src="{{src}}" enable-danmu controls enable-play-gesture="true"></video>
-  
-</view>

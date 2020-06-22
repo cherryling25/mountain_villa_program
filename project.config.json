@@ -83,6 +83,13 @@
 					"id": -1,
 					"name": "packageB/pages/orderFood/orderFood",
 					"pathName": "packageB/pages/orderFood/orderFood",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "packageB/pages/orderRoom/orderRoom",
+					"pathName": "packageB/pages/orderRoom/orderRoom",
 					"scene": null
 				}
 			]

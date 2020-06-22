@@ -4,6 +4,43 @@
   justify-content: space-between;
 }
 
+.van-card {
+  border-bottom: 10rpx solid #eaebec;
+  padding: var(--card-padding,8px 33px) !important;
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.block {
+  width: 80%;
+  border-radius: 15rpx;
+  background-color: #fff;
+  border: 1px solid #0ab955;
+  text-align: center;
+  padding: 10rpx 0;
+}
+.blockTitle{
+  color: gray;
+  font-weight: bold;
+}
+.blockContent{
+  padding: 45rpx 0 10rpx 0; 
+}
+.blockTip{
+  font-size: 26rpx;
+  padding: 10rpx 0 30rpx 0;
+  color: gray;
+}
+.blockBtn{
+  display: flex;
+  justify-content: space-around;
+}
+
+
 /*图片*/
 .img {
   width: 750rpx;
