@@ -3,90 +3,35 @@
 page {
   background: whitesmoke;
 }
-
-.wrap {
-  margin: 40rpx 20rpx;
+.whiteBg{
+  background: white;
+  height: 120rpx;
+  margin: 30rpx;
+  border-radius: 15rpx;
+  width: 50%;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  flex-direction: column
+}
+.time{
+  font-size: 26rpx;
+  color: gray;
+  margin-left: 55rpx;
+  margin-top: 15rpx;
 }
 
-.flex_img {
-  width: 60rpx;
-  height: 60rpx;
+radio{
+  margin-left: 10rpx;
 }
-
-.title {
-  margin-left: 80rpx;
-  margin-top: -70rpx;
-  font-size: 18px;
+.menu{
+  background: white;
+  display: flex;
+  padding:25rpx;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(219, 217, 217);
 }
-
-.text1 {
-  padding: 18rpx 0 0 0;
-}
-
-.text {
-  padding: 10rpx 0;
-}
-
-.hr {
-  border-bottom: 4px solid rgb(228, 227, 227);
-  margin-top: 30rpx;
-}
-
-/*就餐人信息*/
-
-.content {
-  margin: 20rpx 0 0 0;
-}
-
-/*最后 input 的线，自己写的样式*/
-
-.xian {
-  width: 672rpx;
-  border: 0.1px solid rgba(0, 0, 0, 0.1);
-  margin-left: 37rpx;
-}
-
-/*箭头*/
-
-.weui-cell__ft_in-access {
-  padding-right: 420rpx;
-  position: relative;
-}
-.weui-cell__ft_in-access1 {
-  padding-right: 520rpx;
-  position: relative;
-}
-.weui-cell__ft_in-access1:after {
-  content: " ";
-  display: inline-block;
-  height: 8px;
-  width: 8px;
-  border-width: 2px 2px 0 0;
-  border-color: #b2b2b2;
-  border-style: solid;
-  -webkit-transform: matrix(0.71, 0.71, -.71, 0.71, 0, 0);
-  transform: matrix(0.71, 0.71, -.71, 0.71, 0, 0);
-  position: absolute;
-  top: -2px;
-  top: 50%;
-  margin-top: -5px;
-  right: 0;
-}
-
-/*input 样式*/
-
-.holder {
-  color: rgb(197, 196, 196);
-}
-
-button {
-  margin: 60rpx 40rpx;
-}
-
-.wran {
-  font-size: 13px;
-}
-
-.wran span {
-  color: red;
+.stepper{
+  display: flex;
+  align-items:center;
 }

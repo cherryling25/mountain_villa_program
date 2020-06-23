@@ -1,19 +1,68 @@
 <!--pages/service/orderFood/orderFoodInformation/orderFoodInformation.wxml-->
 <view class="wrap">
-  <image src="../../../../images/order.png" class="flex_img"></image>
+  <view class="whiteBg">
+    <view>
+      <van-radio-group value="{{ radio }}" bind:change="onChange" class="radio">
+        <van-radio name="1">选择就餐时间</van-radio>
+      </van-radio-group>
+    </view>
+    <!-- <view class="time">2020-02-12 12:20</view> -->
+    <view class="time">{{currentDate}}</view>
+    
+  </view>
+
+  <view class="menu" wx:for="{{menu}}" wx:key="index">
+    <view>
+      <view>{{item.title}}</view>
+      <view style="margin-top:5rpx;">¥ {{item.price}}</view>
+    </view>
+    <view class="stepper">
+      <van-stepper value="{{ 1 }}" bind:change="onChange" />
+    </view>
+  </view>
+
+</view>
+
+<van-popup 
+  show="{{ popupShow }}"
+  round
+  position="bottom"
+  custom-style="height: 50%"
+  bind:close="onClose"
+>
+<van-datetime-picker
+  type="datetime"
+  value="{{ currentDate }}"
+  min-date="{{ minDate }}"
+  max-date="{{ maxDate }}"
+  bind:input="onInput"
+  bind:formatter="formatter"
+  bind:cancel="show = false"
+  bind:confirm="confirmPicker"
+/>
+</van-popup>
+
+
+
+<van-submit-bar
+  price="{{ 100 }}"
+  button-text="预订"
+  bind:submit="onClickShow"
+>
+</van-submit-bar> 
+
+
+
+
+
+<!-- <image src="../../../../images/order.png" class="flex_img"></image>
   <view class="title">预订信息</view>
 
-  <!-- <view>
-    <view class="text1">座位类型：4人桌</view>
-    <view class="text">容纳人数：1-4人</view>
-  </view> -->
 
   <view class="hr"></view>
 
-  <!--就餐人信息-->
 
   <view class="content">
-    <!--input-->
   <form bindsubmit="formSubmit">
     <view class="weui-cell ">
       <picker mode="date" value="{{day}}" start="2019-09-11" end="2029-09-01" bindchange="bindDayChange">
@@ -49,9 +98,4 @@
     <view class="wran">
       <span>温馨提示：</span>预订后本座位只预留1小时，若1小时未到店，将自动释放，敬请谅解！
     </view>
-  </view>
-  <!--content-->
-
-
-</view>
-<!--wrap-->
+  </view> -->

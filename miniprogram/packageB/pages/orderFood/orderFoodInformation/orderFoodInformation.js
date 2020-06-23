@@ -5,6 +5,24 @@ var app = getApp();
 
 Page({
   data: {
+    radio: '0',
+    popupShow: false,
+    menu: [
+      {
+        title: '麦麦脆汁鸡',
+        price: '17.2'
+      },
+      {
+        title: '麦麦脆汁鸡',
+        price: '17.2'
+      }
+    ],
+    minHour: 10,
+    maxHour: 20,
+    minDate: new Date().getTime(),
+    maxDate: new Date(2029, 10, 1).getTime(),
+    currentDate: new Date().getTime(),
+    
     form: {
       day: '',
       time: '',
@@ -12,6 +30,58 @@ Page({
       name: '',
       phone: ''
     }
+  },
+  // radio
+  onChange(event) {
+    this.setData({
+      radio: event.detail,
+      popupShow: true
+    });
+    
+  },
+  // 弹出层隐藏
+  onClose() {
+    this.setData({ popupShow: false });
+  },
+  // 当前时间
+  onInput(event) {
+    var currentDate = event.detail;
+
+    this.setData({
+      currentDate: event.detail,
+    });
+  },
+  // 确认选择的时间
+  confirmPicker(event) {
+    let val = event.detail;
+    // let year = val.getFullYear()
+    // let month = val.getMonth() + 1
+    // let day = val.getDate()
+    // let hour = val.getHours()
+    // let minute = val.getMinutes()
+    // if (month >= 1 && month <= 9) { month = `0${month}` }
+    // if (day >= 1 && day <= 9) { day = `0${day}` }
+    // if (hour >= 0 && hour <= 9) { hour = `0${hour}` }
+    // if (minute >= 0 && minute <= 9) { minute = `0${minute}` }
+    
+    // this.timeValue = `${year}-${month}-${day} ${hour}:${minute}`
+    // this.popupShow = false
+  },
+
+  // 选项格式化函数
+  formatter(type, value) {
+    if(type === 'year') {
+      return `${value}年`
+    } else if(type === 'month') {
+      return `${value}月`
+    } else if (type === 'day') {
+      return `${value}日`
+    } else if (type === 'hour') {
+      return `${value}时`
+    } else if (type === 'minute') {
+      return `${value}分`
+    }
+    return value;
   },
   onLoad: function (options) {
     //验证方法

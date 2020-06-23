@@ -1,8 +1,9 @@
 {
   "pages": [
+    "pages/index/index",
+    
     "pages/discover/discover",
     
-    "pages/index/index",
     
     "pages/myPage/my",
     "pages/service/service",
@@ -86,6 +87,10 @@
     "van-submit-bar": "@vant/weapp/submit-bar/index",
     "van-dialog": "@vant/weapp/dialog/index",
     "van-overlay": "@vant/weapp/overlay/index",
-    "van-button": "@vant/weapp/button/index"
+    "van-button": "@vant/weapp/button/index",
+    "van-radio": "@vant/weapp/radio/index",
+    "van-radio-group": "@vant/weapp/radio-group/index",
+    "van-popup": "@vant/weapp/popup/index",
+    "van-datetime-picker": "@vant/weapp/datetime-picker/index"
   }
 }
