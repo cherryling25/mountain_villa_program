@@ -1,15 +1,13 @@
 <!--pages/service/orderFood/orderFoodInformation/orderFoodInformation.wxml-->
 <view class="wrap">
-  <view class="whiteBg">
+  <!-- <view class="whiteBg">
     <view>
       <van-radio-group value="{{ radio }}" bind:change="onChange" class="radio">
         <van-radio name="1">选择就餐时间</van-radio>
       </van-radio-group>
     </view>
-    <!-- <view class="time">2020-02-12 12:20</view> -->
-    <view class="time">{{currentDate}}</view>
-    
-  </view>
+    <view class="time">2020-02-12 12:20</view>
+  </view> -->
 
   <view class="menu" wx:for="{{menu}}" wx:key="index">
     <view>
@@ -46,9 +44,10 @@
 
 <van-submit-bar
   price="{{ 100 }}"
-  button-text="预订"
+  button-text="立即下单"
   bind:submit="onClickShow"
 >
+<van-button round type="warning" bind:click="booking">线上预订</van-button>
 </van-submit-bar> 
 
 

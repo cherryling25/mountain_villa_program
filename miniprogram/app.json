@@ -1,13 +1,9 @@
 {
   "pages": [
     "pages/index/index",
-    
     "pages/discover/discover",
-    
-    
     "pages/myPage/my",
     "pages/service/service",
-    
     "pages/authorize/authorize",
     "pages/register/register"
   ],
@@ -68,7 +64,8 @@
         "pages/orderRoom/roomDetails/roomDetails",
         "pages/introduce/introduce",
         "pages/coupon",
-        "pages/booking"
+        "pages/booking",
+        "pages/orderFood/bookingMeal/bookingMeal"
       ]
     }
   ],
@@ -91,6 +88,7 @@
     "van-radio": "@vant/weapp/radio/index",
     "van-radio-group": "@vant/weapp/radio-group/index",
     "van-popup": "@vant/weapp/popup/index",
-    "van-datetime-picker": "@vant/weapp/datetime-picker/index"
+    "van-datetime-picker": "@vant/weapp/datetime-picker/index",
+    "van-field": "@vant/weapp/field/index"
   }
 }

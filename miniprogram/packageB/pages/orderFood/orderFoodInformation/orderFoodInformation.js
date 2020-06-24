@@ -31,6 +31,13 @@ Page({
       phone: ''
     }
   },
+
+  // 线上预订
+  booking(){
+    wx.navigateTo({
+      url: '../bookingMeal/bookingMeal'
+    })
+  },
   // radio
   onChange(event) {
     this.setData({
@@ -140,7 +147,7 @@ Page({
       this.showToast(error);
       return false;
     }
-    this.booking();
+    // this.booking();
   },
 
   /***报错 **/
@@ -177,53 +184,53 @@ Page({
     })
   },
   
-  booking: function () {
-    wx.cloud.init();
-    const db = wx.cloud.database();
-    db.collection('booking').add({
-      data: {
-        data:this.data.day,
-        time:this.data.time,
-        person: this.data.person,
-        name: this.data.name,
-        phone: this.data.phone,
-        userInfo: app.globalData.userInfo.nickName,
-        state:'New'
-      },
-      success: res => {
-        // 在返回结果中会包含新创建的记录的 _id
-        var day = util.formatTime(new Date());
-        var time = util.formatDate(new Date());
-        this.setData({
-          day: day,
-          time: time,
-          person: '',
-          name: '',
-          phone: '',
-          userInfo: app.globalData.userInfo.nickName
-        })
-        wx.showToast({
-          title: '预订成功',
-          duration: 2000, 
-          success: function () {
-            setTimeout(function () {  // 返回上一页
-              wx.navigateBack({
-                delta: 1
-              })
-            }, 2000);
-          }
-        })
-        console.log('[数据库] [新增记录] 成功，记录 _id: ', res._id)
-      },
-      fail: err => {
-        wx.showToast({
-          icon: 'none',
-          title: '预订失败'
-        })
-        console.error('[数据库] [新增记录] 失败：', err)
-      }
-    })
-  },
+  // booking: function () {
+  //   wx.cloud.init();
+  //   const db = wx.cloud.database();
+  //   db.collection('booking').add({
+  //     data: {
+  //       data:this.data.day,
+  //       time:this.data.time,
+  //       person: this.data.person,
+  //       name: this.data.name,
+  //       phone: this.data.phone,
+  //       userInfo: app.globalData.userInfo.nickName,
+  //       state:'New'
+  //     },
+  //     success: res => {
+  //       // 在返回结果中会包含新创建的记录的 _id
+  //       var day = util.formatTime(new Date());
+  //       var time = util.formatDate(new Date());
+  //       this.setData({
+  //         day: day,
+  //         time: time,
+  //         person: '',
+  //         name: '',
+  //         phone: '',
+  //         userInfo: app.globalData.userInfo.nickName
+  //       })
+  //       wx.showToast({
+  //         title: '预订成功',
+  //         duration: 2000, 
+  //         success: function () {
+  //           setTimeout(function () {  // 返回上一页
+  //             wx.navigateBack({
+  //               delta: 1
+  //             })
+  //           }, 2000);
+  //         }
+  //       })
+  //       console.log('[数据库] [新增记录] 成功，记录 _id: ', res._id)
+  //     },
+  //     fail: err => {
+  //       wx.showToast({
+  //         icon: 'none',
+  //         title: '预订失败'
+  //       })
+  //       console.error('[数据库] [新增记录] 失败：', err)
+  //     }
+  //   })
+  // },
 
   
 

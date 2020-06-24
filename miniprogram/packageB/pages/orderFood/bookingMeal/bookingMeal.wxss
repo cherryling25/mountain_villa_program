@@ -1,0 +1,12 @@
+/* miniprogram/packageB/pages/orderFood/bookingMeal/bookingMeal.wxss */
+.wrap{
+  display: flex;
+  justify-content: center;
+}
+.whiteBg{
+  width: 92%;
+  background: white;
+  margin-top: 30rpx;
+  border-radius: 20rpx;
+  border: 1px solid rgb(10, 10, 10)
+}
