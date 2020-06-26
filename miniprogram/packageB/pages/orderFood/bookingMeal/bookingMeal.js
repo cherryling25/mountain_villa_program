@@ -5,11 +5,49 @@ Page({
    * Page initial data
    */
   data: {
-    
+    info: {
+      username: '',
+      phone: '',
+      number:'',
+      time: ''
+    },
+    popupShow: false,
+    minHour: 10,
+    maxHour: 20,
+    minDate: new Date().getTime(),
+    maxDate: new Date(2029, 10, 1).getTime(),
+    currentDate: new Date().getTime(),
   },
   onChange(event) {
     // event.detail 为当前输入的值
     console.log(event.detail);
+
+  },
+  // 选择时间
+  selectedTime(){
+    this.setData({
+      popupShow: true
+    });
+  },
+  onInput(event) {
+    this.setData({
+      currentDate: event.detail,
+    });
+  },
+  confirmPicker(){
+
+  },
+  // 弹出层隐藏
+  onClose() {
+    this.setData({ popupShow: false });
+  },
+  // 当前时间
+  onInput(event) {
+    var currentDate = event.detail;
+
+    this.setData({
+      currentDate: event.detail,
+    });
   },
   /**
    * Lifecycle function--Called when page load
