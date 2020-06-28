@@ -3,7 +3,9 @@
   display: flex;
   justify-content: space-between;
 }
-
+.van-tag{
+  margin-left: 5rpx;
+}
 .van-card {
   border-bottom: 10rpx solid #eaebec;
   padding: var(--card-padding,8px 33px) !important;

@@ -16,7 +16,7 @@ Page({
     maxHour: 20,
     minDate: new Date().getTime(),
     maxDate: new Date(2029, 10, 1).getTime(),
-    currentDate: new Date().getTime(),
+    currentDate: '',
   },
   onChange(event) {
     // event.detail 为当前输入的值

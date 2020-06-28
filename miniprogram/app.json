@@ -1,17 +1,18 @@
 {
   "pages": [
+    "pages/service/service",
+    
     "pages/index/index",
     "pages/discover/discover",
     "pages/myPage/my",
-    "pages/service/service",
     "pages/authorize/authorize",
     "pages/register/register"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#f5dce0",
+    "navigationBarBackgroundColor": "#8cbcfc",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "white"
   },
   "sitemapLocation": "sitemap.json",
   "tabBar": {
@@ -21,12 +22,6 @@
         "text": "首页",
         "iconPath": "images/first.png",
         "selectedIconPath": "images/first1.png"
-      },
-      {
-        "pagePath": "pages/discover/discover",
-        "text": "发现",
-        "iconPath": "images/discover.png",
-        "selectedIconPath": "images/discover1.png"
       },
       {
         "pagePath": "pages/service/service",
@@ -41,8 +36,8 @@
         "selectedIconPath": "images/second1.png"
       }
     ],
-    "color": "#c09ce2",
-    "selectedColor": "#000000"
+    "color": "#000",
+    "selectedColor": "#8cbcfc"
   },
   "subpackages": [
     {
@@ -89,6 +84,9 @@
     "van-radio-group": "@vant/weapp/radio-group/index",
     "van-popup": "@vant/weapp/popup/index",
     "van-datetime-picker": "@vant/weapp/datetime-picker/index",
-    "van-field": "@vant/weapp/field/index"
+    "van-field": "@vant/weapp/field/index",
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "van-tag": "@vant/weapp/tag/index"
   }
 }

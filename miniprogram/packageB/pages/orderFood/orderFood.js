@@ -8,13 +8,15 @@ Page({
     activeKey: 0,
     show: false,
     list:[
-      {title: "主食",
+      {title: "炒菜",
         card: [{
           num: 0,
           price: 10.00,
           amount: '',
           commodityTitle: '商品标题',
           desc: '好吃的',
+          tag: '牛肉',
+          tag1: '小葱',
           imgurl:
             'https://images.unsplash.com/photo-1551446591-142875a901a1?w=640',
           currentIcon: true
@@ -54,7 +56,7 @@ Page({
         }],
       },
       {
-        title: "小吃",
+        title: "汤羹类",
         card: [{
           num: 0,
           price: 10.00,
@@ -67,7 +69,7 @@ Page({
         }],
       },
       {
-        title: "甜点",
+        title: "甜品类",
         card: [{
           num: 0,
           price: 10.00,

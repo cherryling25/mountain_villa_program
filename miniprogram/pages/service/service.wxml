@@ -11,34 +11,22 @@
 </view>
 
 <!--图标-->
-<view class="weui-flex">
-  <view class="weui-flex__item">
-    <view class="placeholder">
+<view class="iconFlex">
+  <view>
     <navigator url="../../packageB/pages/orderFood/orderFood">
-      <image src="../../images/order_food.png" class="flex_img"></image>
-      <span> 订 餐</span> 
-      </navigator>
-    </view>
+    <view><image src="../../images/order_food.png" class="flex_img"></image></view>
+    <view style="font-size:28rpx;">订餐</view>
+    </navigator>
   </view>
 
-  <view class="weui-flex__item">
-    <view class="placeholder">
+  <view>
     <navigator url="../../packageB/pages/orderRoom/orderRoom">
-     <image src="../../images/order_room.png" class="flex_img"></image>
-    <span> 订 房</span> 
+    <view><image src="../../images/order_room.png" class="flex_img"></image></view>
+    <view style="font-size:28rpx;">订房</view>
     </navigator>
-    </view>
-  </view>
-  
-  <view class="weui-flex__item">
-    <view class="placeholder">
-    <navigator url="../../packageB/pages/receiveCoupon/receiveCoupon">
-     <image src="../../images/home_coupon.png" class="flex_img"></image>
-    <span>优惠劵</span>
-    </navigator> 
-    </view>
   </view>
 </view>
+
 
 <!--故事集-->
 <view wx:for="{{stories}}" wx:key="index">

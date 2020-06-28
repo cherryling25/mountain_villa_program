@@ -15,6 +15,10 @@
       title="{{item.commodityTitle}}"
       thumb="{{ item.imgurl }}"
     >
+    <view slot="tags">
+      <van-tag type="warning">{{item.tag}}</van-tag>
+      <van-tag type="warning">{{item.tag1}}</van-tag>
+    </view>
       <view slot="footer">
           <van-icon name="add" color="red" size="50rpx" wx:if="{{item.currentIcon}}" data-index="{{index}}" bind:click="hide"/>
           <van-stepper wx:if="{{!item.currentIcon}}" min="0" value="{{ 1 }}" data-index="{{index}}" bind:change="changeNumber" />

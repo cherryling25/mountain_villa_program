@@ -97,6 +97,13 @@
 					"id": -1,
 					"name": "packageB/pages/orderFood/bookingMeal/bookingMeal",
 					"pathName": "packageB/pages/orderFood/bookingMeal/bookingMeal",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "packageB/pages/booking",
+					"pathName": "packageB/pages/booking",
 					"scene": null
 				}
 			]
