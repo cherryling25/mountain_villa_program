@@ -20,7 +20,7 @@
   </view>
 
   <view>
-    <navigator url="../../packageB/pages/orderRoom/orderRoom">
+    <navigator url="../../packageB/pages/orderRoom/roomDetails/roomDetails">
     <view><image src="../../images/order_room.png" class="flex_img"></image></view>
     <view style="font-size:28rpx;">订房</view>
     </navigator>

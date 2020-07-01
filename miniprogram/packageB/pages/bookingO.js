@@ -1,37 +1,25 @@
-// pages/home/orderRoom/roomDetails/orderRoomInformation/orderRoomInformation.js
+// miniprogram/packageB/pages/bookingO.js
 Page({
 
   /**
    * Page initial data
    */
   data: {
-    selectedDate: '',
-    calendarShow: false,
-    value: '',
-  },
-  onDisplay() {
-    this.setData({ calendarShow: true });
-  },
-  onClose() {
-    this.setData({ calendarShow: false });
-  },
-  formatDate(selectedDate) {
-    selectedDate = new Date(selectedDate);
-    return `${selectedDate.getMonth() + 1}/${selectedDate.getDate()}`;
-  },
-  onConfirm(event) {
-    const [start, end] = event.detail;
-    this.setData({
-      calendarShow: false,
-      selectedDate: `${this.formatDate(start)} - ${this.formatDate(end)}`,
-    });
+    active: 1,
   },
 
-  // save(){
-  //   wx.redirectTo({
-  //     url: '../roomDetails',
-  //   })
-  // },
+  onChange(event) {
+    // wx.showToast({
+    //   title: `切换到标签 ${event.detail.name}`,
+    //   icon: 'none'
+    // });
+  },
+
+  detail() {
+    wx.navigateTo({
+      url: './detailR/detailR',
+    })
+  },
   /**
    * Lifecycle function--Called when page load
    */

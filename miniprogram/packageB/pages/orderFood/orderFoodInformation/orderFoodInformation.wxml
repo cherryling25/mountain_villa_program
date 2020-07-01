@@ -1,14 +1,5 @@
 <!--pages/service/orderFood/orderFoodInformation/orderFoodInformation.wxml-->
 <view class="wrap">
-  <!-- <view class="whiteBg">
-    <view>
-      <van-radio-group value="{{ radio }}" bind:change="onChange" class="radio">
-        <van-radio name="1">选择就餐时间</van-radio>
-      </van-radio-group>
-    </view>
-    <view class="time">2020-02-12 12:20</view>
-  </view> -->
-
   <view class="menu" wx:for="{{menu}}" wx:key="index">
     <view>
       <view>{{item.title}}</view>
@@ -40,61 +31,18 @@
 />
 </van-popup>
 
+<van-goods-action>
+  <van-goods-action-icon text="总计：" bind:click="onClickIcon" text-class="text"/>
+  <van-goods-action-icon text="¥ 123.00" bind:click="onClickIcon" text-class="text"/>
+  <van-goods-action-button color="#be99ff" text="预订" type="warning" bind:click="booking"/>
+  <van-goods-action-button color="#7232dd" text="立即下单" bind:click="onClickButton"/>
+</van-goods-action>
 
-
+<!-- 
 <van-submit-bar
   price="{{ 100 }}"
   button-text="立即下单"
   bind:submit="onClickShow"
 >
 <van-button round type="warning" bind:click="booking">线上预订</van-button>
-</van-submit-bar> 
-
-
-
-
-
-<!-- <image src="../../../../images/order.png" class="flex_img"></image>
-  <view class="title">预订信息</view>
-
-
-  <view class="hr"></view>
-
-
-  <view class="content">
-  <form bindsubmit="formSubmit">
-    <view class="weui-cell ">
-      <picker mode="date" value="{{day}}" start="2019-09-11" end="2029-09-01" bindchange="bindDayChange">
-        <view class="weui-input weui-cell__ft_in-access">{{day}}</view>
-      </picker>
-    </view>
-
-    <view class="weui-cell">
-      <picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
-        <view class="weui-input weui-cell__ft_in-access1">{{time}}</view>
-      </picker>
-    </view>
-
-    
-    <view class="weui-cell ">
-      <input type="number" placeholder-class="holder" bindinput="userPersonInput" 
-      value="{{from.person}}" placeholder="就餐人数" />
-    </view>
-
-    <view class="weui-cell ">
-      <input type="text" placeholder-class="holder" bindinput="userNameInput"
-      value="{{from.name}}" name="userName" placeholder="联系人" />
-    </view>
-
-    <view class="weui-cell">
-      <input type="number" placeholder-class="holder" bindinput="userPhoneInput"
-      value="{{from.phone}}" placeholder="联系人手机号" />
-    </view>
-    <view class="xian"></view>
-    <button type="primary" form-type="submit">预订</button>
-</form>
-
-    <view class="wran">
-      <span>温馨提示：</span>预订后本座位只预留1小时，若1小时未到店，将自动释放，敬请谅解！
-    </view>
-  </view> -->
+</van-submit-bar>  -->

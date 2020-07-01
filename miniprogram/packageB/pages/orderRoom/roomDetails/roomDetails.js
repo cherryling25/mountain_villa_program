@@ -7,7 +7,7 @@ Page({
   data: {
     imgUrls: [
       'https://images.unsplash.com/photo-1551446591-142875a901a1?w=640',
-      '../../../../images/1.png',
+      '../../../../images/backed.jpg',
       'https://images.unsplash.com/photo-1551446591-142875a901a1?w=640'
     ],
     indicatorDots: true,

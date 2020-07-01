@@ -1,20 +1,20 @@
-// pages/myPage/booking.js
-var app = getApp();
+// miniprogram/packageB/pages/detailR/detailR.js
 Page({
+
+  /**
+   * Page initial data
+   */
   data: {
-    active: 1,
-  },
-
-  onChange(event) {
-    wx.showToast({
-      title: `切换到标签 ${event.detail.name}`,
-      icon: 'none',
-    });
-  },
-  onLoad: function (option) {
-
 
   },
+
+  /**
+   * Lifecycle function--Called when page load
+   */
+  onLoad: function (options) {
+
+  },
+
   /**
    * Lifecycle function--Called when page is initially rendered
    */

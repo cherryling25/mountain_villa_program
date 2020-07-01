@@ -59,9 +59,9 @@
 					"scene": null
 				},
 				{
-					"id": -1,
-					"name": "packageB/pages/booking",
-					"pathName": "packageB/pages/booking",
+					"id": 3,
+					"name": "packageB/pages/bookingO",
+					"pathName": "packageB/pages/bookingO",
 					"query": "",
 					"scene": null
 				},
@@ -104,6 +104,35 @@
 					"id": -1,
 					"name": "packageB/pages/booking",
 					"pathName": "packageB/pages/booking",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "packageB/pages/orderRoom/roomDetails/roomDetails",
+					"pathName": "packageB/pages/orderRoom/roomDetails/roomDetails",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "packageB/pages/orderRoom/roomDetails/orderRoomInformation/orderRoomInformation",
+					"pathName": "packageB/pages/orderRoom/roomDetails/orderRoomInformation/orderRoomInformation",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 12,
+					"name": "packageB/pages/detailR/detailR",
+					"pathName": "packageB/pages/detailR/detailR",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "packageB/pages/booking",
+					"pathName": "packageB/pages/booking",
+					"query": "",
 					"scene": null
 				}
 			]

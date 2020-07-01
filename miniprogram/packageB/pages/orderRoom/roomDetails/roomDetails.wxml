@@ -75,7 +75,7 @@
     <span class="span1">¥ 259 每晚</span>
     <span>⭐️⭐️⭐️</span>
    </view>
-    <button type="warn" bindtap="warnButton">查看可订时期</button>
+    <button type="warn" bindtap="warnButton">预订</button>
    </view>
    </view>
 </view>

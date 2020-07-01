@@ -1,0 +1,44 @@
+/* miniprogram/packageB/pages/detailR/detailR.wxss */
+page{
+  background: #f7f7f7;
+}
+.head{
+  background: #f8df84;
+  padding: 25rpx;
+}
+.tip{
+  font-size: 45rpx;
+}
+.btn{
+  margin-top: 20rpx;
+  width: 50%;
+  height: 70rpx;
+  background: #f7f7f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10rpx;
+}
+.order{
+  background: white;
+}
+.common{
+  padding: 25rpx;
+  border-bottom: 1px solid #f5f1f1;
+}
+.label{
+  display: inline-block;
+  width: 199rpx;
+  color: gray;
+  padding: 8rpx 0;
+}
+.bottom{
+  background: white;
+  color: #f8df84;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 105rpx;
+  line-height: 105rpx;
+  text-align: center;
+}

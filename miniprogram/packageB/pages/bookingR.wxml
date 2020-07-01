@@ -1,0 +1,82 @@
+<!--pages/myPage/booking.wxml-->
+<van-tabs active="{{ active }}" bind:change="onChange" >
+  <van-tab title="全部订单">
+    <view class="cardWrap">
+      <view class="card">
+        <view class="cardTitle">
+          <view>君悦休闲农庄</view>
+          <view class="tip">已成功</view>
+        </view>
+        <view class="cardContent" bindtap="detail">
+          <view class="cardImg"><image src="../../images/cardRoom.png" style="margin-right: 16px;vertical-align: middle;width:50px; height: 50px;"></image></view>
+          <view class="cardTime">
+            <view>入住时间:<text class="time">2020-02-14</text></view>
+            <view>离店时间:<text class="time">2020-02-15</text></view>
+          </view>
+        </view>
+        <view class="total">共1件商品<text class="money">合计 <text class="price">¥ 106.00</text> </text> </view>
+        <view class="btn">删除订单</view>
+      </view>
+    </view>
+  </van-tab>
+
+  <van-tab title="待入住">
+    <view class="cardWrap">
+      <view class="card">
+        <view class="cardTitle">
+          <view>君悦休闲农庄</view>
+          <view class="tip">待入住</view>
+        </view>
+        <view class="cardContent" bindtap="detail">
+          <view class="cardImg"><image src="../../images/cardRoom.png" style="margin-right: 16px;vertical-align: middle;width:50px; height: 50px;"></image></view>
+          <view class="cardTime">
+            <view>入住时间:<text class="time">2020-02-14</text></view>
+            <view>离店时间:<text class="time">2020-02-15</text></view>
+          </view>
+        </view>
+        <view class="total">共1件商品<text class="money">合计 <text class="price">¥ 106.00</text> </text> </view>
+        <view class="btn">取消订单</view>
+      </view>
+    </view>
+  </van-tab>
+
+  <van-tab title="待评价">
+    <view class="cardWrap">
+      <view class="card">
+        <view class="cardTitle">
+          <view>君悦休闲农庄</view>
+          <view class="tip">待评价</view>
+        </view>
+        <view class="cardContent" bindtap="detail">
+          <view class="cardImg"><image src="../../images/cardRoom.png" style="margin-right: 16px;vertical-align: middle;width:50px; height: 50px;"></image></view>
+          <view class="cardTime">
+            <view>入住时间:<text class="time">2020-02-14</text></view>
+            <view>离店时间:<text class="time">2020-02-15</text></view>
+          </view>
+        </view>
+        <view class="total">共1件商品<text class="money">合计 <text class="price">¥ 106.00</text> </text> </view>
+        <view class="btn">评价</view>
+      </view>
+    </view>
+  </van-tab>
+
+  <van-tab title="取消">
+    <view class="cardWrap">
+    <view class="card">
+      <view class="cardTitle">
+        <view>君悦休闲农庄</view>
+        <view class="tip">已取消</view>
+      </view>
+      <view class="cardContent" bindtap="detail">
+        <view class="cardImg"><image src="../../images/cardRoom.png" style="margin-right: 16px;vertical-align: middle;width:50px; height: 50px;"></image></view>
+        <view class="cardTime">
+          <view>入住时间:<text class="time">2020-02-14</text></view>
+          <view>离店时间:<text class="time">2020-02-15</text></view>
+        </view>
+      </view>
+      <view class="total">共1件商品<text class="money">合计 <text class="price">¥ 106.00</text> </text> </view>
+      <view class="btn">删除记录</view>
+    </view>
+  </view>
+  </van-tab>
+</van-tabs>

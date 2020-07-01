@@ -3,27 +3,6 @@
 page {
   background: whitesmoke;
 }
-.whiteBg{
-  background: white;
-  height: 120rpx;
-  margin: 30rpx;
-  border-radius: 15rpx;
-  width: 50%;
-  display: flex;
-  align-items:center;
-  justify-content: center;
-  flex-direction: column
-}
-.time{
-  font-size: 26rpx;
-  color: gray;
-  margin-left: 55rpx;
-  margin-top: 15rpx;
-}
-
-radio{
-  margin-left: 10rpx;
-}
 .menu{
   background: white;
   display: flex;
@@ -34,4 +13,7 @@ radio{
 .stepper{
   display: flex;
   align-items:center;
+}
+.text{
+  font-size: 28rpx;
 }

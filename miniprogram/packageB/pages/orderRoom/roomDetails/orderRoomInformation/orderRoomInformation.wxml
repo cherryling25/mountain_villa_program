@@ -1,32 +1,39 @@
 <!--pages/service/orderRoom/roomDetails/orderRoomInformation/orderRoomInformation.wxml-->
-<view class="content">
-  <!--输入框-->
-
-<view class="weui-flex">
-  <view class="weui-flex__item">
-    <view class="placeholder">
-      <view>
-        <image src="/images/calendar.png" class="flex-img"></image>
-        <input placeholder="入住日期" placeholder-style="width:60px;" type="date"/>
-      </view>
-    </view>
+  <view class="title">预订信息</view>
+  <van-divider dashed borderColor="#8cbcfc"/>
+  
+  
+ <van-cell title="入离日期"  is-link value="{{ selectedDate }}" bind:click="onDisplay" required/>
+  <van-calendar
+    show="{{ calendarShow }}"
+    type="range"
+    bind:close="onClose"
+    bind:confirm="onConfirm"
+  />
+  <view class="roomNumber">
+    <view class="roomText"><text style="color:red;margin-right:10rpx;">*</text>房间数量</view>
+    <van-stepper value="{{ 1 }}" bind:change="onChange" />
   </view>
+  
+  <van-cell-group>
+  <van-field
+    required
+    label="入住人"
+    value="{{ value }}"
+    placeholder="入住人姓名"
+    bind:change="onChange"
+  />
+  <van-field
+    value="{{ phone }}"
+    label="联系电话"
+    required
+    placeholder="请输入手机号"
+  />
+  
+</van-cell-group>
 
-  <view class="weui-flex__item">
-    <view class="placeholder">
-      <view>
-        <image src="/images/calendar.png" class="flex-img"></image>
-        <input placeholder="退房时间" placeholder-style="width:60px;" />
-      </view>
-    </view>
-  </view>
-
+<view class="btnWrap">
+<view class="btn">
+  <view>支付担保金</view>
 </view>
-
-  <!--日历-->
-  <calendar calendar-style="calendar"  header-style="calendar-header"  board-style="calendar-board"
- days-color="{{dayStyle}}" weeks-type="cn" binddayClick="dayClick"
- />
-
- <button type="primary" bindtap="save">保存</button>
 </view>

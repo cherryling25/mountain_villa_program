@@ -1,5 +1,0 @@
-/* pages/myPage/booking.wxss */
-.active-class{
-  /* color: #ee0a24; */
-  color: #8cbcfc;
-}

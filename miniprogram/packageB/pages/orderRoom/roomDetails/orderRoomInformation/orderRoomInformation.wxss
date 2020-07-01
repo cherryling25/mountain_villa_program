@@ -1,54 +1,34 @@
 /* pages/home/orderRoom/roomDetails/orderRoomInformation/orderRoomInformation.wxss */
-
-/*输入框*/
-.placeholder {
-  margin: 5px;
-  padding: 5px 5px;
-  text-align: center;
-  /*border-radius: 5px;
-  background-color: #f7dede;*/
-  line-height: 2.3em;
-  color: #262427d8;
-  border: 1px solid green;
-  font-size: 12px;
+page{
+  background: white;
 }
-
-.weui-flex {
-  display: -webkit-box;
-  display: -webkit-flex;
+.title{
+  margin-top:25rpx;
+  margin-left:25rpx;
+  font-size:35rpx;
+}
+.roomNumber{
   display: flex;
-  margin: 5px 0;
+  font-size: 28rpx;
+  margin-left: 11rpx;
+  padding: 20rpx 0;
+  border-bottom: 1px solid #f0f2f5;
 }
-
-.weui-flex__item {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-  flex: 1;
-  border: 0px solid gray;
-
+.roomText{
+  padding: 8rpx;
+  margin-right: 60rpx;
 }
-
-.flex-img{
-  width: 40rpx;
-  height: 40rpx;
-  float: right;
+.btnWrap{
+  display: flex;
+  justify-content: center;
+  margin-top: 180rpx;
 }
-
-
-/* 日历 */
-.calendar {
-   
-    padding-top: 60rpx; 
-}
-.calendar-header{
-  font-size: large;
-  color: #59518d;
-}
-.calendar-board{
-  color: #c7cbe2;
-   font-weight: bold;
-}
-
-button {
-  margin: 60rpx 40rpx;
+.btn{
+  background: #ff4a4b;
+  color: white;
+  width: 50%;
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: center;
+  border-radius: 10rpx;
 }

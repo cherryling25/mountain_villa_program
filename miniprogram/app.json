@@ -1,10 +1,9 @@
 {
   "pages": [
+    "pages/myPage/my",
     "pages/service/service",
-    
     "pages/index/index",
     "pages/discover/discover",
-    "pages/myPage/my",
     "pages/authorize/authorize",
     "pages/register/register"
   ],
@@ -59,8 +58,10 @@
         "pages/orderRoom/roomDetails/roomDetails",
         "pages/introduce/introduce",
         "pages/coupon",
-        "pages/booking",
-        "pages/orderFood/bookingMeal/bookingMeal"
+        "pages/bookingR",
+        "pages/orderFood/bookingMeal/bookingMeal",
+        "pages/detailR/detailR",
+        "pages/bookingO"
       ]
     }
   ],
@@ -87,6 +88,12 @@
     "van-field": "@vant/weapp/field/index",
     "van-tab": "@vant/weapp/tab/index",
     "van-tabs": "@vant/weapp/tabs/index",
-    "van-tag": "@vant/weapp/tag/index"
+    "van-tag": "@vant/weapp/tag/index",
+    "van-goods-action": "@vant/weapp/goods-action/index",
+    "van-goods-action-icon": "@vant/weapp/goods-action-icon/index",
+    "van-goods-action-button": "@vant/weapp/goods-action-button/index",
+    "van-calendar": "@vant/weapp/calendar/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-divider": "@vant/weapp/divider/index"
   }
 }
