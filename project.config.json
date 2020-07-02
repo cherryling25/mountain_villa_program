@@ -53,8 +53,8 @@
 				},
 				{
 					"id": 2,
-					"name": "pages/register/register",
-					"pathName": "pages/register/register",
+					"name": "packageB/pages/detailR/detailO",
+					"pathName": "packageB/pages/detailO/detailO",
 					"query": "",
 					"scene": null
 				},

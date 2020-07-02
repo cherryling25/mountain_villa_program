@@ -1,25 +1,13 @@
-// miniprogram/packageB/pages/bookingO.js
+// miniprogram/packageB/pages/detailO/detailO.js
 Page({
 
   /**
    * Page initial data
    */
   data: {
-    active: 0,
+
   },
 
-  onChange(event) {
-    // wx.showToast({
-    //   title: `切换到标签 ${event.detail.name}`,
-    //   icon: 'none'
-    // });
-  },
-
-  detail() {
-    wx.navigateTo({
-      url: './detailO/detailO',
-    })
-  },
   /**
    * Lifecycle function--Called when page load
    */

@@ -61,7 +61,8 @@
         "pages/bookingR",
         "pages/orderFood/bookingMeal/bookingMeal",
         "pages/detailR/detailR",
-        "pages/bookingO"
+        "pages/bookingO",
+        "pages/detailO/detailO"
       ]
     }
   ],

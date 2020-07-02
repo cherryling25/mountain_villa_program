@@ -1,57 +1,66 @@
 /* miniprogram/packageB/pages/bookingO.wxss */
-.cardWrap{
+
+.cardWrap {
   display: flex;
   justify-content: center;
   margin-top: 20rpx;
 }
-.card{
+
+.card {
   background: white;
   width: 88%;
   padding: 20rpx;
   border-radius: 15rpx;
   border: 1px solid #8cbcfc;
 }
-.cardTitle{
+
+.cardTitle {
   display: flex;
   justify-content: space-between;
   font-size: 33rpx;
 }
-.tip{
+
+.tip {
   color: #8cbcfc;
 }
-.time{
-  margin-left: 100rpx;
-}
-.money{
+
+.money {
   margin-left: 60rpx;
+  margin-top: -8rpx;
 }
-.price{
-  font-size: 33rpx;
+
+.price {
+  font-size: 35rpx;
 }
-.cardTime{
+
+.cardTip {
+  display: flex;
   margin-top: 40rpx;
   margin-left: 30rpx;
   color: gray;
 }
-.cardContent{
+
+.cardImg {
+  margin-right: 16px;
+  vertical-align: middle;
+  width: 85px;
+  height: 60px;
+}
+
+.cardContent {
   display: flex;
   font-size: 30rpx;
   margin-top: 30rpx;
 }
-.cardImg{
-  background: #8cbcfc;
-  display: inline-block;
-  padding: 30rpx 0 30rpx 30rpx;
-  border-radius: 10rpx;
-}
-.total, .btn{
+
+.total, .btn {
   font-size: 30rpx;
   display: flex;
   justify-content: flex-end;
   margin-top: 25rpx;
 }
 
-.btn{
+.btn {
   border: 1px solid gray;
   display: inline-block;
   float: right;
