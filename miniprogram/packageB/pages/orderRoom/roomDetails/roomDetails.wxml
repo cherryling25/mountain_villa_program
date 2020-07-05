@@ -1,5 +1,4 @@
 <!--pages/service/orderRoom/roomDetails/roomDetails.wxml-->
-<!--轮播-->
 <view class="weui-padding-wrap">
   <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
     <block wx:for="{{imgUrls}}" wx:key="index" class="img_content">
@@ -10,72 +9,35 @@
   </swiper>
 </view>
 
-<!--输入框-->
-<!--
-<view class="weui-flex">
-  <view class="weui-flex__item">
-    <view class="placeholder">
-      <view>
-        <image src="/images/calendar.png" class="flex-img"></image>
-        <input placeholder="入住日期" placeholder-style="width:60px;" type="date"/>
-      </view>
-    </view>
-    
-   <calendar calendar-style="calendar1"  header-style="calendar-header1"  board-style="calendar-board1"
- days-color="{{dayStyle}}" weeks-type="cn" binddayClick="dayClick"/>
-  </view>
-
-  <view class="weui-flex__item">
-    <view class="placeholder">
-      <view>
-        <image src="/images/calendar.png" class="flex-img"></image>
-        <input placeholder="退房时间" placeholder-style="width:60px;" />
-      </view>
-    </view>
-  </view>
-
-</view>-->
-
- <!--房屋介绍-->
 <view class="introduce">
-  <view class="text">
-    简约风/ins 风观景房酒店
+  <view>
+    欢迎光临 君悦休闲农庄 ! 你会喜欢这里
   </view>
 
-  <view class="text1">
-    标间･1张床･1间卫生间･最多住两人
+  <view class="content">
+    炎炎夏日，来这避暑。 
+    这里有天然的空调，三伏天需要盖被子。 
+    最热的时候，这里22度。 
+    开阔的观景阳台，坐在藤椅上，一杯清茶，一方风景。 
+    三五好友，斗个地主，打个麻将，这就是生活。 
+    有时候需要慢下来，慢慢体会。
   </view>
-
-   <view class="text2">
+  
+  <view style="margin-top:30rpx;">
+    大床･独立卫生间･含洗漱用品
+  </view>
+  <!-- <view class="text2">
     享受 8月1日-8月15日 期间的九折优惠，
     完成预定，锁定限时好礼
-   </view>
-
-  <view class="text3">
-    欢迎光临 lemon house! 你会喜欢这里
-   </view>
-
-   <view class="text4">
-    <span>入住/退房</span>   入住时间 14:00后･ 退房时间 12:00
-   </view>
-
-    <view class="text5">
+   </view> -->
+  <!-- <view class="text5">
     <view>预定须知</view>
     <p>* 48小时内可免费取消预定</p>
-   </view>
-
+   </view> -->
+  <view class='placeholder-view'></view>
 </view>
 
-
-<!--固定底部-->
-<view class="weui-flex">
-   <view class="weui-flex__item">
-   <view class="footer">
-   <view class="footer_left">
-    <span class="span1">¥ 259 每晚</span>
-    <span>⭐️⭐️⭐️</span>
-   </view>
-    <button type="warn" bindtap="warnButton">预订</button>
-   </view>
-   </view>
+<view class="bottom">
+  <view class="price">¥ 259 / 晚</view>
+  <view class="booking">预订</view>
 </view>

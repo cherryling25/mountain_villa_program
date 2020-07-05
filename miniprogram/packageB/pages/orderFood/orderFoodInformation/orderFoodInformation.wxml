@@ -2,6 +2,9 @@
 <view class="wrap">
   <view class="menu" wx:for="{{menu}}" wx:key="index">
     <view>
+      <image class="cardImg" src="../../../../images/backed.jpg"></image>
+    </view>
+    <view style="margin-left: -80rpx;">
       <view>{{item.title}}</view>
       <view style="margin-top:5rpx;">¥ {{item.price}}</view>
     </view>
@@ -11,38 +14,10 @@
   </view>
 
 </view>
-
-<van-popup 
-  show="{{ popupShow }}"
-  round
-  position="bottom"
-  custom-style="height: 50%"
-  bind:close="onClose"
->
-<van-datetime-picker
-  type="datetime"
-  value="{{ currentDate }}"
-  min-date="{{ minDate }}"
-  max-date="{{ maxDate }}"
-  bind:input="onInput"
-  bind:formatter="formatter"
-  bind:cancel="show = false"
-  bind:confirm="confirmPicker"
-/>
-</van-popup>
-
-<van-goods-action>
-  <van-goods-action-icon text="总计：" bind:click="onClickIcon" text-class="text"/>
-  <van-goods-action-icon text="¥ 123.00" bind:click="onClickIcon" text-class="text"/>
-  <van-goods-action-button color="#be99ff" text="预订" type="warning" bind:click="booking"/>
-  <van-goods-action-button color="#7232dd" text="立即下单" bind:click="onClickButton"/>
-</van-goods-action>
-
-<!-- 
-<van-submit-bar
-  price="{{ 100 }}"
-  button-text="立即下单"
-  bind:submit="onClickShow"
->
-<van-button round type="warning" bind:click="booking">线上预订</van-button>
-</van-submit-bar>  -->
+<view class='placeholder-view'></view>
+<view class="bottom">
+  <view>总计：</view>
+  <view>¥ 123.00</view>
+  <view class="booking" bindtap="booking">预订</view>
+  <view class="order">立即下单</view>
+</view>

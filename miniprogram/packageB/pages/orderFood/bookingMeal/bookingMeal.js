@@ -1,9 +1,7 @@
 // miniprogram/packageB/pages/orderFood/bookingMeal/bookingMeal.js
-Page({
+var util = require('../../util.js');
 
-  /**
-   * Page initial data
-   */
+Page({
   data: {
     info: {
       username: '',
@@ -12,48 +10,78 @@ Page({
       time: ''
     },
     popupShow: false,
-    minHour: 10,
-    maxHour: 20,
     minDate: new Date().getTime(),
     maxDate: new Date(2029, 10, 1).getTime(),
     currentDate: '',
   },
-  onChange(event) {
-    // event.detail 为当前输入的值
-    console.log(event.detail);
-
-  },
+ 
   // 选择时间
   selectedTime(){
     this.setData({
       popupShow: true
     });
   },
-  onInput(event) {
+  // 确定
+  confirmPicker(e){
+    var info = this.data.info;
+    info.time = util.formatTime(new Date(e.detail));
     this.setData({
-      currentDate: event.detail,
+      info: info,
+      popupShow: false
+    })
+  },
+  // 取消
+  cancelPicker(){
+    this.setData({
+      popupShow: false
+    })
+  },
+  onInput: function (e) {
+    let dataset = e.currentTarget.dataset;
+    this.data.info[dataset.name] = e.detail;
+    this.setData({
+      info: this.data.info
     });
   },
-  confirmPicker(){
-
+  // menuBooking() {
+  //   console.log(this.data.info);
+  // },
+  menuBooking: function () {
+    wx.cloud.init();
+    const db = wx.cloud.database();
+    db.collection('booking').add({
+      data: {
+        username: this.data.info.username,
+        time: this.data.info.time,
+        number: this.data.info.number,
+        phone: this.data.info.phone,
+      },
+      success: res => {
+        // 在返回结果中会包含新创建的记录的 _id
+        this.setData({
+          counterId: res._id,
+          count: 1
+        })
+        wx.showToast({
+          title: '预订成功',
+        })
+        console.log('[数据库] [新增记录] 成功，记录 _id: ', res._id)
+      },
+      fail: err => {
+        wx.showToast({
+          icon: 'none',
+          title: '预订失败'
+        })
+        console.error('[数据库] [新增记录] 失败：', err)
+      }
+    })
   },
-  // 弹出层隐藏
-  onClose() {
-    this.setData({ popupShow: false });
-  },
-  // 当前时间
-  onInput(event) {
-    var currentDate = event.detail;
-
-    this.setData({
-      currentDate: event.detail,
-    });
-  },
-  /**
-   * Lifecycle function--Called when page load
-   */
+  
   onLoad: function (options) {
-
+    var time = util.formatTime(new Date());	
+    this.setData({
+      time: time
+    });
   },
 
   /**

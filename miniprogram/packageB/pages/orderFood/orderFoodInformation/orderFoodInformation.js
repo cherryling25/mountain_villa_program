@@ -15,6 +15,34 @@ Page({
       {
         title: '麦麦脆汁鸡',
         price: '17.2'
+      },
+      {
+        title: '麦麦脆汁鸡',
+        price: '17.2'
+      },
+      {
+        title: '麦麦脆汁鸡',
+        price: '17.2'
+      },
+      {
+        title: '麦麦脆汁鸡',
+        price: '17.2'
+      },
+      {
+        title: '麦麦脆汁鸡',
+        price: '17.2'
+      },
+      {
+        title: '麦麦脆汁鸡',
+        price: '17.2'
+      },
+      {
+        title: '麦麦脆汁鸡',
+        price: '17.2'
+      },
+      {
+        title: '麦麦脆汁鸡',
+        price: '17.2'
       }
     ],
     minHour: 10,

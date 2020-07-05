@@ -148,9 +148,16 @@ Page({
     });
   },
   onClickShow() {
-    this.setData({ show: true });
+    var openId = wx.getStorageSync('openId');
+    console.log(openId);
+    if(openId) {
+      wx.navigateTo({
+        url: './orderFoodInformation/orderFoodInformation'
+      });
+    } else {
+      this.setData({ show: true });
+    }
   },
-
   onClickHide() {
     this.setData({ show: false });
   },
@@ -173,31 +180,22 @@ Page({
                 success: res => {
                   getApp().globalData.userInfo = res.userInfo;
                   console.log(res.userInfo)
-                  wx.navigateTo({
-                    url: './orderFoodInformation/orderFoodInformation'
-                  })
+                  
                   //调用后端接口 获取微信的session_key 和 openID
-                  // wx.request({
-                  //   url: getApp().globalData.dataUrl + '/CycMobileApi/GetToken',
-                  //   method: "post",
-                  //   data: {
-                  //     'code': code,
-                  //   },
-                  //   success(obj) {
-                  //     wx.hideLoading()
-                  //     console.log(obj);
-                  //     if (obj.data.Result == "true" || obj.data.Result == true) {
-                  //       //把token 存为全局
-                  //       getApp().globalData.token = obj.data.Data.token;
-                  //       that.request()
-                  //       
-                  //       that.isorder()
-                  //     } else {
-
-                  //     }
-                  //   }
-                  // });
-
+                  wx.cloud.init();
+                  wx.cloud.callFunction({
+                    name : 'login',
+                    data : {},
+                    success : res => {
+                      //TODO 弹出来提示框 授权成功
+                      console.log(res);
+                      getApp().globalData.openId = res.result.openid; // 这里id是小写
+                      wx.setStorageSync('openId', res.result.openid);
+                      wx.navigateTo({
+                        url: './orderFoodInformation/orderFoodInformation'
+                      });
+                    }
+                  });
                   // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
                   // 所以此处加入 callback 以防止这种情况
                   if (this.userInfoReadyCallback) {
@@ -208,126 +206,9 @@ Page({
             }
           }
         })
-
       }
     });
-    // var openId = (wx.getStorageSync('openId'))
-    // if (openId) {
-    //   wx.getUserInfo({
-    //     success: function (res) {
-    //       console.log('授权成功')
-    //       // that.setData({
-    //       //   nickName: res.userInfo.nickName,
-    //       //   avatarUrl: res.userInfo.avatarUrl,
-    //       // })
-    //     },
-    //     fail: function () {
-    //       // fail
-    //       console.log("获取失败！")
-    //     },
-    //     complete: function () {
-    //       // complete
-    //       console.log("获取用户信息完成！")
-    //     }
-    //   })
-    // } else {
-    //   wx.login({
-    //     success: function (res) {
-    //       console.log(res.code)
-    //       if (res.code) {
-    //         wx.getUserInfo({
-    //           withCredentials: true,
-    //           success: function (res) {
-    //             console.log(res);
-    //             // wx.request({
-    //             //   //后台接口地址
-    //             //   url: 'https://....com/wx/login',
-    //             //   data: {
-    //             //     code: res.code,
-    //             //     encryptedData: res_user.encryptedData,
-    //             //     iv: res_user.iv
-    //             //   },
-    //             //   method: 'GET',
-    //             //   header: {
-    //             //     'content-type': 'application/json'
-    //             //   },
-    //             //   success: function (res) {
-    //             //     // this.globalData.userInfo = JSON.parse(res.data);
-    //             //     that.setData({
-    //             //       nickName: res.data.nickName,
-    //             //       avatarUrl: res.data.avatarUrl,
-    //             //     })
-    //             //     wx.setStorageSync('openId', res.data.openId);
-
-    //             //   }
-    //             // })
-    //           }, fail: function (res) {
-    //             console.log(res);
-    //             // wx.showModal({
-    //             //   title: '警告通知',
-    //             //   content: '您点击了拒绝授权,将无法正常显示个人信息,点击确定重新获取授权。',
-    //             //   success: function (res) {
-    //             //     if (res.confirm) {
-    //             //       wx.openSetting({
-    //             //         success: (res) => {
-    //             //           if (res.authSetting["scope.userInfo"]) {////如果用户重新同意了授权登录
-    //             //             wx.login({
-    //             //               success: function (res_login) {
-    //             //                 if (res_login.code) {
-    //             //                   wx.getUserInfo({
-    //             //                     withCredentials: true,
-    //             //                     success: function (res_user) {
-    //             //                       wx.request({
-    //             //                         url: 'https://....com/wx/login',
-    //             //                         data: {
-    //             //                           code: res_login.code,
-    //             //                           encryptedData: res_user.encryptedData,
-    //             //                           iv: res_user.iv
-    //             //                         },
-    //             //                         method: 'GET',
-    //             //                         header: {
-    //             //                           'content-type': 'application/json'
-    //             //                         },
-    //             //                         success: function (res) {
-    //             //                           that.setData({
-    //             //                             nickName: res.data.nickName,
-    //             //                             avatarUrl: res.data.avatarUrl,
-
-    //             //                           })
-    //             //                           wx.setStorageSync('openId', res.data.openId);
-    //             //                         }
-    //             //                       })
-    //             //                     }
-    //             //                   })
-    //             //                 }
-    //             //               }
-    //             //             });
-    //             //           }
-    //             //         }, fail: function (res) {
-
-    //             //         }
-    //             //       })
-
-    //             //     }
-    //             //   }
-    //             // })
-    //           }, complete: function (res) {
-
-
-    //           }
-    //         })
-    //       }
-    //     }
-    //   })
-
-    // }
-
-
   },
-  // globalData: {
-  //   userInfo: null
-  // },
-    
   
   /**
    * Lifecycle function--Called when page load

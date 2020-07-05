@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/myPage/my",
     "pages/service/service",
+    "pages/myPage/my",
     "pages/index/index",
     "pages/discover/discover",
     "pages/authorize/authorize",
@@ -9,7 +9,7 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#8cbcfc",
+    "navigationBarBackgroundColor": "#ff4042",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "white"
   },
@@ -24,7 +24,7 @@
       },
       {
         "pagePath": "pages/service/service",
-        "text": "服务",
+        "text": "发现",
         "iconPath": "images/service.png",
         "selectedIconPath": "images/service1.png"
       },
@@ -36,7 +36,7 @@
       }
     ],
     "color": "#000",
-    "selectedColor": "#8cbcfc"
+    "selectedColor": "#ff4042"
   },
   "subpackages": [
     {

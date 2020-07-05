@@ -21,7 +21,8 @@
 }
 
 .tip {
-  color: #8cbcfc;
+  /* color: #8cbcfc; */
+  /* color: #f73148; */
 }
 
 .money {
@@ -35,7 +36,7 @@
 
 .cardTip {
   display: flex;
-  margin-top: 40rpx;
+  margin-top: 20rpx;
   margin-left: 30rpx;
   color: gray;
 }

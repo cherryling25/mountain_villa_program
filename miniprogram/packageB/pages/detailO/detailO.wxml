@@ -2,7 +2,7 @@
 <view class="head">
   <view class="tip">交易成功</view>
   <view style="margin-top: 20rpx;">结账金额 ¥ 106.0</view>
-  <view class="btn">再来一单</view>
+  <!-- <view class="btn">再来一单</view> -->
 </view>
 
 <view class="order">

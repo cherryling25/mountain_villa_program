@@ -14,6 +14,38 @@ page {
   display: flex;
   align-items:center;
 }
-.text{
-  font-size: 28rpx;
+.bottom{
+  background: white;
+  display: flex;
+  width: 100%;
+  height: 130rpx;
+  align-items: center;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 0;
+  z-index: 2;
+}
+.booking{
+  background: #f5b534;
+  color: white;
+  padding: 10rpx 70rpx;
+  border-radius: 50rpx;
+  font-size: 34rpx;
+}
+.order{
+  background: #ff4042;
+  color: white;
+  padding: 10rpx 30rpx;
+  border-radius: 50rpx;
+  font-size: 34rpx;
+}
+.placeholder-view {
+  width: 100%;
+  height: 150rpx;
+}
+.cardImg {
+  vertical-align: middle;
+  width: 65px;
+  height: 60px;
+  border-radius: 8rpx;
 }
