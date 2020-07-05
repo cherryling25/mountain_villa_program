@@ -1,9 +1,8 @@
 {
   "pages": [
-    "pages/service/service",
+    "pages/discover/discover",
     "pages/myPage/my",
     "pages/index/index",
-    "pages/discover/discover",
     "pages/authorize/authorize",
     "pages/register/register"
   ],
@@ -23,7 +22,7 @@
         "selectedIconPath": "images/first1.png"
       },
       {
-        "pagePath": "pages/service/service",
+        "pagePath": "pages/discover/discover",
         "text": "发现",
         "iconPath": "images/service.png",
         "selectedIconPath": "images/service1.png"

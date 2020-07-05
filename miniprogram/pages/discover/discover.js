@@ -1,35 +1,28 @@
-// pages/home/home.js
-
+// pages/discover/discover.js
 Page({
-  //视频加载
-  onReady: function (res) {
-    this.videoContext = wx.createVideoContext('myVideo')
-  },
-
   data: {
     stories: [
       {
         title: '标题1',
-        url: '../../packageA/pages/story/story',
+        url: '../../packageB/pages/introduce/introduce',
         src: '../../images/backed.jpg',
       },
       {
         title: '标题2',
-        url: '../../packageA/pages/story/story',
+        url: '../../packageB/pages/introduce/introduce',
         src: '../../images/backed.jpg',
       }
     ],
-    imgurl: 
-      '/images/backed.jpg'
-    ,
+    imgUrls: [
+      '../../images/backed.jpg',
+      'https://images.unsplash.com/photo-1551446591-142875a901a1?w=640',
+      'https://images.unsplash.com/photo-1551446591-142875a901a1?w=640'
+    ],
+    indicatorDots: true,
+    autoplay: true,
+    interval: 3000,
+    duration: 500,
   },
-  /**
-   * Lifecycle function--Called when page load
-   */
-  onLoad: function (options) {
-
-  },
-
   /**
    * Lifecycle function--Called when page is initially rendered
    */

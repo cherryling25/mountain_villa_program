@@ -9,7 +9,10 @@ Page({
     show: false,
     list:[
       {title: "炒菜",
+        serialnumber: 1,
         card: [{
+          id: 1,
+          serialnumber: 1,
           num: 0,
           price: 10.00,
           amount: '',
@@ -22,6 +25,8 @@ Page({
           currentIcon: true
         },
         {
+          id: 2,
+          serialnumber: 2,
           num: 0,
           price: 10.00,
           amount: '',
@@ -34,7 +39,10 @@ Page({
       },
       {
         title: "蔬菜",
+        serialnumber: 2,
         card: [{
+          id: 3,
+          serialnumber: 3,
           num: 0,
           price: 10.00,
           amount: '',
@@ -45,6 +53,8 @@ Page({
           currentIcon: true
         },
         {
+          id: 4,
+          serialnumber: 4,
           num: 0,
           price: 10.00,
           amount: '',
@@ -57,7 +67,10 @@ Page({
       },
       {
         title: "汤羹类",
+        serialnumber: 3,
         card: [{
+          id: 5,
+          serialnumber: 5,
           num: 0,
           price: 10.00,
           amount: '',
@@ -70,7 +83,10 @@ Page({
       },
       {
         title: "甜品类",
+        serialnumber: 4,
         card: [{
+          id: 6,
+          serialnumber: 6,
           num: 0,
           price: 10.00,
           amount: '',
@@ -147,13 +163,33 @@ Page({
       total
     });
   },
+  navigateToBooking() {
+    let list = this.data.list;
+    let selectedItems = [];
+    for (let i = 0; i < list.length; i++) {
+      let cards = list[i].card;
+      for (let j = 0; j < cards.length; j++) {
+        if (cards[j].num > 0) {
+          selectedItems.push({
+            id: cards[j].id,
+            num: cards[j].num
+          });
+        }
+      }
+    }
+    let obj = {
+      selectedItems: selectedItems
+    }
+    let objStr = JSON.stringify(obj);
+    wx.navigateTo({
+      url: './orderFoodInformation/orderFoodInformation?data=' + objStr
+    });
+  },
   onClickShow() {
     var openId = wx.getStorageSync('openId');
     console.log(openId);
     if(openId) {
-      wx.navigateTo({
-        url: './orderFoodInformation/orderFoodInformation'
-      });
+      this.navigateToBooking();
     } else {
       this.setData({ show: true });
     }
@@ -191,9 +227,7 @@ Page({
                       console.log(res);
                       getApp().globalData.openId = res.result.openid; // 这里id是小写
                       wx.setStorageSync('openId', res.result.openid);
-                      wx.navigateTo({
-                        url: './orderFoodInformation/orderFoodInformation'
-                      });
+                      this.navigateToBooking();
                     }
                   });
                   // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
@@ -209,14 +243,40 @@ Page({
       }
     });
   },
-  
+  initMenu: function () {
+    wx.cloud.init();
+    const db = wx.cloud.database();
+    for (let i = 0; i < this.data.list.length; i++){
+      db.collection('menu').add({
+        data: this.data.list[i],
+        success: res => {
+          console.log(res);
+        },
+        fail: err => {
+          console.error('[数据库] [新增记录] 失败：', err)
+        }
+      })
+    }
+    
+  },
+  searchMenu(){
+    wx.cloud.init();
+    const db = wx.cloud.database();
+    db.collection('menu').orderBy('serialnumber', 'asc').get({
+        success: res => {
+          this.setData({
+            list: res.data,
+            selectCard: res.data[0].card
+          })
+        }
+      })
+  },
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-    this.setData({
-      selectCard: this.data.list[0].card
-    });
+    // this.initMenu();
+    this.searchMenu();
   },
 
   /**

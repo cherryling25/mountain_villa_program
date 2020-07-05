@@ -1,11 +1,11 @@
 <!--pages/service/orderFood/orderFoodInformation/orderFoodInformation.wxml-->
 <view class="wrap">
-  <view class="menu" wx:for="{{menu}}" wx:key="index">
+  <view class="menu" wx:for="{{selectedItems}}" wx:key="index">
     <view>
       <image class="cardImg" src="../../../../images/backed.jpg"></image>
     </view>
     <view style="margin-left: -80rpx;">
-      <view>{{item.title}}</view>
+      <view>{{item.commodityTitle}}</view>
       <view style="margin-top:5rpx;">¥ {{item.price}}</view>
     </view>
     <view class="stepper">

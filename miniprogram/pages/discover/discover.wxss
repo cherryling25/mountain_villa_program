@@ -1,11 +1,44 @@
-/* pages/home/home.wxss */
-/*图片*/
-.img {
-  width: 750rpx;
-  height: 330rpx;
+/* pages/discover/discover.wxss */
+
+.wx-swiper-dots {
+  position: relative;
+  left: unset !important;
+  right: 0;
 }
 
-/*故事集*/
+.wx-swiper-dots.wx-swiper-dots-horizontal {
+  margin-bottom: -5rpx;
+}
+
+.weui-padding-wrap {
+  width: 750rpx;
+  padding: 0;
+}
+
+.image-content {
+  width: 100%;
+}
+
+.img {
+  width: 750rpx;
+}
+
+
+/*图标*/
+.iconFlex{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20rpx;
+}
+
+
+.flex_img {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+
+/*内容*/
 .title{
   margin-top: 50rpx;
   margin-left: 40rpx;
