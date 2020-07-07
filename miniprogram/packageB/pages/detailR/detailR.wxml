@@ -1,19 +1,19 @@
 <!--miniprogram/packageB/pages/detailR/detailR.wxml-->
 <view class="head">
   <view class="tip">交易成功</view>
-  <view style="margin-top: 20rpx;">结账金额 ¥ 106.0</view>
-  <view class="btn">再次预订</view>
+  <view style="margin-top: 20rpx;">结账金额 ¥ {{price}}</view>
+  <!-- <view class="btn">再次预订</view> -->
 </view>
 
 <view class="order">
   <view class="title common">君悦休闲农庄</view>
   <view class="common">
-    <view><text class="label">入住时间</text> <text>2020-6-30</text> </view>
-    <view><text class="label">离店时间</text> <text style="margin-right:30rpx;">2020-7-1</text> 共1间1晚</view>
+    <view><text class="label">入离时间</text> <text>{{startTime}}</text> </view>
+    <view><text class="label">离店时间</text> <text style="margin-right:30rpx;">{{endTime}}</text> 共{{num}}间{{days}}晚</view>
   </view>
   <view class="common">
-    <view><text class="label">入住人</text> <text>lemon</text> </view>
-    <view><text class="label">联系电话</text> <text>14265263716262</text></view>
+    <view><text class="label">入住人</text> <text>{{name}}</text> </view>
+    <view><text class="label">联系电话</text> <text>{{phone}}</text></view>
   </view>
 </view>
 <view class="bottom">

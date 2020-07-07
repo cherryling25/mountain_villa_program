@@ -7,18 +7,28 @@ Page({
   data: {
     selectedDate: '',
     calendarShow: false,
-    value: '',
+    name: '',
+    phone: '',
+    num: '1',
+    price: '',
+    status : ''
   },
   onDisplay() {
-    this.setData({ calendarShow: true });
+    this.setData({
+      calendarShow: true
+    });
   },
   onClose() {
-    this.setData({ calendarShow: false });
+    this.setData({
+      calendarShow: false
+    });
   },
+  // 格式时间
   formatDate(selectedDate) {
     selectedDate = new Date(selectedDate);
-    return `${selectedDate.getMonth() + 1}/${selectedDate.getDate()}`;
+    return `${selectedDate.getFullYear()}/${selectedDate.getMonth() + 1}/${selectedDate.getDate()}`;
   },
+
   onConfirm(event) {
     const [start, end] = event.detail;
     this.setData({
@@ -26,16 +36,100 @@ Page({
       selectedDate: `${this.formatDate(start)} - ${this.formatDate(end)}`,
     });
   },
+  // 房间数量
+  selectedRoomNumber(e) {
+    console.log(e.detail);
+    let num = e.detail;
+    this.setData({
+      num
+    })
+  },
+  // 输入框的值
+  onInput: function (e) {
+    console.log(e);
+    let dataset = e.currentTarget.dataset;
+    var value = e.detail;
+    this.data[dataset.name] = value;
+  },
+  
+  // 验证
+  verify() {
+    if (!this.data.selectedDate) {
+      wx.showToast({
+        title: '请选择入离日期',
+        icon: 'none',
+        duration: 1500
+      })
+      return false;
+    }
+    if (!this.data.name) {
+      wx.showToast({
+        title: '请输入姓名',
+        icon: 'none',
+        duration: 1500
+      })
+      return false;
+    }
+    if (!this.data.phone) {
+      wx.showToast({
+        title: '请输入正确的手机号',
+        icon: 'none',
+        duration: 1500
+      })
+      return false;
+    }
+    return true;
+  },
 
-  // save(){
-  //   wx.redirectTo({
-  //     url: '../roomDetails',
-  //   })
-  // },
+  // 预订房间
+  bookingR() {
+    if (!this.verify()) {
+      return;
+    }
+    wx.cloud.init();
+    const db = wx.cloud.database();
+    db.collection('bookingR').add({
+      data: {
+        selectedDate: this.data.selectedDate,
+        name: this.data.name,
+        phone: this.data.phone,
+        num: this.data.num,
+        price: this.data.price,
+        status: 'new'
+      },
+      success: res => {
+        // 在返回结果中会包含新创建的记录的 _id
+        this.setData({
+          counterId: res._id,
+        })
+        wx.showToast({
+          icon: 'success',
+          title: '预订成功',
+        })
+        setTimeout(() => {
+          wx.navigateBack({
+            delta: 1
+          })
+        }, 2000);
+        console.log('[数据库] [新增记录] 成功，记录 _id: ', res._id)
+      },
+      fail: err => {
+        wx.showToast({
+          icon: 'none',
+          title: '预订失败'
+        })
+        console.error('[数据库] [新增记录] 失败：', err)
+      }
+    })
+  },
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
+    let price = options.price;
+    this.setData({
+      price: price
+    })
 
   },
 

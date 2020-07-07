@@ -12,28 +12,31 @@
   />
   <view class="roomNumber">
     <view class="roomText"><text style="color:red;margin-right:10rpx;">*</text>房间数量</view>
-    <van-stepper value="{{ 1 }}" bind:change="onChange" />
+    <van-stepper value="{{ 1 }}" bind:change="selectedRoomNumber" />
   </view>
   
   <van-cell-group>
   <van-field
     required
     label="入住人"
-    value="{{ value }}"
+    value="{{ name }}"
     placeholder="入住人姓名"
-    bind:change="onChange"
+    data-name='name'
+    bind:input="onInput"
   />
   <van-field
     value="{{ phone }}"
     label="联系电话"
+    data-name='phone'
     required
     placeholder="请输入手机号"
+    bind:input="onInput"
   />
   
 </van-cell-group>
 
 <view class="btnWrap">
 <view class="btn">
-  <view>支付担保金</view>
+  <view bindtap="bookingR">预订</view>
 </view>
 </view>

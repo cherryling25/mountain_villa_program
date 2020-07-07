@@ -16,17 +16,31 @@
   justify-content: space-between;
   font-size: 33rpx;
 }
+.no_order{
+  display: flex;
+  margin-top: 100rpx;
+  justify-content: center;
+}
+.img{
+  width:80px; 
+  height: 80px;
+}
+.no{
+  font-size: 35rpx;
+}
 .tip{
   color: #8cbcfc;
 }
 .time{
   margin-left: 100rpx;
 }
-.money{
+.money {
   margin-left: 60rpx;
+  margin-top: -8rpx;
 }
-.price{
-  font-size: 33rpx;
+
+.price {
+  font-size: 35rpx;
 }
 .cardTime{
   margin-top: 40rpx;

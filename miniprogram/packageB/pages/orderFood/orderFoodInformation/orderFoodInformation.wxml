@@ -2,14 +2,14 @@
 <view class="wrap">
   <view class="menu" wx:for="{{selectedItems}}" wx:key="index">
     <view>
-      <image class="cardImg" src="../../../../images/backed.jpg"></image>
+      <image class="cardImg" src="{{item.imgurl}}"></image>
     </view>
     <view style="margin-left: -80rpx;">
       <view>{{item.commodityTitle}}</view>
       <view style="margin-top:5rpx;">¥ {{item.price}}</view>
     </view>
     <view class="stepper">
-      <van-stepper value="{{ 1 }}" bind:change="onChange" />
+      <van-stepper min="0" value="{{ 1 }}" data-index="{{index}}" bind:change="changeNumber" />
     </view>
   </view>
 
@@ -17,7 +17,7 @@
 <view class='placeholder-view'></view>
 <view class="bottom">
   <view>总计：</view>
-  <view>¥ 123.00</view>
+  <view>¥ {{total}}</view>
   <view class="booking" bindtap="booking">预订</view>
   <view class="order">立即下单</view>
 </view>

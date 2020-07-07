@@ -2,10 +2,46 @@
 var app = getApp();
 Page({
   data: {
-    active: 0,
+    active: 1,
+    orders: [
+    ]
   },
-
-  onChange(event) {
+  find(){
+    wx.cloud.init();
+    const db = wx.cloud.database();
+    db.collection('bookingR').get({
+      success: res => {
+        this.setData({
+          orders: res.data
+        });
+      }
+    });
+  },
+  findByStatus(status) {
+    wx.cloud.init();
+    const db = wx.cloud.database();
+    db.collection('bookingR').where({status : status}).get({
+      success: res => {
+        this.setData({
+          orders: res.data
+        });
+      }
+    });
+  },
+  onChange(e) {
+    console.log(e);
+    if(e.detail.index == 0){
+      this.find();
+    }
+    if (e.detail.index == 1) {
+      this.findByStatus('new');
+    }
+    if (e.detail.index == 2) {
+      this.findByStatus('invoiced');
+    }
+    if (e.detail.index == 3) {
+      this.findByStatus('cancelled');
+    }
     // wx.showToast({
     //   title: `切换到标签 ${event.detail.name}`,
     //   icon: 'none'
@@ -17,7 +53,7 @@ Page({
     })
   },
   onLoad: function (option) {
-
+    this.find();
   },
   /**
    * Lifecycle function--Called when page is initially rendered

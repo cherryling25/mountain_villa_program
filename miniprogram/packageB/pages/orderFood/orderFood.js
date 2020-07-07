@@ -224,6 +224,7 @@ Page({
                     data : {},
                     success : res => {
                       //TODO 弹出来提示框 授权成功
+                      
                       console.log(res);
                       getApp().globalData.openId = res.result.openid; // 这里id是小写
                       wx.setStorageSync('openId', res.result.openid);

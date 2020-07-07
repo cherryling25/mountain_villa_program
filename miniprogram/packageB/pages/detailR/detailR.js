@@ -5,14 +5,45 @@ Page({
    * Page initial data
    */
   data: {
-
+    price: '',
+    startTime: '',
+    endTime: '',
+    num: '',
+    days: '',
+    name: '',
+    phone: ''
   },
 
+  query() {
+    wx.cloud.init();
+    const db = wx.cloud.database();
+    db.collection('bookingR').get({
+      success: res => {
+        console.log(res.data);
+        for (let i = 0; i < res.data.length; i++) {
+          this.data.name  = res.data[i].name;
+          this.data.startTime = res.data[i].selectedDate;
+          this.data.endTime = res.data[i].selectedDate;
+          this.data.phone = res.data[i].phone;
+          this.data.num = res.data[i].num;
+          this.data.price = res.data[i].price;
+        }
+        this.setData({
+          startTime: this.data.startTime,
+          endTime: this.data.endTime,
+          name: this.data.name,
+          phone: this.data.phone,
+          num: this.data.num,
+          price: this.data.price
+        });
+      }
+    });
+  },
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-
+    this.query();
   },
 
   /**

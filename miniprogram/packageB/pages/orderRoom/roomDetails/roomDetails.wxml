@@ -38,6 +38,6 @@
 </view>
 
 <view class="bottom">
-  <view class="price">¥ 259 / 晚</view>
-  <view class="booking">预订</view>
+  <view class="price">¥ {{price}} / 晚</view>
+  <view class="booking" bindtap="bookingRoom">预订</view>
 </view>

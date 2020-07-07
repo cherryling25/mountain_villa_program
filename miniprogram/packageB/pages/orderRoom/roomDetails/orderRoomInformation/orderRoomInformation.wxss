@@ -9,7 +9,7 @@ page{
 }
 .roomNumber{
   display: flex;
-  font-size: 28rpx;
+  font-size: 33rpx;
   margin-left: 11rpx;
   padding: 20rpx 0;
   border-bottom: 1px solid #f0f2f5;
