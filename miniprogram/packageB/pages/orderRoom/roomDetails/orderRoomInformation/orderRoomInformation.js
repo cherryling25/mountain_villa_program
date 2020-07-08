@@ -25,8 +25,24 @@ Page({
   },
   // 格式时间
   formatDate(selectedDate) {
-    selectedDate = new Date(selectedDate);
-    return `${selectedDate.getFullYear()}/${selectedDate.getMonth() + 1}/${selectedDate.getDate()}`;
+    const year = `${selectedDate.getFullYear()}`;
+    let month = `${selectedDate.getMonth() + 1}`;
+    let day = `${selectedDate.getDate()}`;
+
+    if (month.length == 1) {
+      month =  '0' + month ;
+    }
+
+    if (day.length == 1) {
+      day =  '0' + day;
+    }
+
+    return year + '/' + month + '/' + day;
+
+    // console.log(selectedDate);
+    // selectedDate = new Date(selectedDate);
+    // console.log(selectedDate);
+    // return `${selectedDate.getFullYear()}/${selectedDate.getMonth() + 1}/${selectedDate.getDate()}`;
   },
 
   onConfirm(event) {

@@ -2,28 +2,41 @@
 var app = getApp();
 Page({
   data: {
-    active: 1,
-    orders: [
-    ]
+    active: 0,
+    currentStatus:'',
+    orders: []
   },
-  find(){
+  findByStatus() {
     wx.cloud.init();
+    let requestObj = {};
+    if (this.data.currentStatus) {
+      requestObj = { status: this.data.currentStatus};
+    }
     const db = wx.cloud.database();
-    db.collection('bookingR').get({
+    db.collection('bookingR').where(requestObj).get({
       success: res => {
+        let list = [];
+        console.log(res.data);
+        for (let i = 0; i < res.data.length; i++) {
+          let statusCn = '';
+          if (res.data[i].status == 'new') {
+            statusCn = '待入住';
+          } else if (res.data[i].status == 'invoiced') {
+            statusCn = '待评价';
+          } else if (res.data[i].status == 'cancelled') {
+            statusCn = '取消';
+          }
+          let item = {
+            id: res.data[i]._id,
+            startTime: res.data[i].selectedDate.substring(0, 10).replace(/\//g, '-'),
+            endTime: res.data[i].selectedDate.substring(13, 23).replace(/\//g, '-'),
+            price: res.data[i].price,
+            status: statusCn
+          };
+          list.push(item);
+        }
         this.setData({
-          orders: res.data
-        });
-      }
-    });
-  },
-  findByStatus(status) {
-    wx.cloud.init();
-    const db = wx.cloud.database();
-    db.collection('bookingR').where({status : status}).get({
-      success: res => {
-        this.setData({
-          orders: res.data
+          orders: list
         });
       }
     });
@@ -31,21 +44,30 @@ Page({
   onChange(e) {
     console.log(e);
     if(e.detail.index == 0){
-      this.find();
+      this.data.currentStatus = null;
     }
     if (e.detail.index == 1) {
-      this.findByStatus('new');
+      this.data.currentStatus = 'new';
     }
     if (e.detail.index == 2) {
-      this.findByStatus('invoiced');
+      this.data.currentStatus = 'invoiced';
     }
     if (e.detail.index == 3) {
-      this.findByStatus('cancelled');
+      this.data.currentStatus = 'cancelled';
     }
-    // wx.showToast({
-    //   title: `切换到标签 ${event.detail.name}`,
-    //   icon: 'none'
-    // });
+    this.findByStatus();
+  },
+  cancelOrder(e){
+    let id = e.target.dataset.id;
+    wx.cloud.init();
+    const db = wx.cloud.database();
+    db.collection('bookingR').doc(id).update({
+      data : {status:'cancelled'},
+      success: () => {
+        this.findByStatus();
+        console.log('update success')
+      }
+      });
   },
   detail(){
     wx.navigateTo({
@@ -53,7 +75,7 @@ Page({
     })
   },
   onLoad: function (option) {
-    this.find();
+    this.findByStatus();
   },
   /**
    * Lifecycle function--Called when page is initially rendered
