@@ -19,19 +19,24 @@ Page({
         console.log(res.data);
         for (let i = 0; i < res.data.length; i++) {
           let statusCn = '';
+          let btnStatus = '';
           if (res.data[i].status == 'new') {
             statusCn = '待入住';
+            btnStatus = '取消订单';
           } else if (res.data[i].status == 'invoiced') {
             statusCn = '待评价';
+            btnStatus = '评价';
           } else if (res.data[i].status == 'cancelled') {
-            statusCn = '取消';
+            statusCn = '已取消';
+            btnStatus = '删除订单';
           }
           let item = {
             id: res.data[i]._id,
             startTime: res.data[i].selectedDate.substring(0, 10).replace(/\//g, '-'),
             endTime: res.data[i].selectedDate.substring(13, 23).replace(/\//g, '-'),
-            price: res.data[i].price,
-            status: statusCn
+            price: res.data[i].total,
+            status: statusCn,
+            btnStatus: btnStatus
           };
           list.push(item);
         }
@@ -69,9 +74,10 @@ Page({
       }
       });
   },
-  detail(){
+  detail(e){
+    let id = e.currentTarget.dataset.id;
     wx.navigateTo({
-      url: './detailR/detailR',
+      url: './detailR/detailR?id='+ id
     })
   },
   onLoad: function (option) {

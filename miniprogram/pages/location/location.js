@@ -7,10 +7,10 @@ Page({
   data: {
     markers:  [
       {
-        iconPath:  "/images/ljx.png",
+        iconPath:  "../../images/home.png",
         id:  4,
-        latitude:  31.938841,
-        longitude:  118.799698,
+        latitude:  26.418841,
+        longitude:  111.289698,
         width:  30,
         height:  30
       }

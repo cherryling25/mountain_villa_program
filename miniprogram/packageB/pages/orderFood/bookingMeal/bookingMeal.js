@@ -12,7 +12,7 @@ Page({
     popupShow: false,
     minDate: new Date().getTime(),
     maxDate: new Date(2029, 10, 1).getTime(),
-    currentDate: '',
+    currentDate: ''
   },
  
   // 选择时间
@@ -43,8 +43,47 @@ Page({
       info: this.data.info
     });
   },
+  // 验证
+  verify() {
+    if (!this.data.info.username) {
+      wx.showToast({
+        title: '请输入姓名',
+        icon: 'none',
+        duration: 1500
+      })
+      return false;
+    }
+    if (!this.data.info.phone) {
+      wx.showToast({
+        title: '请输入正确的手机号',
+        icon: 'none',
+        duration: 1500
+      })
+      return false;
+    }
+    if (!this.data.info.number) {
+      wx.showToast({
+        title: '请输入人数',
+        icon: 'none',
+        duration: 1500
+      })
+      return false;
+    }
+    if (!this.data.info.time) {
+      wx.showToast({
+        title: '请选择就餐时间',
+        icon: 'none',
+        duration: 1500
+      })
+      return false;
+    }
+    return true;
+  },
   // 预订
   menuBooking: function () {
+    if (!this.verify()) {
+      return;
+    }
     wx.cloud.init();
     const db = wx.cloud.database();
     db.collection('booking').add({
@@ -61,8 +100,14 @@ Page({
           count: 1
         })
         wx.showToast({
+          icon: 'success',
           title: '预订成功',
         })
+        setTimeout(() => {
+          wx.navigateBack({
+            delta: 2
+          })
+        }, 2000);
         console.log('[数据库] [新增记录] 成功，记录 _id: ', res._id)
       },
       fail: err => {

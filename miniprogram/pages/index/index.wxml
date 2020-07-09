@@ -25,7 +25,7 @@
   </view>
   <view class="underline"></view>
   <view class="border">
-    <image src="/images/backed.jpg" class="img"></image>
+    <image src="/images/logo.png" class="img"></image>
     <view class="text">
       <view class="text_title">春日睡醒的我</view>
       <view class="wenzi">

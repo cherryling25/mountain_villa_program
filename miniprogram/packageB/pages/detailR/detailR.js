@@ -14,36 +14,41 @@ Page({
     phone: ''
   },
 
-  query() {
+  query(id) {
     wx.cloud.init();
     const db = wx.cloud.database();
-    db.collection('bookingR').get({
+    db.collection('bookingR').where({ _id:id}).get({
       success: res => {
-        console.log(res.data);
-        for (let i = 0; i < res.data.length; i++) {
-          this.data.name  = res.data[i].name;
-          this.data.startTime = res.data[i].selectedDate;
-          this.data.endTime = res.data[i].selectedDate;
-          this.data.phone = res.data[i].phone;
-          this.data.num = res.data[i].num;
-          this.data.price = res.data[i].price;
-        }
+        let obj = res.data[0];
+        this.data.name = obj.name;
+        this.data.startTime = obj.selectedDate.substring(0, 10).replace(/\//g, '-');
+        this.data.endTime = obj.selectedDate.substring(13, 23).replace(/\//g, '-');
+        this.data.phone = obj.phone;
+        this.data.num = obj.num;
+        this.data.price = obj.total;
+        
+        let s = new Date(this.data.startTime);
+        let e = new Date(this.data.endTime);
+        let difValue = (e - s) / (1000 * 60 * 60 * 24);
+      
         this.setData({
           startTime: this.data.startTime,
           endTime: this.data.endTime,
           name: this.data.name,
           phone: this.data.phone,
           num: this.data.num,
-          price: this.data.price
+          price: this.data.price,
+          days: difValue
         });
       }
     });
   },
+  
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-    this.query();
+    this.query(options.id);
   },
 
   /**

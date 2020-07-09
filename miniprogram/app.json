@@ -1,8 +1,9 @@
 {
   "pages": [
+    "pages/location/location",
+    
     "pages/discover/discover",
     
-    "pages/location/location",
     "pages/myPage/my",
     "pages/index/index",
     "pages/authorize/authorize",

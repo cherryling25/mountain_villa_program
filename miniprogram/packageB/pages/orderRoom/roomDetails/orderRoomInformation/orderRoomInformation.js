@@ -38,11 +38,6 @@ Page({
     }
 
     return year + '/' + month + '/' + day;
-
-    // console.log(selectedDate);
-    // selectedDate = new Date(selectedDate);
-    // console.log(selectedDate);
-    // return `${selectedDate.getFullYear()}/${selectedDate.getMonth() + 1}/${selectedDate.getDate()}`;
   },
 
   onConfirm(event) {
@@ -111,6 +106,7 @@ Page({
         phone: this.data.phone,
         num: this.data.num,
         price: this.data.price,
+        total: (this.data.price * this.data.num),
         status: 'new'
       },
       success: res => {
