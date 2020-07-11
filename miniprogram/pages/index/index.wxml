@@ -1,6 +1,12 @@
 <!--pages/discover/discover.wxml-->
-<!--<image class="img-bg" src="/images/beijing1.jpg" style='width:100%;min-height:100%;background-size:100% 100%;'></image>-->
+<!-- <image class="img-bg" src="/images/beijing1.jpg" style='width:100%;min-height:100%;background-size:100% 100%;'></image> -->
+
 <view class="content">
+  <view class="go" bindtap="navigate">
+    <image src="/images/location1.png" class="goImg"></image>
+    <view>去这里</view>
+  </view>
+
   <view class="title">湖南竟有如此不可思议的地方</view>
   <view class="underline"></view>
 

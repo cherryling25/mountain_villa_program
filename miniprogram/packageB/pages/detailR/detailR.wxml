@@ -17,5 +17,5 @@
   </view>
 </view>
 <view class="bottom">
-  <view>联系店家</view>
+  <view bindtap="call">联系店家</view>
 </view>

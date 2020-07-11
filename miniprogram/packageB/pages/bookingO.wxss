@@ -11,7 +11,7 @@
   width: 88%;
   padding: 20rpx;
   border-radius: 15rpx;
-  border: 1px solid #8cbcfc;
+  border: 1px solid #fac9ca;
 }
 
 .cardTitle {
@@ -21,8 +21,7 @@
 }
 
 .tip {
-  /* color: #8cbcfc; */
-  /* color: #f73148; */
+  color: #ff4042;
 }
 
 .money {

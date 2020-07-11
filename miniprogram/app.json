@@ -1,11 +1,13 @@
 {
   "pages": [
+    "pages/myPage/my",
+    
+    "pages/index/index",
+    
     "pages/location/location",
     
     "pages/discover/discover",
     
-    "pages/myPage/my",
-    "pages/index/index",
     "pages/authorize/authorize",
     "pages/register/register"
   ],
@@ -23,12 +25,6 @@
   },
   "tabBar": {
     "list": [
-      {
-        "pagePath": "pages/location/location",
-        "text": "定位",
-        "iconPath": "images/location.png",
-        "selectedIconPath": "images/location1.png"
-      },
       {
         "pagePath": "pages/index/index",
         "text": "首页",

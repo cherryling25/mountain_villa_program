@@ -97,16 +97,25 @@ Page({
     if (!this.verify()) {
       return;
     }
+    let startDays = this.data.selectedDate.substring(0, 10).replace(/\//g, '-');
+    let endDays = this.data.selectedDate.substring(13, 23).replace(/\//g, '-');
+    let s = new Date(startDays);
+    let e = new Date(endDays);
+    let difValue = (e - s) / (1000 * 60 * 60 * 24);
+
+    console.log(difValue);
     wx.cloud.init();
     const db = wx.cloud.database();
     db.collection('bookingR').add({
+      
       data: {
         selectedDate: this.data.selectedDate,
+        daysCompare: difValue,
         name: this.data.name,
         phone: this.data.phone,
         num: this.data.num,
         price: this.data.price,
-        total: (this.data.price * this.data.num),
+        total: (this.data.price * this.data.num * difValue),
         status: 'new'
       },
       success: res => {

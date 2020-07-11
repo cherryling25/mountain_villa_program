@@ -9,7 +9,8 @@
   width: 88%;
   padding: 20rpx;
   border-radius: 15rpx;
-  border: 1px solid #8cbcfc;
+  border: 1px solid #fac9ca;
+  /* box-shadow: 1px 1px 3px #ff4042 */
 }
 .cardTitle{
   display: flex;
@@ -29,7 +30,7 @@
   font-size: 35rpx;
 }
 .tip{
-  color: #8cbcfc;
+  color: #ff4042;
 }
 .time{
   margin-left: 100rpx;
@@ -53,7 +54,7 @@
   margin-top: 30rpx;
 }
 .cardImg{
-  background: #8cbcfc;
+  background: #ff4042;
   display: inline-block;
   padding: 30rpx 0 30rpx 30rpx;
   border-radius: 10rpx;

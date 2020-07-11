@@ -3,7 +3,9 @@ page{
   background: #f7f7f7;
 }
 .head{
+  /* background: #f8df84; */
   background: #f8df84;
+
   padding: 25rpx;
 }
 .tip{
@@ -34,7 +36,7 @@ page{
 }
 .bottom{
   background: white;
-  color: #f8df84;
+  color: #ff4042;
   position: fixed;
   bottom: 0;
   width: 100%;

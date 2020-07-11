@@ -101,9 +101,9 @@
 					"scene": null
 				},
 				{
-					"id": -1,
-					"name": "packageB/pages/booking",
-					"pathName": "packageB/pages/booking",
+					"id": 9,
+					"name": "packageB/pages/bookingO",
+					"pathName": "packageB/pages/bookingO",
 					"query": "",
 					"scene": null
 				},
@@ -139,6 +139,7 @@
 					"id": -1,
 					"name": "packageB/pages/bookingR",
 					"pathName": "packageB/pages/bookingR",
+					"query": "",
 					"scene": null
 				}
 			]

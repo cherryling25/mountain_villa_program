@@ -43,7 +43,12 @@ Page({
       }
     });
   },
-  
+  // 联系店家
+  call() {
+    wx.makePhoneCall({
+      phoneNumber: '15226371822'
+    })
+  },
   /**
    * Lifecycle function--Called when page load
    */

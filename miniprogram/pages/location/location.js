@@ -7,8 +7,8 @@ Page({
   data: {
     markers:  [
       {
-        iconPath:  "../../images/home.png",
-        id:  4,
+        iconPath:  "/images/home.png",
+        id:  1,
         latitude:  26.418841,
         longitude:  111.289698,
         width:  30,
