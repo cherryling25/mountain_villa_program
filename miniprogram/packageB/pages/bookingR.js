@@ -28,14 +28,14 @@ Page({
             btnStatus = '评价';
           } else if (res.data[i].status == 'cancelled') {
             statusCn = '已取消';
-            btnStatus = '删除订单';
           }
           let item = {
             id: res.data[i]._id,
             startTime: res.data[i].selectedDate.substring(0, 10).replace(/\//g, '-'),
             endTime: res.data[i].selectedDate.substring(13, 23).replace(/\//g, '-'),
             price: res.data[i].total,
-            status: statusCn,
+            status: res.data[i].status,
+            statusCn : statusCn,
             btnStatus: btnStatus
           };
           list.push(item);
@@ -74,6 +74,7 @@ Page({
       }
       });
   },
+  
   detail(e){
     let id = e.currentTarget.dataset.id;
     wx.navigateTo({

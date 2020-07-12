@@ -7,11 +7,38 @@ Page({
     total: '0.00'
   },
 
-  // 线上预订
+  // 预订
   booking(){
+    let list = this.data.selectedItems;
+    console.log(list);
+    let items = [];
+    for (let i = 0; i < list.length; i++) {
+      if (list[i].num > 0) {
+          items.push({
+            id: list[i].id,
+            num: list[i].num
+          });
+        }
+    }
+    let obj = {
+      items: items
+    }
+    let objStr = JSON.stringify(obj);
+    console.log(objStr);
+
     wx.navigateTo({
-      url: '../bookingMeal/bookingMeal'
+      url: '../bookingMeal/bookingMeal?data=' + objStr
     })
+  },
+  calculateTotal() {
+    let total = 0;
+    let list = this.data.selectedItems;
+    for (let i = 0; i < list.length; i++) {
+      total += (list[i].num * list[i].price) ;
+    }
+    this.setData({
+      total
+    });
   },
   onLoad: function (options) {
     let data = JSON.parse(options.data);
@@ -34,6 +61,7 @@ Page({
         this.setData({
           selectedItems: selectedItems
         });
+        this.calculateTotal();
       }
     });
    
@@ -42,31 +70,17 @@ Page({
   changeNumber(e) {
     console.log(e);
     let index = e.currentTarget.dataset.index;
-    // let num = e.detail;
-    // for (let i = 0; i < this.data.selectCard.length; i++) {
-    //   if (index == i) {
-    //     this.data.selectCard[i].num = num;
-    //     this.setData({
-    //       selectCard: this.data.selectCard
-    //     });
-    //     break;
-    //   }
-    // }
-    // this.calculateTotal();
-  },
-  calculateTotal(price) {
-    let total = 0;
-    let selectedItems = this.data.selectedItems;
-    for (let i = 0; i < selectedItems.length; i++) {
-      let cards = selectedItems[i].card;
-      for (let j = 0; j < cards.length; j++) {
-        total += (cards[j].num * cards[j].price);
+    let num = e.detail;
+    for (let i = 0; i < this.data.selectedItems.length; i++) {
+      if (index == i) {
+        this.data.selectedItems[i].num = num;
+        this.setData({
+          selectedItems: this.data.selectedItems
+        });
+        break;
       }
     }
-
-    this.setData({
-      total
-    });
+    this.calculateTotal();
   },
   /**
    * Lifecycle function--Called when page is initially rendered

@@ -9,7 +9,7 @@
       <view style="margin-top:5rpx;">¥ {{item.price}}</view>
     </view>
     <view class="stepper">
-      <van-stepper min="0" value="{{ 1 }}" data-index="{{index}}" bind:change="changeNumber" />
+      <van-stepper min="0" value="{{ item.num }}" data-index="{{index}}" bind:change="changeNumber" />
     </view>
   </view>
 

@@ -1,22 +1,29 @@
 <!--miniprogram/packageB/pages/bookingO.wxml-->
 <van-tabs active="{{ active }}" bind:change="onChange" >
   <van-tab title="全部订单">
-    <view class="cardWrap">
+    <view class="no_order" wx:if="{{orders.length == 0}}">
+      <view>
+        <image src="../../images/no_order.png" class="img"></image>
+        <view class="no">暂无订单 !</view>
+      </view>
+    </view>
+
+    <view class="cardWrap" wx:for="{{orders}}" wx:key="{{index}}">
       <view class="card">
         <view class="cardTitle">
           <view>君悦休闲农庄</view>
-          <view class="tip">已成功</view>
+          <view class="tip">{{item.statusCn}}</view>
         </view>
-        <view class="cardContent" bindtap="detail">
+        <view class="cardContent" data-id='{{item.id}}' bindtap="detail">
           <image class="cardImg" src="../../images/backed.jpg"></image>
           <image class="cardImg" src="../../images/backed.jpg"></image>
         </view>
         <view class="cardTip">
-          <view>炸鸡炸鸡</view>
-          <view style="margin-left:75rpx;">可乐可乐</view>
+          <view>{{item.title}}</view>
+          <view style="margin-left:75rpx;">{{item.title}}</view>
         </view>
-        <view class="total">共1件商品<text class="money">合计 <text class="price">¥ 106.00</text> </text> </view>
-        <view class="btn">删除订单</view>
+        <view class="total">共1件商品<text class="money">合计 <text class="price">¥ {{item.price}}</text> </text> </view>
+        <view class="btn">{{item.btnStatus}}</view>
       </view>
     </view>
   </van-tab>
@@ -41,7 +48,7 @@
     </view>
   </van-tab> -->
 
-  <van-tab title="待评价">
+  <!-- <van-tab title="待评价">
     <view class="cardWrap">
       <view class="card">
         <view class="cardTitle">
@@ -60,7 +67,7 @@
         <view class="btn">评价</view>
       </view>
     </view>
-  </van-tab>
+  </van-tab> -->
 
   <van-tab title="取消">
     <view class="cardWrap">

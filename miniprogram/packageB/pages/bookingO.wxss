@@ -32,6 +32,18 @@
 .price {
   font-size: 35rpx;
 }
+.no_order{
+  display: flex;
+  margin-top: 100rpx;
+  justify-content: center;
+}
+.img{
+  width:80px; 
+  height: 80px;
+}
+.no{
+  font-size: 35rpx;
+}
 
 .cardTip {
   display: flex;

@@ -102,11 +102,7 @@ Page({
     selectCard: [],
     total: 0
   },
-  booking(){
-    wx.navigateTo({
-      url: './orderFoodInformation/orderFoodInformation'
-    })
-  },
+  
   onChange(e) {
     console.log(e);
     for(let i=0; i < this.data.list.length; i++) {
@@ -164,6 +160,14 @@ Page({
     });
   },
   navigateToBooking() {
+    if(this.data.total == 0){
+      wx.showModal({
+        showCancel: false,
+        title: '温馨提示',
+        content: '您还未选择菜品',
+      })
+      return;
+    }
     let list = this.data.list;
     let selectedItems = [];
     for (let i = 0; i < list.length; i++) {
@@ -185,7 +189,7 @@ Page({
       url: './orderFoodInformation/orderFoodInformation?data=' + objStr
     });
   },
-  onClickShow() {
+  ok() {
     var openId = wx.getStorageSync('openId');
     console.log(openId);
     if(openId) {

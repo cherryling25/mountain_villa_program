@@ -86,12 +86,13 @@ Page({
     }
     wx.cloud.init();
     const db = wx.cloud.database();
-    db.collection('booking').add({
+    db.collection('bookingO').add({
       data: {
         username: this.data.info.username,
         time: this.data.info.time,
         number: this.data.info.number,
-        phone: this.data.info.phone
+        phone: this.data.info.phone,
+        
       },
       success: res => {
         // 在返回结果中会包含新创建的记录的 _id

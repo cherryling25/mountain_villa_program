@@ -1,12 +1,13 @@
 {
   "pages": [
+    "pages/discover/discover",
+    
     "pages/myPage/my",
     
     "pages/index/index",
     
     "pages/location/location",
     
-    "pages/discover/discover",
     
     "pages/authorize/authorize",
     "pages/register/register"

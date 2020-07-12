@@ -12,7 +12,7 @@
       <view class="card">
         <view class="cardTitle">
           <view>君悦休闲农庄</view>
-          <view class="tip">{{item.status}}</view>
+          <view class="tip">{{item.statusCn}}</view>
         </view>
         <view class="cardContent" data-id='{{item.id}}' bindtap="detail">
           <view class="cardImg"><image src="../../images/cardRoom.png" style="margin-right: 16px;vertical-align: middle;width:50px; height: 50px;"></image></view>
@@ -22,7 +22,7 @@
           </view>
         </view>
         <view class="total"><text class="money">合计 <text class="price">¥ {{item.price}}</text> </text> </view>
-        <view class="btn">{{item.btnStatus}}</view>
+        <view wx:if="{{item.status != 'cancelled'}}" class="btn">{{item.btnStatus}}</view>
       </view>
     </view>
     
@@ -40,7 +40,7 @@
       <view class="card">
         <view class="cardTitle">
           <view>君悦休闲农庄</view>
-          <view class="tip">{{item.status}}</view>
+          <view class="tip">{{item.statusCn}}</view>
         </view>
         <view class="cardContent" data-id='{{item.id}}' bindtap="detail">
           <view class="cardImg"><image src="../../images/cardRoom.png" style="margin-right: 16px;vertical-align: middle;width:50px; height: 50px;"></image></view>
@@ -67,7 +67,7 @@
       <view class="card">
         <view class="cardTitle">
           <view>君悦休闲农庄</view>
-          <view class="tip">{{item.status}}</view>
+          <view class="tip">{{item.statusCn}}</view>
         </view>
         <view class="cardContent" data-id='{{item.id}}' bindtap="detail">
           <view class="cardImg"><image src="../../images/cardRoom.png" style="margin-right: 16px;vertical-align: middle;width:50px; height: 50px;"></image></view>
@@ -94,7 +94,7 @@
       <view class="card">
         <view class="cardTitle">
           <view>君悦休闲农庄</view>
-          <view class="tip">{{item.status}}</view>
+          <view class="tip">{{item.statusCn}}</view>
         </view>
         <view class="cardContent" data-id='{{item.id}}' bindtap="detail">
           <view class="cardImg"><image src="../../images/cardRoom.png" style="margin-right: 16px;vertical-align: middle;width:50px; height: 50px;"></image></view>
@@ -104,7 +104,7 @@
           </view>
         </view>
         <view class="total"><text class="money">合计 <text class="price">¥ {{item.price}}</text> </text> </view>
-        <view class="btn">{{item.btnStatus}}</view>
+        <!-- <view class="btn" data-id='{{item.id}}' bindtap="deleteOrder">{{item.btnStatus}}</view> -->
       </view>
     </view>
   </van-tab>
