@@ -5,7 +5,16 @@ Page({
    * Page initial data
    */
   data: {
+    total: '',
+    orders: [
+      {
+        img:'../../../images/backed.jpg',
+        commodityTitle:'微麻加辣',
+        price: '2',
+        num: '1',
 
+      }
+    ]
   },
 
   /**

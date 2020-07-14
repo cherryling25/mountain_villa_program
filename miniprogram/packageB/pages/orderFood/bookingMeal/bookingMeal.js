@@ -9,6 +9,9 @@ Page({
       number:'',
       time: ''
     },
+    status: '',
+    total : null,
+    items:[],
     popupShow: false,
     minDate: new Date().getTime(),
     maxDate: new Date(2029, 10, 1).getTime(),
@@ -88,11 +91,13 @@ Page({
     const db = wx.cloud.database();
     db.collection('bookingO').add({
       data: {
+        items: this.data.items,
+        total: this.data.total,
         username: this.data.info.username,
         time: this.data.info.time,
         number: this.data.info.number,
         phone: this.data.info.phone,
-        
+        status: 'new'
       },
       success: res => {
         // 在返回结果中会包含新创建的记录的 _id
@@ -126,6 +131,10 @@ Page({
     this.setData({
       time: time
     });
+
+    let data = JSON.parse(options.data);
+    this.data.items = data.items;
+    this.data.total = data.total;
   },
 
   /**

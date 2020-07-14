@@ -1,15 +1,24 @@
 /* miniprogram/packageB/pages/orderFood/bookingMeal/bookingMeal.wxss */
-.wrap{
+page{
+  background: white;
+}
+.title{
+  margin-top:25rpx;
+  margin-left:25rpx;
+  font-size:35rpx;
+}
+
+.btnWrap{
   display: flex;
   justify-content: center;
+  margin-top: 180rpx;
 }
-.whiteBg{
-  width: 90%;
-  margin-top: 30rpx;
-  height: 300rpx;
-  
-}
-.van-button--block {
-  width: 90% !important;
-  margin-top: 230rpx;
+.btn{
+  background: #ff4a4b;
+  color: white;
+  width: 50%;
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: center;
+  border-radius: 10rpx;
 }

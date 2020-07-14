@@ -15,6 +15,34 @@
           <view class="tip">{{item.statusCn}}</view>
         </view>
         <view class="cardContent" data-id='{{item.id}}' bindtap="detail">
+          <image class="cardImg" src="{{item.product0.imgurl}}"></image>
+          <image class="cardImg" src="{{item.product1.imgurl}}"></image>
+        </view>
+        <view class="cardTip">
+          <view>{{item.product0.commodityTitle}}</view>
+          <view style="margin-left:75rpx;">{{item.product1.commodityTitle}}</view>
+        </view>
+        <view class="total">共 {{item.piece}} 件商品<text class="money">合计 <text class="price">¥ {{item.price}}</text> </text> </view>
+        <view class="btn" wx:if="{{item.status != 'cancelled'}}">{{item.btnStatus}}</view>
+      </view>
+    </view>
+  </van-tab>
+
+  <van-tab title="待付款">
+    <view class="no_order" wx:if="{{orders.length == 0}}">
+      <view>
+        <image src="../../images/no_order.png" class="img"></image>
+        <view class="no">暂无订单 !</view>
+      </view>
+    </view>
+
+    <view class="cardWrap" wx:for="{{orders}}" wx:key="{{index}}">
+      <view class="card">
+        <view class="cardTitle">
+          <view>君悦休闲农庄</view>
+          <view class="tip">{{item.statusCn}}</view>
+        </view>
+        <view class="cardContent" data-id='{{item.id}}' bindtap="detail">
           <image class="cardImg" src="../../images/backed.jpg"></image>
           <image class="cardImg" src="../../images/backed.jpg"></image>
         </view>
@@ -23,70 +51,64 @@
           <view style="margin-left:75rpx;">{{item.title}}</view>
         </view>
         <view class="total">共1件商品<text class="money">合计 <text class="price">¥ {{item.price}}</text> </text> </view>
-        <view class="btn">{{item.btnStatus}}</view>
+        <view class="btn" data-id='{{item.id}}' bindtap="payment">{{item.btnStatus}}</view>
       </view>
     </view>
   </van-tab>
 
-  <!-- <van-tab title="待用餐">
-    <view class="cardWrap">
-      <view class="card">
-        <view class="cardTitle">
-          <view>君悦休闲农庄</view>
-          <view class="tip">待用餐</view>
-        </view>
-        <view class="cardContent" bindtap="detail">
-          <view class="cardImg"><image src="../../images/cardRoom.png" style="margin-right: 16px;vertical-align: middle;width:50px; height: 50px;"></image></view>
-          <view class="cardTime">
-            <view>入住时间:<text class="time">2020-02-14</text></view>
-            <view>离店时间:<text class="time">2020-02-15</text></view>
-          </view>
-        </view>
-        <view class="total">共1件商品<text class="money">合计 <text class="price">¥ 106.00</text> </text> </view>
-        <view class="btn">取消订单</view>
+  <van-tab title="已付款">
+    <view class="no_order" wx:if="{{orders.length == 0}}">
+      <view>
+        <image src="../../images/no_order.png" class="img"></image>
+        <view class="no">暂无订单 !</view>
       </view>
     </view>
-  </van-tab> -->
 
-  <!-- <van-tab title="待评价">
-    <view class="cardWrap">
+    <view class="cardWrap" wx:for="{{orders}}" wx:key="{{index}}">
       <view class="card">
         <view class="cardTitle">
           <view>君悦休闲农庄</view>
-          <view class="tip">待评价</view>
+          <view class="tip">{{item.statusCn}}</view>
         </view>
-        <view class="cardContent" bindtap="detail">
+        <view class="cardContent" data-id='{{item.id}}' bindtap="detail">
           <image class="cardImg" src="../../images/backed.jpg"></image>
           <image class="cardImg" src="../../images/backed.jpg"></image>
         </view>
         <view class="cardTip">
-          <view>炸鸡炸鸡</view>
-          <view style="margin-left:75rpx;">可乐可乐</view>
+          <view>{{item.title}}</view>
+          <view style="margin-left:75rpx;">{{item.title}}</view>
         </view>
-        <view class="total">共1件商品<text class="money">合计 <text class="price">¥ 106.00</text> </text> </view>
-        <view class="btn">评价</view>
+        <view class="total">共1件商品<text class="money">合计 <text class="price">¥ {{item.price}}</text> </text> </view>
+        <view class="btn" data-id='{{item.id}}' bindtap="cancelOrder">{{item.btnStatus}}</view>
       </view>
     </view>
-  </van-tab> -->
+  </van-tab>
 
   <van-tab title="取消">
-    <view class="cardWrap">
-    <view class="card">
-      <view class="cardTitle">
-        <view>君悦休闲农庄</view>
-        <view class="tip">已取消</view>
+    <view class="no_order" wx:if="{{orders.length == 0}}">
+      <view>
+        <image src="../../images/no_order.png" class="img"></image>
+        <view class="no">暂无订单 !</view>
       </view>
-      <view class="cardContent" bindtap="detail">
+    </view>
+
+    <view class="cardWrap" wx:for="{{orders}}" wx:key="{{index}}">
+      <view class="card">
+        <view class="cardTitle">
+          <view>君悦休闲农庄</view>
+          <view class="tip">{{item.statusCn}}</view>
+        </view>
+        <view class="cardContent" data-id='{{item.id}}' bindtap="detail">
           <image class="cardImg" src="../../images/backed.jpg"></image>
           <image class="cardImg" src="../../images/backed.jpg"></image>
         </view>
         <view class="cardTip">
-          <view>炸鸡炸鸡</view>
-          <view style="margin-left:75rpx;">可乐可乐</view>
+          <view>{{item.title}}</view>
+          <view style="margin-left:75rpx;">{{item.title}}</view>
         </view>
-      <view class="total">共1件商品<text class="money">合计 <text class="price">¥ 106.00</text> </text> </view>
-      <view class="btn">删除记录</view>
+        <view class="total">共1件商品<text class="money">合计 <text class="price">¥ {{item.price}}</text> </text> </view>
+        <!-- <view class="btn">{{item.btnStatus}}</view> -->
+      </view>
     </view>
-  </view>
   </van-tab>
 </van-tabs>

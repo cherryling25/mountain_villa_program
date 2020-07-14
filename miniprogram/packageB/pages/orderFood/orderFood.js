@@ -16,7 +16,7 @@ Page({
           num: 0,
           price: 10.00,
           amount: '',
-          commodityTitle: '商品标题',
+          commodityTitle: '小炒牛肉',
           desc: '好吃的',
           tag: '牛肉',
           tag1: '小葱',
@@ -30,7 +30,7 @@ Page({
           num: 0,
           price: 10.00,
           amount: '',
-          commodityTitle: '商品标题',
+          commodityTitle: '辣椒炒肉',
           desc: '好吃的好吃的吃的',
           imgurl:
             'https://images.unsplash.com/photo-1551446591-142875a901a1?w=640',
@@ -46,7 +46,7 @@ Page({
           num: 0,
           price: 10.00,
           amount: '',
-          commodityTitle: '商品标题',
+          commodityTitle: '空心菜',
           desc: '好吃的好吃的吃的',
           imgurl:
             'https://images.unsplash.com/photo-1551446591-142875a901a1?w=640',
@@ -58,7 +58,7 @@ Page({
           num: 0,
           price: 10.00,
           amount: '',
-          commodityTitle: '商品标题',
+          commodityTitle: '大白菜',
           desc: '好吃的好吃的吃的',
           imgurl:
             'https://images.unsplash.com/photo-1551446591-142875a901a1?w=640',
@@ -74,7 +74,7 @@ Page({
           num: 0,
           price: 10.00,
           amount: '',
-          commodityTitle: '商品标题',
+          commodityTitle: '海带汤',
           desc: '好吃的好吃的吃的',
           imgurl:
             'https://images.unsplash.com/photo-1551446591-142875a901a1?w=640',
@@ -90,7 +90,7 @@ Page({
           num: 0,
           price: 10.00,
           amount: '',
-          commodityTitle: '商品标题',
+          commodityTitle: '珍珠奶茶',
           desc: '好吃的好吃的吃的',
           imgurl:
             'https://images.unsplash.com/photo-1551446591-142875a901a1?w=640',

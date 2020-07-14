@@ -15,7 +15,7 @@
   <view>
     <navigator url="../../packageB/pages/orderFood/orderFood">
     <view><image src="../../images/order_food.png" class="flex_img"></image></view>
-    <view style="font-size:28rpx;">订餐</view>
+    <view style="font-size:28rpx;">点餐</view>
     </navigator>
   </view>
 

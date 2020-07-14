@@ -16,12 +16,14 @@ Page({
       if (list[i].num > 0) {
           items.push({
             id: list[i].id,
-            num: list[i].num
+            num: list[i].num,
+            price: list[i].price
           });
         }
     }
     let obj = {
-      items: items
+      items: items,
+      total: this.data.total
     }
     let objStr = JSON.stringify(obj);
     console.log(objStr);
@@ -42,6 +44,7 @@ Page({
   },
   onLoad: function (options) {
     let data = JSON.parse(options.data);
+    console.log(data);
     let selectedItems = [];
     wx.cloud.init();
     const db = wx.cloud.database();

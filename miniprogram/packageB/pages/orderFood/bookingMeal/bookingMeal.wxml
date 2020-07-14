@@ -1,17 +1,21 @@
 <!--miniprogram/packageB/pages/orderFood/bookingMeal/bookingMeal.wxml-->
-<view class="wrap">
-  <view class="whiteBg">
-    <van-cell-group>
-      <van-field value="{{ info.username }}" data-name='username' required label="姓名" placeholder="请输入姓名"  bind:input="onInput"/>
-      <van-field required value="{{ info.phone }}" data-name='phone' label="手机号" placeholder="请输入手机号"  bind:input="onInput"/>
-      <van-field value="{{ info.number }}" data-name='number' required label="就餐人数" placeholder="请输入"  bind:input="onInput"/>
-      <van-field value="{{ info.time }}" data-name='time' required readonly label="就餐时间" placeholder="请选择" bindtap="selectedTime" />
-    </van-cell-group>
-  </view>
 
-  <van-popup show="{{ popupShow }}" round position="bottom" custom-style="height: 50%">
+ <view class="title">预订信息</view>
+  <van-divider dashed borderColor="#8cbcfc"/>
+  
+  <van-cell-group>
+    <van-field value="{{ info.username }}" data-name='username' required label="姓名" placeholder="请输入姓名"  bind:input="onInput"/>
+    <van-field required value="{{ info.phone }}" data-name='phone' label="手机号" placeholder="请输入手机号"  bind:input="onInput"/>
+    <van-field value="{{ info.number }}" data-name='number' required label="就餐人数" placeholder="请输入"  bind:input="onInput"/>
+    <van-field value="{{ info.time }}" data-name='time' required readonly label="就餐时间" placeholder="请选择" bindtap="selectedTime" />
+  </van-cell-group>
+ 
+<van-popup show="{{ popupShow }}" round position="bottom" custom-style="height: 50%">
     <van-datetime-picker type="datetime" value="{{ currentDate }}" min-date="{{ minDate }}" max-date="{{ maxDate }}" bind:cancel="cancelPicker" bind:confirm="confirmPicker" />
   </van-popup>
-</view>
 
-<van-button type="primary" round block bindtap="menuBooking">预订</van-button>
+<view class="btnWrap">
+<view class="btn">
+  <view bindtap="menuBooking">预订</view>
+</view>
+</view>

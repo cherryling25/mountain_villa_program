@@ -1,39 +1,29 @@
 <!--miniprogram/packageB/pages/detailO/detailO.wxml-->
 <view class="head">
   <view class="tip">交易成功</view>
-  <view style="margin-top: 20rpx;">结账金额 ¥ 106.0</view>
+  <view style="margin-top: 20rpx;">结账金额 ¥ {{total}}</view>
   <!-- <view class="btn">再来一单</view> -->
 </view>
 
 <view class="order">
   <view class="title">君悦休闲农庄</view>
   <view class="common">
-    <view class="menu">
-      <view class="imageWrap"><image class="cardImg" src="../../../images/backed.jpg"></image></view>
+    <view class="menu" wx:for="{{orders}}" wx:key="{{index}}">
+      <view class="imageWrap"><image class="cardImg" src="{{item.img}}"></image></view>
       <view class="mid">
-        <view>微麻加辣</view>
-        <view style="margin-top:15rpx;color:gray;">x1</view>
+        <view>{{itme.commodityTitle}}</view>
+        <view style="margin-top:15rpx;color:gray;">x{{item.num}}</view>
       </view>
-      <view class="right">¥ 2</view>
+      <view class="right">¥ {{item.price}}</view>
     </view>
-    
-    <view class="menu">
-      <view class="imageWrap"><image class="cardImg" src="../../../images/backed.jpg"></image></view>
-      <view class="mid">
-        <view>微麻加辣</view>
-        <view style="margin-top:15rpx;color:gray;">x1</view>
-      </view>
-      <view class="right">¥ 2</view>
-    </view>
-
   </view>
   <view class="title total">
-    <view>合计：<text style="font-size:40rpx;"> 32.16 </text></view>
+    <view>合计：<text style="font-size:40rpx;"> {{total}} </text></view>
   </view>
   <view class="title" style="border-top:15rpx solid #f7f7f7;">
-    <view><text class="label">下单时间</text> <text>2020-07-01 17:06:20</text> </view>
-    <view><text class="label">联系电话</text> <text>15235251822</text></view>
-    <view><text class="label">下单人</text> <text>lemon</text></view>
+    <view><text class="label">下单时间</text> <text>{{time}}</text> </view>
+    <view><text class="label">联系电话</text> <text>{{phone}}</text></view>
+    <view><text class="label">下单人</text> <text>{{name}}</text></view>
   </view>
 </view>
 <view class="bottom">

@@ -40,3 +40,4 @@
   <view bindtap="bookingR">预订</view>
 </view>
 </view>
+
